@@ -144,7 +144,7 @@ public class RegistrationScript : MonoBehaviour
 
     private void SaveData()
     {
-        UserData userData = new UserData(user.UserId, nicknameField.text, 0, 0,-1);
+        UserData userData = new UserData(user.UserId, nicknameField.text, 0, 0,-1, 0);
 
         string json = JsonUtility.ToJson(userData);
         Debug.Log("work");

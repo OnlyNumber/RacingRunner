@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class LogInScript : MonoBehaviour
 {
     private const string REGISTRATION_MENU_SCENE = "RegistrationMenu";
-    private const string GAME_PLAY_SCENE = "MenuScene";
+    private const string MENU_SCENE = "MenuScene";
 
 
     [SerializeField]
@@ -81,9 +81,11 @@ public class LogInScript : MonoBehaviour
             //DataHolder.name = user.DisplayName;
             //DataHolder.id = user.UserId;
 
+            DataHolder.firebaseUser = user;
+
             Debug.Log(user.UserId);
 
-            SceneManager.LoadScene(GAME_PLAY_SCENE);
+            SceneManager.LoadScene(MENU_SCENE);
         }
         else
         {
@@ -169,8 +171,8 @@ public class LogInScript : MonoBehaviour
 
             Debug.Log(user.UserId);
 
-            //SceneManager.LoadScene(MAIN_MENU_SCENE);
-            
+            SceneManager.LoadScene(MENU_SCENE);
+
         }
     }
 
