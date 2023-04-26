@@ -171,3 +171,9 @@ Received Import Request.
   path: Assets/Scenes/GamePlayScene.unity
   artifactKey: Guid(fb634ef7605b96c409106e584f60051b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/GamePlayScene.unity using Guid(fb634ef7605b96c409106e584f60051b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '072d251efd0540b788bf46fda0bcec62') in 0.005962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 416.720549 seconds.
+  path: Assets/Prefabs/NetworkRunnerHandler.prefab
+  artifactKey: Guid(9d1c9c3e6f5d4fd4b831c57bf6534653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/NetworkRunnerHandler.prefab using Guid(9d1c9c3e6f5d4fd4b831c57bf6534653) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '215d50a9db3fb7b1e2372c1c41f93494') in 0.042722 seconds 
