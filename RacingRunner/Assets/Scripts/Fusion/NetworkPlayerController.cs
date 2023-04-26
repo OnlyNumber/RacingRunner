@@ -3,8 +3,8 @@ using Fusion;
 
 public class NetworkPlayerController : NetworkBehaviour
 {
-    [SerializeField]
-    float speed;
+    //[SerializeField]
+    //float speed;
 
     //[SerializeField]
     //Rigidbody2D rigidbody;
