@@ -19,6 +19,10 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     private const string MENU_SCENE = "MenuScene";
 
+    private const string GAME_PLAY = "GamePlay";
+
+   
+
     [ContextMenu("Find players")]
     public void ShowDictionary()
     {
@@ -50,11 +54,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
         sessionListUIHandler = FindObjectOfType<SessionListUIHandler>(true);
     }
 
-    private void Start()
-    {
-        
-    }
-
     int GetPlayerToken(NetworkRunner runner, PlayerRef player)
     {
         if(runner.LocalPlayer == player)
@@ -73,7 +72,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
             Debug.LogError($"GetPlayerToken returned invalid token");
 
                 return 0;
-
         }
     }
 
@@ -145,6 +143,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnCustomAuthenticationResponse(NetworkRunner runner, Dictionary<string, object> data)
     {
+
     }
 
     public void OnDisconnectedFromServer(NetworkRunner runner)

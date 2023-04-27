@@ -7,16 +7,16 @@ public class MainMenuUIHandler : MonoBehaviour
 
 
 
-    public GameObject playerDetailsPanel;
+    /*public GameObject playerDetailsPanel;
     public GameObject sessionBrowserPanel;
     public GameObject createSessionPanel;
     public GameObject statusPanel;
 
     public TMP_InputField playerNameInputField;
 
-    public TMP_InputField sessionNameInputField;
+    public TMP_InputField sessionNameInputField;*/
 
-    private const string GAME_PLAY_SCENE = "GamePlayScene";
+    private const string GAME_PLAY_SCENE = "GamePlay";
 
     private void Start()
     {
@@ -25,10 +25,10 @@ public class MainMenuUIHandler : MonoBehaviour
 
     private void HideAllPanels()
     {
-        playerDetailsPanel.SetActive(false);
+        /*playerDetailsPanel.SetActive(false);
         sessionBrowserPanel.SetActive(false);
         createSessionPanel.SetActive(false);
-        statusPanel.SetActive(false);
+        statusPanel.SetActive(false);*/
     }
 
     public void OnJoinGameClick()
@@ -40,29 +40,35 @@ public class MainMenuUIHandler : MonoBehaviour
         HideAllPanels();
 
         
-        sessionBrowserPanel.SetActive(true);
+        //sessionBrowserPanel.SetActive(true);
 
         FindObjectOfType<SessionListUIHandler>(true).OnLookingForGameSession();
     }
 
     public void OnStartNewSessionClicked()
     {
+        Debug.Log("Work1?");
+
         NetworkRunnerHandler networkRunnerHandler = FindObjectOfType<NetworkRunnerHandler>();
 
-        networkRunnerHandler.CreateGame(sessionNameInputField.text, GAME_PLAY_SCENE);
+        Debug.Log("Work2?");
+
+        networkRunnerHandler.CreateGame("TestSession", GAME_PLAY_SCENE);
 
         HideAllPanels();
 
-        statusPanel.SetActive(true);
-
+        //statusPanel.SetActive(true);
     }
+
+
+
 
     public void GoBackToMainMenu()
     {
 
         HideAllPanels();
 
-        playerDetailsPanel.SetActive(true);
+        //playerDetailsPanel.SetActive(true);
     }
 
 
@@ -70,7 +76,7 @@ public class MainMenuUIHandler : MonoBehaviour
     {
         HideAllPanels();
 
-        createSessionPanel.SetActive(true);
+        //createSessionPanel.SetActive(true);
     }
 
     public void OnJoiningServer()
@@ -78,7 +84,7 @@ public class MainMenuUIHandler : MonoBehaviour
 
         HideAllPanels();
 
-        statusPanel.SetActive(true);
+        //statusPanel.SetActive(true);
     }
 
     

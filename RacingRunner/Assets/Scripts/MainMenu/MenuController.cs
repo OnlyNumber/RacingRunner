@@ -32,4 +32,10 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene(LOG_IN_MENU_SCENE);
 
     }
+
+    public void ExitFromGame()
+    {
+        Application.Quit();
+    }
+
 }

@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  speed: 1
+  speed: 160
 --- !u!114 &-684335992115629430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  speed: 0.0001
+  speed: 160
   lines:
   - {x: -7, y: 0, z: 0}
   - {x: -2.5, y: 0, z: 0}
@@ -179,7 +179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3980294915376147048}
   m_LocalRotation: {x: 0.24973507, y: -0, z: -0, w: 0.96831423}
-  m_LocalPosition: {x: -0.0027419329, y: 3.75, z: -6.18}
+  m_LocalPosition: {x: -0.0027419329, y: 6.14, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

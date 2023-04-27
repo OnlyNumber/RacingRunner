@@ -15,7 +15,7 @@ public class MovingForward : NetworkBehaviour
             transform.position = new Vector3(0,0,0);
         }
 
-        transform.Translate(Vector3.forward * speed);
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
 }

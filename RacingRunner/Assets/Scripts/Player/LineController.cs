@@ -17,7 +17,7 @@ public class LineController : NetworkBehaviour
     public override void FixedUpdateNetwork()
     {
 
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(lines[targetLine].x, transform.position.y, transform.position.z), speed );
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(lines[targetLine].x, transform.position.y, transform.position.z), speed * Time.deltaTime );
         
     }
 
