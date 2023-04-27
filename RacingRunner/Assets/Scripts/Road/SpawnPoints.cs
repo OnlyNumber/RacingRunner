@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Fusion;
 
-public class FragmentRoad : NetworkBehaviour
+public class SpawnPoints : MonoBehaviour
 {
     [SerializeField]
-    private SpawnPoints[] spawnWaves;
+    public Transform[] spawnPoints;
 }
