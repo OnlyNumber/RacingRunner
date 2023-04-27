@@ -3,9 +3,6 @@ using Fusion;
 
 public struct NetworkInputData : INetworkInput
 {
-
-    public Vector2 movementAxisInput;
-    public Vector2 mousePosition;
-    public NetworkBool isFireButtonPressed;
-    public NetworkBool isReloadButtonPressed;
+    public int line;
+    public NetworkBool isPressedBrake;
 }

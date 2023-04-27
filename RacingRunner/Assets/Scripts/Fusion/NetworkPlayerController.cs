@@ -18,7 +18,7 @@ public class NetworkPlayerController : NetworkBehaviour
     {
         Move();
 
-        RotateWeapon();
+        //RotateWeapon();
     }
 
     private void Move()
@@ -29,7 +29,7 @@ public class NetworkPlayerController : NetworkBehaviour
         }
     }
 
-    private void RotateWeapon()
+   /* private void RotateWeapon()
     {
         if (GetInput(out NetworkInputData networkInput))
         {
@@ -40,7 +40,7 @@ public class NetworkPlayerController : NetworkBehaviour
 
             
         }
-    }
+    }*/
 
 
 

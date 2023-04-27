@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "684052438983",
+    "firebase_url": "https://racingrunner-b546c-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "racingrunner-b546c",
+    "storage_bucket": "racingrunner-b546c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:684052438983:android:a270cf2f7510cf349ac3e2",
+        "android_client_info": {
+          "package_name": "com.RacingRunnerCompany.RacingRunner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "684052438983-ev2oc2jq0uu8l9m2fnauau7b41laot9v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfrYP4e75pWIAI7M4cGTMN9duDiBWlqpU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "684052438983-ev2oc2jq0uu8l9m2fnauau7b41laot9v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

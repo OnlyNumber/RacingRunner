@@ -44,7 +44,7 @@ public class NetworkRunnerHandler : MonoBehaviour
         }
     }
 
-    public void StartHostMigration(HostMigrationToken hostMigrationToken)
+    /*public void StartHostMigration(HostMigrationToken hostMigrationToken)
     {
 
         networkRunner = Instantiate(networkRunnerPrefab);
@@ -55,7 +55,7 @@ public class NetworkRunnerHandler : MonoBehaviour
         
         Debug.Log("Server NetworkRunner started");
 
-    }
+    }*/
 
     protected virtual Task InitializeNetworkRunner(NetworkRunner runner, GameMode gameMode, string sessionName, byte[] connectionToken, NetAddress addres, SceneRef scene, Action<NetworkRunner> initialized)
     {
@@ -80,7 +80,7 @@ public class NetworkRunnerHandler : MonoBehaviour
         });
     }
 
-    protected virtual Task InitializeNetworkRunnerMigration(NetworkRunner runner,HostMigrationToken hostMigrationToken)
+    /*protected virtual Task InitializeNetworkRunnerMigration(NetworkRunner runner,HostMigrationToken hostMigrationToken)
     {
         var sceneManager = GetSceneManager(runner);
 
@@ -96,9 +96,9 @@ public class NetworkRunnerHandler : MonoBehaviour
             HostMigrationResume = HostMigrationResume,
             ConnectionToken = GameManager.instance.GetConnectionToken()
         });
-    }
+    }*/
 
-    void HostMigrationResume(NetworkRunner runner)
+    /*void HostMigrationResume(NetworkRunner runner)
     {
         Debug.Log($"HostMigration started");
 
@@ -106,7 +106,6 @@ public class NetworkRunnerHandler : MonoBehaviour
         {
             if(ResumeNetworkObjects.TryGetBehaviour<NetworkPlayerController>(out var characterController))
             {
-                //TODO: доделать HostMigration;
                 runner.Spawn(ResumeNetworkObjects, position: Vector2.zero, rotation: Quaternion.identity, onBeforeSpawned: (runner, newNetworkObject) =>
                 {
                     newNetworkObject.CopyStateFrom(ResumeNetworkObjects);
@@ -121,7 +120,7 @@ public class NetworkRunnerHandler : MonoBehaviour
         }
 
         Debug.Log($"HostMigration completed");
-    }
+    }*/
 
     public void OnJoinLobby()
     {

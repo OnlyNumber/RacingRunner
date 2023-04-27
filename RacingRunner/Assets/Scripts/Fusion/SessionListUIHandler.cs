@@ -25,6 +25,9 @@ public class SessionListUIHandler : MonoBehaviour
 
     }
 
+
+
+
     public void AddToList(SessionInfo sessionInfo)
     {
         SessionInfoListUIItem addedItem = Instantiate(sesionItemListPrefab, verticalLayoutGroup.transform).GetComponent<SessionInfoListUIItem>();

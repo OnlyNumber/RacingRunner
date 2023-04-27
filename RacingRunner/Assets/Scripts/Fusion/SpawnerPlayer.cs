@@ -21,7 +21,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     private const string GAME_PLAY = "GamePlay";
 
-   
+    private SessionFinder _sessionFinder;
 
     [ContextMenu("Find players")]
     public void ShowDictionary()
@@ -52,6 +52,10 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
         mapTokenIdWithNetworkPlayer = new Dictionary<int, NetworkPlayer>();
         
         sessionListUIHandler = FindObjectOfType<SessionListUIHandler>(true);
+
+        _sessionFinder = FindObjectOfType<SessionFinder>(true);
+
+        _sessionFinder.StartFinding();
     }
 
     int GetPlayerToken(NetworkRunner runner, PlayerRef player)
@@ -82,6 +86,8 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
         {
             characterInputHandler = NetworkPlayer.local.GetComponent<PlayerInputHandler>();
         }
+
+
 
         if(characterInputHandler != null)
         {
@@ -192,6 +198,11 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList)
     {
+        Debug.Log("OnSessionListUpdated");
+
+        _sessionFinder.firstSession = sessionList[0];
+
+
         SessionInfo sessionInfoTransfer;
 
         if(sessionListUIHandler == null)

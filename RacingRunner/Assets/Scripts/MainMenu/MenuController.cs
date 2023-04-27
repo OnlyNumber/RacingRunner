@@ -8,22 +8,44 @@ public class MenuController : MonoBehaviour
     private const string LOG_IN_MENU_SCENE = "LogInMenu";
 
     [SerializeField]
-    private GameObject MainUI;
+    private GameObject _mainUI;
 
     [SerializeField]
-    private GameObject GarageUI;
+    private GameObject _garageUI;
+
+    [SerializeField]
+    private GameObject _raitingUI;
+
+    [SerializeField]
+    private GameObject _optionsUI;
 
     public void GoToMainUI()
     {
-        MainUI.SetActive(true);
-        GarageUI.SetActive(false);
+        HeadeAllPanels();
+        _mainUI.SetActive(true);
     }
 
     public void GoToGarageUI()
     {
-        GarageUI.SetActive(true);
-        MainUI.SetActive(false);
+        HeadeAllPanels();
+        _garageUI.SetActive(true);
+       
     }
+
+    public void GoToOptionsUI()
+    {
+        HeadeAllPanels();
+        _optionsUI.SetActive(true);
+
+    }
+
+    public void GoToRaitingUI()
+    {
+        HeadeAllPanels();
+        _raitingUI.SetActive(true);
+
+    }
+
 
     public void SignOut()
     {
@@ -37,5 +59,14 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void HeadeAllPanels()
+    {
+        _mainUI.SetActive(false);
+        _garageUI.SetActive(false);
+        _raitingUI.SetActive(false);
+        _optionsUI.SetActive(false);
+    }
+
 
 }

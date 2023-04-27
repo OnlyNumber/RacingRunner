@@ -42,11 +42,11 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
         }
         else
         {
-            /*Camera localCamera = GetComponentInChildren<Camera>();
+            Camera localCamera = GetComponentInChildren<Camera>();
             localCamera.enabled = false;
 
             AudioListener localAudioListener = GetComponentInChildren<AudioListener>();
-            localAudioListener.enabled = false;*/
+            localAudioListener.enabled = false;
         }
 
     }
