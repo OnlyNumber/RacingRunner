@@ -376,6 +376,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1614370697}
         m_TargetAssemblyTypeName: LogInScript, Assembly-CSharp
+        m_MethodName: GoToRegistration
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
