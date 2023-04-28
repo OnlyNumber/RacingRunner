@@ -34,8 +34,6 @@ public class LineController : NetworkBehaviour
     {
         Rpc_RequestChangePos(lineIndex);
 
-        //if (lineIndex + targetLine >= 0 && lineIndex + targetLine < lines.Length)
-        //targetLine += lineIndex;
     }
 
     [Rpc(RpcSources.InputAuthority, RpcTargets.All)]

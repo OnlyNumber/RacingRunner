@@ -200,8 +200,14 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
     {
         Debug.Log("OnSessionListUpdated");
 
-        _sessionFinder.firstSession = sessionList[0];
 
+
+        if (sessionList.Count > 0)
+            _sessionFinder.firstSession = sessionList[0];
+        else
+        {
+            Debug.Log("Sessions count -> " + sessionList.Count);
+        }
 
         SessionInfo sessionInfoTransfer;
 

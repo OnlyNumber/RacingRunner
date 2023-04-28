@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6288479698243620768}
   - component: {fileID: 6696875519240113539}
   - component: {fileID: 2450893284367748611}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rear_Left_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3373015156921204446}
   - component: {fileID: 6761923906817757424}
   - component: {fileID: 389228948723538254}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front_Right_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,8 +178,9 @@ GameObject:
   - component: {fileID: 6795327696180476603}
   - component: {fileID: 6469411458670722065}
   - component: {fileID: 770067522926146063}
-  - component: {fileID: 38376189863787353}
-  m_Layer: 0
+  - component: {fileID: 5406045367159440176}
+  - component: {fileID: -3426132690339273933}
+  m_Layer: 6
   m_Name: Car5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -257,6 +258,8 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 6795327696180476603}
+  - {fileID: 5406045367159440176}
+  - {fileID: -3426132690339273933}
   SimulationBehaviours: []
 --- !u!65 &770067522926146063
 BoxCollider:
@@ -271,7 +274,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.0618167, y: 2.3454936, z: 8.258457}
   m_Center: {x: -0.009699106, y: 1.1915189, z: -0.07393837}
---- !u!114 &38376189863787353
+--- !u!114 &5406045367159440176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -280,10 +283,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 2526801388842654160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2564aac36bf29f3449c04f57f9ed83d1, type: 3}
+  m_Script: {fileID: 11500000, guid: e453a14309632354296c89dce8cb7f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeModificator: 0
+  _interpolationDataSource: 0
+  timer: 10
+  teleportDistance: 300
+--- !u!114 &-3426132690339273933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2526801388842654160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b251ff4942cae0347ada9455952dc04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  speed: 60
 --- !u!1 &6924118838233642934
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +314,7 @@ GameObject:
   - component: {fileID: 2234772900871012804}
   - component: {fileID: 8372135745312293814}
   - component: {fileID: 1449653470861817048}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CarBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,7 +397,7 @@ GameObject:
   - component: {fileID: 7264962832794199395}
   - component: {fileID: 7440685263585809785}
   - component: {fileID: 1312609284053934512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rear_Right_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +480,7 @@ GameObject:
   - component: {fileID: 8588474321213007350}
   - component: {fileID: 1824226469534667479}
   - component: {fileID: 2855053496744509967}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Front_Left_Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

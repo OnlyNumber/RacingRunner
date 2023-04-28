@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
+using System.Threading.Tasks;
+using UnityEngine.SceneManagement;
 
 public class SessionFinder : MonoBehaviour
 {
@@ -21,11 +21,36 @@ public class SessionFinder : MonoBehaviour
         //networkRunnerHandler.OnJoinLobby();
     }
 
+    public void StartSearch()
+    {
+        var ads = StartPlayer(FindObjectOfType<NetworkRunner>());
+    }
+
+    public async Task StartPlayer(NetworkRunner runner)
+    {
+
+        var result = await runner.StartGame(new StartGameArgs()
+        {
+            Scene = SceneUtility.GetBuildIndexByScenePath($"scenes/{"GamePlay"}"),
+            GameMode = GameMode.AutoHostOrClient, // or GameMode.Shared
+        });
+
+        if (result.Ok)
+        {
+            // all good
+        }
+        else
+        {
+            Debug.LogError($"Failed to Start: {result.ShutdownReason}");
+        }
+    }
 
     public void JoingGame()
     {
         //NetworkRunnerHandler networkRunnerHandler = FindObjectOfType<NetworkRunnerHandler>();
-        
+        networkRunnerHandler.OnJoinLobby();
+
+
 
         if (firstSession != null)
         {
@@ -34,8 +59,6 @@ public class SessionFinder : MonoBehaviour
         else
         {
             //networkRunnerHandler.OnJoinLobby();
-
-            networkRunnerHandler.OnJoinLobby();
 
             Debug.Log("firstSession == null");
         }

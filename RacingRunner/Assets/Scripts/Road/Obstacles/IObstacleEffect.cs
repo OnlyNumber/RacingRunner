@@ -6,7 +6,10 @@ public interface IObstacleEffect
 {
     public const int PLAYER_LAYER = 7;
 
-    public IEnumerator ObstacleEffect(MovingForward movingForward);
+    public const int UNTOUCHABLE_LAYER = 8;
+
+
+    public IEnumerator ObstacleEffect(MovingForwardPlayer movingForward);
 
     
 

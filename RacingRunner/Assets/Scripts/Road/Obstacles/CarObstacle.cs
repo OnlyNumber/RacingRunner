@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
-public class CarObstacle : MonoBehaviour
+public class CarObstacle : NetworkBehaviour, IObstacleEffect
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private float timer;
+
+    [SerializeField]
+    private float teleportDistance;
+
+    public IEnumerator ObstacleEffect(MovingForwardPlayer movingForward)
     {
-        
+        movingForward.gameObject.layer = IObstacleEffect.UNTOUCHABLE_LAYER;
+
+        movingForward.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - teleportDistance);
+
+        movingForward.ChangeCurrentSpeedMultiply(0);
+
+        yield return new WaitForSecondsRealtime(timer);
+
+        movingForward.gameObject.layer = IObstacleEffect.PLAYER_LAYER;
+
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

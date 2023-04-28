@@ -7,7 +7,7 @@ public class PlayerStatus : NetworkBehaviour
 {
 
     [SerializeField]
-    private MovingForward movingForward;
+    private MovingForwardPlayer movingForward;
 
     [SerializeField]
     private float debuffTime;

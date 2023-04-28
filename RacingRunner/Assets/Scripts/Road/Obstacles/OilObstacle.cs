@@ -1,17 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
-public class OilObstacle : MonoBehaviour, IObstacleEffect
+public class OilObstacle : NetworkBehaviour, IObstacleEffect
 {
-
-    [SerializeField]
-    private float changeModificator;
-
     [SerializeField]
     public float timer;
 
-    public IEnumerator ObstacleEffect(MovingForward movingForward)
+    public IEnumerator ObstacleEffect(MovingForwardPlayer movingForward)
     {
         Debug.Log("ObstacleEffect");
 
@@ -19,7 +16,7 @@ public class OilObstacle : MonoBehaviour, IObstacleEffect
 
         movingForward.StopBoost();
         
-        movingForward.ChangeCurrentSpeed(0.7f);
+        movingForward.ChangeCurrentSpeedMultiply(0.7f);
 
         yield return new WaitForSecondsRealtime(timer);
 
@@ -27,19 +24,4 @@ public class OilObstacle : MonoBehaviour, IObstacleEffect
 
         movingForward.ChangeBoostToNormal();
     }
-
-
-   
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Trigger" + IObstacleEffect.PLAYER_LAYER + "Player layer" + other.gameObject.layer);
-
-        if (other.gameObject.layer == IObstacleEffect.PLAYER_LAYER)
-        {
-            StartCoroutine(ObstacleEffect(other.GetComponent<MovingForward>()));
-        }
-
-    }
-
 }

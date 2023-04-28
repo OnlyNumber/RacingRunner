@@ -142,6 +142,7 @@ MonoBehaviour:
     RawGuidValue: e3d015ed7a593784cbe1aa9649ddd822
   NestedObjects: []
   NetworkedBehaviours:
+  - {fileID: 2229067964798845693}
   - {fileID: -2703454692974350550}
   SimulationBehaviours: []
 --- !u!114 &2229067964798845693
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2564aac36bf29f3449c04f57f9ed83d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeModificator: 10
+  _interpolationDataSource: 0
   timer: 2
 --- !u!136 &1665302938497135792
 CapsuleCollider:

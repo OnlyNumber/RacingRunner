@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 5539538728048755879}
   - component: {fileID: 170776755476968351}
   - component: {fileID: -2795032635149157715}
-  m_Layer: 0
+  - component: {fileID: -3325903677517418322}
+  - component: {fileID: 6925916139123297680}
+  m_Layer: 9
   m_Name: NitroBarrel
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -85,7 +87,37 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 170776755476968351}
+  - {fileID: -3325903677517418322}
   SimulationBehaviours: []
+--- !u!114 &-3325903677517418322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539538728048755878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1497bdb91c24d6049863ee68c17cc10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  changeModificator: 3
+  timer: 4
+--- !u!136 &6925916139123297680
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539538728048755878}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.53109264
+  m_Height: 2.452074
+  m_Direction: 1
+  m_Center: {x: 0.016804695, y: 1.306037, z: -0.014287949}
 --- !u!1 &5539538729364493718
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,8 +129,7 @@ GameObject:
   - component: {fileID: 5539538729364493719}
   - component: {fileID: 5539538729364493722}
   - component: {fileID: 5539538729364493721}
-  - component: {fileID: 5539538729364493720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,17 +201,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &5539538729364493720
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5539538729364493718}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}

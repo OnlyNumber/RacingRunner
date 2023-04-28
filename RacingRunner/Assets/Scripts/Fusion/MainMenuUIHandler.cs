@@ -47,17 +47,12 @@ public class MainMenuUIHandler : MonoBehaviour
 
     public void OnStartNewSessionClicked()
     {
-        Debug.Log("Work1?");
 
         NetworkRunnerHandler networkRunnerHandler = FindObjectOfType<NetworkRunnerHandler>();
 
-        Debug.Log("Work2?");
-
-        networkRunnerHandler.CreateGame("TestSession", GAME_PLAY_SCENE);
+        networkRunnerHandler.CreateGame(Random.Range(-30000000000f, 30000000000f).ToString(), GAME_PLAY_SCENE);
 
         HideAllPanels();
-
-        //statusPanel.SetActive(true);
     }
 
 

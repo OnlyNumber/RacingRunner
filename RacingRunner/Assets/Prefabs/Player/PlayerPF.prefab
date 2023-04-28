@@ -16,8 +16,10 @@ GameObject:
   - component: {fileID: 6533040817349943296}
   - component: {fileID: 1853324295705234214}
   - component: {fileID: 365858252096765227}
-  - component: {fileID: -5165173030776731239}
-  - component: {fileID: 196416187245825949}
+  - component: {fileID: 8389270902011061585}
+  - component: {fileID: 6523930284814447556}
+  - component: {fileID: 5579475167716667003}
+  - component: {fileID: 7085484484445709563}
   m_Layer: 7
   m_Name: PlayerPF
   m_TagString: Untagged
@@ -95,7 +97,7 @@ MonoBehaviour:
   - {fileID: 1168415741225615652}
   - {fileID: 6533040817349943296}
   - {fileID: 1853324295705234214}
-  - {fileID: 196416187245825949}
+  - {fileID: 5579475167716667003}
   SimulationBehaviours: []
 --- !u!114 &1168415741225615652
 MonoBehaviour:
@@ -128,7 +130,7 @@ MonoBehaviour:
   currentBoost: 0
   normalSpeedIncreacer: 20
   speedDecreacer: 300
-  maxSpeed: 1
+  maxSpeed: 250
 --- !u!114 &1853324295705234214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +165,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkZone: 30
   myPlayer: {fileID: 1853324295705234214}
---- !u!54 &-5165173030776731239
+--- !u!114 &8389270902011061585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3954143759811083748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf5ca05ef324ca468f346607798e333, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingForward: {fileID: 6533040817349943296}
+  finish: {fileID: 7085484484445709563}
+--- !u!54 &6523930284814447556
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -179,7 +195,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &196416187245825949
+--- !u!114 &5579475167716667003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,6 +223,19 @@ MonoBehaviour:
     RotTeleportRadians: 1.5
   UseLegacySharedModeInterpolation: 0
   TargetInterpolationDelay: 0.03
+--- !u!114 &7085484484445709563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3954143759811083748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb180cd71333b0747a7427629cbfd0c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingForwardPlayer: {fileID: 6533040817349943296}
 --- !u!1 &3980294915376147048
 GameObject:
   m_ObjectHideFlags: 0
