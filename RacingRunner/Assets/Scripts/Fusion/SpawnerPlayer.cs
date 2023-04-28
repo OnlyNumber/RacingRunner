@@ -13,8 +13,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     private PlayerInputHandler characterInputHandler;
 
-    private SessionListUIHandler sessionListUIHandler;
-
     private Dictionary<PlayerRef, NetworkPlayer> _spawnedCharacters = new Dictionary<PlayerRef, NetworkPlayer>();
 
     private const string MENU_SCENE = "MenuScene";
@@ -51,8 +49,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
     {
         mapTokenIdWithNetworkPlayer = new Dictionary<int, NetworkPlayer>();
         
-        sessionListUIHandler = FindObjectOfType<SessionListUIHandler>(true);
-
         _sessionFinder = FindObjectOfType<SessionFinder>(true);
 
         _sessionFinder.StartFinding();
@@ -199,42 +195,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
     public void OnSessionListUpdated(NetworkRunner runner, List<SessionInfo> sessionList)
     {
         Debug.Log("OnSessionListUpdated");
-
-
-
-        if (sessionList.Count > 0)
-            _sessionFinder.firstSession = sessionList[0];
-        else
-        {
-            Debug.Log("Sessions count -> " + sessionList.Count);
-        }
-
-        SessionInfo sessionInfoTransfer;
-
-        if(sessionListUIHandler == null)
-        {
-            return;
-        }
-
-        if(sessionList.Count == 0)
-        {
-            Debug.Log("Joined Lobby no sessions found");
-
-            sessionListUIHandler.OnNoSessionFound();
-        }
-        else
-        {
-            sessionListUIHandler.ClearList();
-
-            foreach (SessionInfo sessionInfo in sessionList)
-            {
-                sessionInfoTransfer = sessionInfo;
-
-                sessionListUIHandler.AddToList(sessionInfo);
-
-                Debug.Log($"Found session {sessionInfo.Name} playersCount {sessionInfo.PlayerCount}");
-            }
-        }
     }
 
     public void OnShutdown(NetworkRunner runner, ShutdownReason shutdownReason)

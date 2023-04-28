@@ -9,6 +9,8 @@ public class SessionFinder : MonoBehaviour
 
     NetworkRunnerHandler networkRunnerHandler;
 
+    private const string GAME_PLAY_SCENE = "GamePlay";
+
     private void Start()
     {
         
@@ -31,49 +33,16 @@ public class SessionFinder : MonoBehaviour
 
         var result = await runner.StartGame(new StartGameArgs()
         {
-            Scene = SceneUtility.GetBuildIndexByScenePath($"scenes/{"GamePlay"}"),
-            GameMode = GameMode.AutoHostOrClient, // or GameMode.Shared
+            PlayerCount = 2,
+            Scene = SceneUtility.GetBuildIndexByScenePath($"scenes/{GAME_PLAY_SCENE}"),
+            GameMode = GameMode.AutoHostOrClient, 
         });
 
-        if (result.Ok)
-        {
-            // all good
-        }
-        else
+        if (!result.Ok)
         {
             Debug.LogError($"Failed to Start: {result.ShutdownReason}");
         }
-    }
-
-    public void JoingGame()
-    {
-        //NetworkRunnerHandler networkRunnerHandler = FindObjectOfType<NetworkRunnerHandler>();
-        networkRunnerHandler.OnJoinLobby();
-
-
-
-        if (firstSession != null)
-        {
-            AddedSessionInfoListUIItem_OnJoinSession(firstSession);
-        }
-        else
-        {
-            //networkRunnerHandler.OnJoinLobby();
-
-            Debug.Log("firstSession == null");
-        }
-    }
-
-
-    private void AddedSessionInfoListUIItem_OnJoinSession(SessionInfo sessionInfo)
-    {
-        NetworkRunnerHandler networkRunnerHandler = FindObjectOfType<NetworkRunnerHandler>();
-
-        networkRunnerHandler.JoinGame(sessionInfo);
-
-        MainMenuUIHandler mainMenuUIHandler = FindObjectOfType<MainMenuUIHandler>();
-        mainMenuUIHandler.OnJoiningServer();
-
+        
     }
 
 }
