@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 6533040817349943296}
   - component: {fileID: 1853324295705234214}
   - component: {fileID: 365858252096765227}
-  - component: {fileID: 3105658643793622363}
-  m_Layer: 0
+  - component: {fileID: -5165173030776731239}
+  - component: {fileID: 196416187245825949}
+  m_Layer: 7
   m_Name: PlayerPF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +95,7 @@ MonoBehaviour:
   - {fileID: 1168415741225615652}
   - {fileID: 6533040817349943296}
   - {fileID: 1853324295705234214}
-  - {fileID: 3105658643793622363}
+  - {fileID: 196416187245825949}
   SimulationBehaviours: []
 --- !u!114 &1168415741225615652
 MonoBehaviour:
@@ -123,10 +124,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   speed: 3
-  startSpeed: 50
-  speedIncreacer: 2
+  startSpeed: 20
+  currentBoost: 0
+  normalSpeedIncreacer: 20
   speedDecreacer: 300
-  maxSpeed: 2
+  maxSpeed: 1
 --- !u!114 &1853324295705234214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +163,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkZone: 30
   myPlayer: {fileID: 1853324295705234214}
---- !u!114 &3105658643793622363
+--- !u!54 &-5165173030776731239
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3954143759811083748}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &196416187245825949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -170,7 +188,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3954143759811083748}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Script: {fileID: 1710889294, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
@@ -200,7 +218,7 @@ GameObject:
   - component: {fileID: 1530149849866251335}
   - component: {fileID: 4593976637296517715}
   - component: {fileID: 1166912458677401063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,14 +232,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3980294915376147048}
-  m_LocalRotation: {x: 0.24973507, y: -0, z: -0, w: 0.96831423}
-  m_LocalPosition: {x: -0.0027419329, y: 6.14, z: -10}
+  m_LocalRotation: {x: 0.08846742, y: -0, z: -0, w: 0.9960791}
+  m_LocalPosition: {x: -0.0027419329, y: 6.14, z: -11.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3954143759811083749}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 28.924, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10.151, y: 0, z: 0}
 --- !u!20 &4593976637296517715
 Camera:
   m_ObjectHideFlags: 0
@@ -280,6 +298,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3954143759811083749}
     m_Modifications:
+    - target: {fileID: 1446942032436472088, guid: 0cbd6e5da31e96d4ea851a8f4b59aed2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611944396195816014, guid: 0cbd6e5da31e96d4ea851a8f4b59aed2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473770367309017258, guid: 0cbd6e5da31e96d4ea851a8f4b59aed2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2782671342049214875, guid: 0cbd6e5da31e96d4ea851a8f4b59aed2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3251602588672005783, guid: 0cbd6e5da31e96d4ea851a8f4b59aed2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -327,6 +361,14 @@ PrefabInstance:
     - target: {fileID: 5426738320695598250, guid: 0cbd6e5da31e96d4ea851a8f4b59aed2, type: 3}
       propertyPath: m_Name
       value: Car4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426738320695598250, guid: 0cbd6e5da31e96d4ea851a8f4b59aed2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6085598035341173936, guid: 0cbd6e5da31e96d4ea851a8f4b59aed2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cbd6e5da31e96d4ea851a8f4b59aed2, type: 3}

@@ -93,6 +93,10 @@ public class PlayerInputHandler : MonoBehaviour
         return networkInputData;
     }
 
-    
+    private void OnTriggerEnter(Collider other)
+    {
+        //Debug.Log("SomeTrigger");
+    }
+
 
 }

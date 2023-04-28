@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 
-public class MovingForward : NetworkBehaviour 
+public class MovingForward : NetworkBehaviour
 {
     [SerializeField]
     private float speed;
@@ -12,7 +12,10 @@ public class MovingForward : NetworkBehaviour
     private float startSpeed;
 
     [SerializeField]
-    private float speedIncreacer;
+    private float currentBoost;
+
+    [SerializeField]
+    private float normalSpeedIncreacer;
 
     [SerializeField]
     private float speedDecreacer;
@@ -22,29 +25,27 @@ public class MovingForward : NetworkBehaviour
 
     private bool isBrake;
 
-    //[SerializeField]
-
+    private void Start()
+    {
+        currentBoost = normalSpeedIncreacer;
+    }
 
     public override void FixedUpdateNetwork()
     {
-        
-
         if (GetInput(out NetworkInputData networkInputData))
         {
             isBrake = networkInputData.isPressedBrake;
 
         }
-            SpeedChanger();
-        
+        MoveForward();
+
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
-    private void SpeedChanger()
+    private void MoveForward()
     {
         if (isBrake)
         {
-            Debug.Log("Brake");
-
             if (speed - speedDecreacer * Time.deltaTime > 0)
             {
                 speed -= speedDecreacer * Time.deltaTime;
@@ -59,7 +60,9 @@ public class MovingForward : NetworkBehaviour
         {
             if (speed > 0)
             {
-                speed += speedIncreacer * Time.deltaTime * (maxSpeed / speed);
+
+                //Debug.Log("speed" + speedIncreacer);
+                speed += currentBoost * (maxSpeed / speed);
             }
             else
             {
@@ -67,13 +70,50 @@ public class MovingForward : NetworkBehaviour
             }
         }
 
-        if (transform.position.z > 250)
-        {
-            transform.position = new Vector3(0, 0, 0);
-        }
     }
 
-     
+    public void ChangeBoost(float changeSpeed)
+    {
+        Rpc_RequestSpeedBoost(currentBoost + changeSpeed);
+    }
 
+    public void StopBoost()
+    {
+        Rpc_RequestSpeedBoost(0);
+    }
+
+
+    public void ChangeBoostToNormal()
+    {
+        Debug.Log("ChangeSpeedIncreaceToNormal");
+
+        Rpc_RequestSpeedBoost(normalSpeedIncreacer);
+    }
+
+    public void ChangeCurrentSpeed(float speedEffect)
+    {
+        Debug.Log(speed + " * " + speedEffect + " = " + speed * speedEffect);
+
+        Rpc_RequestSpeed(speed * speedEffect);
+    }
+
+
+
+
+    [Rpc(RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    private void Rpc_RequestSpeed(float changeSpeed)
+    {
+
+        speed = changeSpeed;
+
+    }
+
+    [Rpc(RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    private void Rpc_RequestSpeedBoost(float changeSpeedIncreace)
+    {
+
+        currentBoost = changeSpeedIncreace;
+
+    }
 
 }

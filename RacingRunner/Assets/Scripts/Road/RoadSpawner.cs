@@ -24,7 +24,7 @@ public class RoadSpawner : NetworkBehaviour
     {
         for (int i = 0; i < roadLegth; i++)
         {
-            Debug.Log(i);
+            //Debug.Log(i);
 
             Runner.Spawn(roadFragment, new Vector3(0, 0, distanceToNextFragment * i));
 
