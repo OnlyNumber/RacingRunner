@@ -71,9 +71,9 @@ public class GameStarter : NetworkBehaviour
 
         foreach (var item in FindObjectsOfType<MovingForwardPlayer>())
         {
-            //Debug.Log(Runner.GetPlayerObject(item));
+            Debug.Log(item.GetComponent<NetworkObject>().Id);
 
-            item.GetComponent<MovingForwardPlayer>().ChangeBoostToNormal();
+            item.GetComponent<MovingForwardPlayer>().ChangeBoostToNormalStart();
         }
 
     }
