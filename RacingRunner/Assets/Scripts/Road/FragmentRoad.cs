@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 
@@ -13,34 +11,24 @@ public class FragmentRoad : NetworkBehaviour
 
 
 
-    private void Start()
-    {
-        foreach (var item in spawnWaves)
-        {
-            try
-            {
-                SpawnWave(item);
-            }
-            catch
-            {
 
-            }
-        }
-    }
-
-    public void SpawnWave(SpawnPoints spawnWave)
+    public void SpawnWave()
     {
         int randomNumber;
 
-        for (int i = 0; i < spawnWave.spawnPoints.Length; i++)
+        foreach (var spawnWave in spawnWaves)
         {
-            randomNumber = Random.Range(0, _obstacles.Length);
-
-            if (randomNumber != 0)
+            for (int i = 0; i < spawnWave.spawnPoints.Length; i++)
             {
-                Runner.Spawn(_obstacles[Random.Range(0, _obstacles.Length)], spawnWave.spawnPoints[i].position, spawnWave.spawnPoints[i].rotation);
+                randomNumber = Random.Range(0, _obstacles.Length);
+
+                if (randomNumber != 0)
+                {
+                    Runner.Spawn(_obstacles[randomNumber], spawnWave.spawnPoints[i].position, spawnWave.spawnPoints[i].rotation).transform.SetParent(transform);
+                }
             }
         }
+
     }
 
 }

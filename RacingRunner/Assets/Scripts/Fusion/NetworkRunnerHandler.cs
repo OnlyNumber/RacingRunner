@@ -46,6 +46,9 @@ public class NetworkRunnerHandler : MonoBehaviour
 
     protected virtual Task InitializeNetworkRunner(NetworkRunner runner, GameMode gameMode, string sessionName, byte[] connectionToken, NetAddress addres, SceneRef scene, Action<NetworkRunner> initialized)
     {
+
+        Debug.Log("InitializeNetworkRunner  TestSessionName");
+        
         var sceneManager = runner.GetComponents(typeof(MonoBehaviour)).OfType<INetworkSceneManager>().FirstOrDefault();
 
         if(sceneManager == null)

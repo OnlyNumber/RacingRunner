@@ -13,6 +13,8 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     private PlayerInputHandler characterInputHandler;
 
+    private GameStarter gameStarter;
+
     private Dictionary<PlayerRef, NetworkPlayer> _spawnedCharacters = new Dictionary<PlayerRef, NetworkPlayer>();
 
     private const string MENU_SCENE = "MenuScene";
@@ -20,18 +22,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
     private const string GAME_PLAY = "GamePlay";
 
     private SessionFinder _sessionFinder;
-
-    [ContextMenu("Find players")]
-    public void ShowDictionary()
-    {
-        Debug.Log("Start show players");
-
-        foreach (var item in _spawnedCharacters)
-        {
-            Debug.Log("pla");
-            Debug.Log(item.Key.PlayerId);
-        }
-    }
 
     public Dictionary<PlayerRef, NetworkPlayer> GetSpawnedPlayers()
     {
@@ -45,13 +35,32 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
         return spawnedCharactersCopy;
     }
 
-    private void Awake()
+    private void Start()
     {
         mapTokenIdWithNetworkPlayer = new Dictionary<int, NetworkPlayer>();
         
         _sessionFinder = FindObjectOfType<SessionFinder>(true);
+        
 
-        _sessionFinder.StartFinding();
+        gameStarter = FindObjectOfType<GameStarter>();
+
+        //Debug.Log("Start SpawnerPlayer" + gameStarter.gameObject.name);
+
+        
+
+        if(gameStarter == null)
+        {
+            Debug.Log("NUll gameStarter");
+            gameStarter = FindObjectOfType<GameStarter>();
+        }
+
+        /*if (gameStarter == null)
+        {
+            Debug.Log("NUll gameStarter2");
+        }*/
+
+        
+
     }
 
     int GetPlayerToken(NetworkRunner runner, PlayerRef player)
@@ -122,6 +131,16 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
                 _spawnedCharacters.Add(player, spawnedNetworkPlayer);
 
+                if(runner.SessionInfo.PlayerCount == 1)
+                {
+                    gameStarter = FindObjectOfType<GameStarter>();
+                    gameStarter.SpawnRoad();
+                }
+
+                if(runner.SessionInfo.PlayerCount == runner.SessionInfo.MaxPlayers)
+                {
+                    gameStarter.StartGame();
+                }
                 
             }
         }

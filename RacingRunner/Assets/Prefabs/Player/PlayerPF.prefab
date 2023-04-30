@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  speed: 3
+  speed: 0
   startSpeed: 20
   currentBoost: 0
   normalSpeedIncreacer: 20

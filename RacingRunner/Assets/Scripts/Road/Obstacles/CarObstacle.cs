@@ -15,7 +15,14 @@ public class CarObstacle : NetworkBehaviour, IObstacleEffect
     {
         movingForward.gameObject.layer = IObstacleEffect.UNTOUCHABLE_LAYER;
 
-        movingForward.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - teleportDistance);
+        if (transform.position.z - teleportDistance > 0)
+        {
+            movingForward.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - teleportDistance);
+        }
+        else
+        {
+            movingForward.transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+        }
 
         movingForward.ChangeCurrentSpeedMultiply(0);
 

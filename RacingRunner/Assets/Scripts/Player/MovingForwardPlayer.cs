@@ -25,21 +25,14 @@ public class MovingForwardPlayer : NetworkBehaviour
 
     private bool isBrake;
 
-    private void Start()
-    {
-        currentBoost = normalSpeedIncreacer;
-    }
-
     public override void FixedUpdateNetwork()
     {
         if (GetInput(out NetworkInputData networkInputData))
         {
             isBrake = networkInputData.isPressedBrake;
-
         }
 
         MoveForward();
-
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
@@ -59,14 +52,10 @@ public class MovingForwardPlayer : NetworkBehaviour
         }
         else
         {
-            //Debug.Log("speed" + speedIncreacer);
             if (speed < maxSpeed)
             {
                 if(currentBoost * Time.deltaTime < 1)
                 speed += currentBoost * Time.deltaTime; //* (maxSpeed / speed);
-
-                Debug.Log(currentBoost * Time.deltaTime);
-            
             }
             
         }
@@ -93,7 +82,7 @@ public class MovingForwardPlayer : NetworkBehaviour
 
     public void ChangeCurrentSpeedMultiply(float speedEffect)
     {
-        Debug.Log(speed + " * " + speedEffect + " = " + speed * speedEffect);
+        //Debug.Log(speed + " * " + speedEffect + " = " + speed * speedEffect);
 
         Rpc_RequestSpeed(speed * speedEffect);
     }

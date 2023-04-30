@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 7693924704077992630}
   - component: {fileID: 7693924704077992625}
   - component: {fileID: 5952791080173456147}
+  - component: {fileID: 8542601500789417975}
   m_Layer: 0
   m_Name: FragmentOfRoad
   m_TagString: Untagged
@@ -146,6 +147,7 @@ MonoBehaviour:
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 5952791080173456147}
+  - {fileID: 8542601500789417975}
   SimulationBehaviours: []
 --- !u!114 &5952791080173456147
 MonoBehaviour:
@@ -162,12 +164,39 @@ MonoBehaviour:
   _interpolationDataSource: 0
   spawnWaves:
   - {fileID: 6828354135573731555}
-  - {fileID: 0}
   _obstacles:
   - {fileID: 0}
   - {fileID: -2795032635149157715, guid: 4ab1f760ec2c0bb4fa9938da58f6480c, type: 3}
   - {fileID: 3228986452928886178, guid: e3d015ed7a593784cbe1aa9649ddd822, type: 3}
   - {fileID: 6469411458670722065, guid: b1542f756a99ea44c8163177dfb56798, type: 3}
+--- !u!114 &8542601500789417975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7693924704077992631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  InterpolationSpace: 0
+  InterpolationTarget: {fileID: 7875941136518773615}
+  InterpolateErrorCorrection: 1
+  InterpolatedErrorCorrectionSettings:
+    MinRate: 3.3
+    MaxRate: 10
+    PosBlendStart: 0.25
+    PosBlendEnd: 1
+    PosMinCorrection: 0.025
+    PosTeleportDistance: 2
+    RotBlendStart: 0.1
+    RotBlendEnd: 0.5
+    RotTeleportRadians: 1.5
+  UseLegacySharedModeInterpolation: 0
+  TargetInterpolationDelay: 0.03
 --- !u!1 &7693924704318908541
 GameObject:
   m_ObjectHideFlags: 0
