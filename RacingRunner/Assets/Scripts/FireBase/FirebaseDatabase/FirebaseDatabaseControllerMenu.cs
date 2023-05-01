@@ -26,8 +26,6 @@ public class FirebaseDatabaseControllerMenu : MonoBehaviour
     {
         dbRef = FirebaseDatabase.DefaultInstance.RootReference;
 
-        //Debug.Log(DataHolder.firebaseUser.UserId.ToString());
-
         StartCoroutine(LoadData(DataHolder.firebaseUser.UserId.ToString()));
 
         StartCoroutine(LoadAllUserByScore());

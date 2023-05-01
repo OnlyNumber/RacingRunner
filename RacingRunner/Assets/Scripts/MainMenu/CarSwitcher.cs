@@ -16,8 +16,6 @@ public class CarSwitcher : MonoBehaviour
     private void Start()
     {
         currentCar = 0;
-
-        //transform.Translate(Vector3.right + new Vector3(-15, 0));
     }
 
     
@@ -36,8 +34,6 @@ public class CarSwitcher : MonoBehaviour
 
             targetPosition = new Vector3(distanceBetweenCars * -currentCar, 0, -3);
         }
-        //transform.Translate(Vector3.right + new Vector3(15 *distance, 0));
-
     }
 
     

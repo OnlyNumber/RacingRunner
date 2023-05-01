@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 6523930284814447556}
   - component: {fileID: 5579475167716667003}
   - component: {fileID: 7085484484445709563}
+  - component: {fileID: 1615039430522930526}
   m_Layer: 7
   m_Name: PlayerPF
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_GameObject: {fileID: 3954143759811083748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2017599023672748728}
@@ -55,8 +56,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.7265515, y: 2.401599, z: 4.4064016}
-  m_Center: {x: -0.024052382, y: 1.1808655, z: 0.10523093}
+  m_Size: {x: 1.7673461, y: 1.4051659, z: 4.270839}
+  m_Center: {x: -0.05164679, y: 0.68264925, z: 0.037449203}
 --- !u!114 &5888264949734094863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +100,7 @@ MonoBehaviour:
   - {fileID: 1853324295705234214}
   - {fileID: 8389270902011061585}
   - {fileID: 5579475167716667003}
+  - {fileID: 1615039430522930526}
   SimulationBehaviours: []
 --- !u!114 &1168415741225615652
 MonoBehaviour:
@@ -238,6 +240,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movingForwardPlayer: {fileID: 6533040817349943296}
+--- !u!114 &1615039430522930526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3954143759811083748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 227c9d23030389e45b7482ea588fc82f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
 --- !u!1 &3980294915376147048
 GameObject:
   m_ObjectHideFlags: 0
