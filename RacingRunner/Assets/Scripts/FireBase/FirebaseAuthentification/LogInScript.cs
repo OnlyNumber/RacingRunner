@@ -83,6 +83,11 @@ public class LogInScript : MonoBehaviour
 
             DataHolder.firebaseUser = user;
 
+            if(DataHolder.firebaseUser == null)
+            {
+                Debug.Log("DataHolder.firebaseUser == null");
+            }
+
             Debug.Log(user.UserId);
 
             SceneManager.LoadScene(MENU_SCENE);

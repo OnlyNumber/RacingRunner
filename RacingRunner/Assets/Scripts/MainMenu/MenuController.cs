@@ -19,6 +19,9 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private GameObject _optionsUI;
 
+    [SerializeField]
+    private GameObject _avatarIconsUI;
+
     public void GoToMainUI()
     {
         HeadeAllPanels();
@@ -46,6 +49,11 @@ public class MenuController : MonoBehaviour
 
     }
 
+    public void GoToAvatarIconsUI()
+    {
+        HeadeAllPanels();
+        _avatarIconsUI.SetActive(true);
+    }
 
     public void SignOut()
     {
@@ -66,6 +74,7 @@ public class MenuController : MonoBehaviour
         _garageUI.SetActive(false);
         _raitingUI.SetActive(false);
         _optionsUI.SetActive(false);
+        _avatarIconsUI.SetActive(false);
     }
 
 

@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
-public class ColliderChecker : MonoBehaviour
+
+public class ColliderChecker : NetworkBehaviour
 {
     private const int OBSTACLE_LAYER = 6;
 
@@ -17,8 +19,12 @@ public class ColliderChecker : MonoBehaviour
     [SerializeField]
     private Finish finish;
 
+    //public bool isOiled;
+
     private void OnTriggerEnter(Collider other)
     {
+        
+
         switch (other.gameObject.layer)
         {
             case OBSTACLE_LAYER:
