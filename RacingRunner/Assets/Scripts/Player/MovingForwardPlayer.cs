@@ -97,9 +97,9 @@ public class MovingForwardPlayer : NetworkBehaviour
     [Rpc(RpcSources.All, RpcTargets.All)]
     private void Rpc_RequestSpeedBoostStart(float changeSpeedIncreace)
     {
+        //Debug.Log("Rpc_RequestSpeedBoostStart");
 
         currentBoost = changeSpeedIncreace;
-
     }
 
 

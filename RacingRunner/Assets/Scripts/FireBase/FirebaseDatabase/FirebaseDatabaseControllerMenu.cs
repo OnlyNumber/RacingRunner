@@ -20,6 +20,9 @@ public class FirebaseDatabaseControllerMenu : MonoBehaviour
     [SerializeField]
     private LeaderBoardItem _leaderBoardItem;
 
+    [SerializeField]
+    private CarSwitcher carSwitcher;
+
     public UserData userDataTransfer { private set; get; }
 
     private void Start()
@@ -123,6 +126,9 @@ public class FirebaseDatabaseControllerMenu : MonoBehaviour
             coinsText.text = "Coins: " + userDataTransfer.goldCoins.ToString();
 
             avatarController.SetAvatarStart(userDataTransfer.avatarIcon);
+
+            carSwitcher.Move(userDataTransfer.car);
+
             //nameText.text = userDataTransfer.name; 
 
             //scoreText.text = userDataTransfer.score.ToString();

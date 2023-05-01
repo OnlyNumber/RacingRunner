@@ -19,7 +19,8 @@ public class GameStarter : NetworkBehaviour
     [SerializeField]
     private int _roadLegth;
 
-    
+    [SerializeField]
+    private InterfaceController interfaceController;
 
     private List<FragmentRoad> road = new List<FragmentRoad>();
 
@@ -28,9 +29,6 @@ public class GameStarter : NetworkBehaviour
     {
         Debug.Log("Spawn road");
 
-        //while (true)
-        //{
-
             for (int i = 1; i < _roadLegth; i++)
             {
                 if (Runner == null)
@@ -38,9 +36,6 @@ public class GameStarter : NetworkBehaviour
                     Debug.Log("Runner == null");
                 }
 
-                //Runner.Spawn(_roadFragment, new Vector3(0, 0, _distanceToNextFragment * i));
-
-                //road.Add();
                 road.Add(Runner.Spawn(_roadFragment, new Vector3(0, 0, _distanceToNextFragment * i)));
             }
 
@@ -51,10 +46,13 @@ public class GameStarter : NetworkBehaviour
         //}
     }
 
-    /*IEnumerator st()
+
+    public IEnumerator StartCountdown()
     {
-        yield return new WaitUntil(Runner != null);
-    }*/
+        yield return new WaitForSeconds(5);
+
+        StartGame();
+    }
 
     [ContextMenu("StartGame")]
     public void StartGame()
@@ -64,16 +62,21 @@ public class GameStarter : NetworkBehaviour
             item.SpawnWave();
         }
 
-        if (Runner == null)
-        {
-            Debug.Log("Runner == null");
-        }
+        List<MovingForwardPlayer> movingPlayers = new List<MovingForwardPlayer>(); 
 
         foreach (var item in FindObjectsOfType<MovingForwardPlayer>())
         {
-            Debug.Log(item.GetComponent<NetworkObject>().Id);
+            movingPlayers.Add(item);
+        }
 
-            item.GetComponent<MovingForwardPlayer>().ChangeBoostToNormalStart();
+
+        foreach (var localPlayer in movingPlayers)
+        {
+            localPlayer.GetComponent<MovingForwardPlayer>().ChangeBoostToNormalStart();
+
+            localPlayer.GetComponent<InterfaceController>().Rpc_Init();
+
+
         }
 
     }

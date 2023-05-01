@@ -1255,6 +1255,7 @@ MonoBehaviour:
   _finishFragment: {fileID: 6118392707285798342, guid: 207ae15ceb2d0b043b16b298d1d084e4, type: 3}
   _roadFragment: {fileID: 5952791080173456147, guid: 755d2d85eaf95144f849aec863323ba9, type: 3}
   _roadLegth: 50
+  interfaceController: {fileID: 0}
 --- !u!1 &1144491089
 GameObject:
   m_ObjectHideFlags: 0

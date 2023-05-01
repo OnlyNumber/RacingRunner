@@ -13,11 +13,10 @@ public class CarSwitcher : MonoBehaviour
 
     private Vector3 targetPosition = new Vector3(0, 0, -3);
 
-    private void Start()
-    {
-        currentCar = 0;
-    }
+    [SerializeField]
+    private FirebaseDatabaseControllerMenu _firebase;
 
+    
     
 
     private void Update()
@@ -34,10 +33,21 @@ public class CarSwitcher : MonoBehaviour
 
             targetPosition = new Vector3(distanceBetweenCars * -currentCar, 0, -3);
         }
+
+        ChangeIcon();
     }
 
-    
+    public void ChangeIcon()
+    {
+        
 
-    
+        _firebase.ChangeCurrentUser(_firebase.userDataTransfer.id, _firebase.userDataTransfer.nickName, _firebase.userDataTransfer.goldCoins, _firebase.userDataTransfer.avatarIcon, _firebase.userDataTransfer.bestTime, currentCar);
+
+        _firebase.SaveData(_firebase.userDataTransfer.id, _firebase.userDataTransfer.nickName, _firebase.userDataTransfer.goldCoins, _firebase.userDataTransfer.avatarIcon, _firebase.userDataTransfer.bestTime, _firebase.userDataTransfer.car);
+
+    }
+
+
+
 
 }

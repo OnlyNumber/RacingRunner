@@ -15,7 +15,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     private GameStarter gameStarter;
 
-    private Dictionary<PlayerRef, NetworkPlayer> _spawnedCharacters = new Dictionary<PlayerRef, NetworkPlayer>();
+    public Dictionary<PlayerRef, NetworkPlayer> _spawnedCharacters = new Dictionary<PlayerRef, NetworkPlayer>();
 
     private const string MENU_SCENE = "MenuScene";
 
@@ -90,7 +90,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
         mapTokenIdWithNetworkPlayer.Add(token, networkPlayer);
     }
 
-    public void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
+    public virtual void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
         if(runner.IsServer)
         {
@@ -122,7 +122,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
                 if(runner.SessionInfo.PlayerCount == runner.SessionInfo.MaxPlayers)
                 {
-                    gameStarter.StartGame();
+                    StartCoroutine(gameStarter.StartCountdown());
                 }
                 
             }

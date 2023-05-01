@@ -1031,360 +1031,390 @@ extern void PlayerStatus__ctor_m20BAAC8C03626832727B7F2080F4675639B1E1B2 (void);
 extern void PlayerStatus_CopyBackingFieldsToState_mE510573222908FA52BF00F424F5F02E3FE01D796 (void);
 // 0x0000020B System.Void PlayerStatus::CopyStateToBackingFields()
 extern void PlayerStatus_CopyStateToBackingFields_m9E0CFEF918DF7D7EB838ABCC04C200707B85A941 (void);
-// 0x0000020C System.Void InterfaceController::Start()
+// 0x0000020C Fusion.NetworkBool InterfaceController::get_isStart()
+extern void InterfaceController_get_isStart_m2210E3D814CBF530ADBB00B0824FF9FE90EC0473 (void);
+// 0x0000020D System.Void InterfaceController::set_isStart(Fusion.NetworkBool)
+extern void InterfaceController_set_isStart_m75FAB2A4E03C9B227262CCF47FA52033D39F6FB3 (void);
+// 0x0000020E System.Void InterfaceController::Start()
 extern void InterfaceController_Start_m82F90A83DEB30CEB3B2384EB618B36D7DDBA1251 (void);
-// 0x0000020D System.Void InterfaceController::Update()
+// 0x0000020F System.Void InterfaceController::Update()
 extern void InterfaceController_Update_m0B1FAB5B22F31A48BF7B048432D65D9BFE03AE90 (void);
-// 0x0000020E System.Void InterfaceController::.ctor()
+// 0x00000210 System.Void InterfaceController::UpdateTimer()
+extern void InterfaceController_UpdateTimer_m58EBDD1D2789406822FF0E20F53D628FCE1FADB0 (void);
+// 0x00000211 System.Void InterfaceController::Find_AnotherPlayer()
+extern void InterfaceController_Find_AnotherPlayer_m430CEFED356FB4815DEE3144E60016D0355D02D3 (void);
+// 0x00000212 System.Void InterfaceController::Rpc_Init()
+extern void InterfaceController_Rpc_Init_m5B2AA49C3E4489A040B1E58BADE00787BB914BC1 (void);
+// 0x00000213 System.Void InterfaceController::OnChangeMethode(Fusion.Changed`1<InterfaceController>)
+extern void InterfaceController_OnChangeMethode_mD770D2ADB3FDAAFB6B912C1ED1174CCF6335F886 (void);
+// 0x00000214 System.Void InterfaceController::OnChangeMethode()
+extern void InterfaceController_OnChangeMethode_m0AEDD87376B94656416C9C550B34CCCF0A8F4937 (void);
+// 0x00000215 System.Void InterfaceController::.ctor()
 extern void InterfaceController__ctor_m042275A459A1B958C9D1D4FD75174546AB666F55 (void);
-// 0x0000020F System.Void InterfaceController::CopyBackingFieldsToState(System.Boolean)
+// 0x00000216 System.Void InterfaceController::CopyBackingFieldsToState(System.Boolean)
 extern void InterfaceController_CopyBackingFieldsToState_mB0B5A83507AFC59FF8176FFF72AD222754B92B1C (void);
-// 0x00000210 System.Void InterfaceController::CopyStateToBackingFields()
+// 0x00000217 System.Void InterfaceController::CopyStateToBackingFields()
 extern void InterfaceController_CopyStateToBackingFields_m32ACAC04B66E09BA40D5F557F5A96B3D5F3E7746 (void);
-// 0x00000211 System.Void FragmentRoad::SpawnWave()
+// 0x00000218 System.Void InterfaceController::Rpc_Init@Invoker(Fusion.NetworkBehaviour,Fusion.SimulationMessage*)
+extern void InterfaceController_Rpc_InitU40Invoker_m9F4FDBFA7C6911745EC4666A02C4E328D9C1C82C (void);
+// 0x00000219 System.Void FragmentRoad::SpawnWave()
 extern void FragmentRoad_SpawnWave_mD4ECCE61C3E7E8CEC218A7F1580FA82E96B36AB2 (void);
-// 0x00000212 System.Void FragmentRoad::.ctor()
+// 0x0000021A System.Void FragmentRoad::.ctor()
 extern void FragmentRoad__ctor_mE88D37A366B9199258BD4A27F24AA47A2231608F (void);
-// 0x00000213 System.Void FragmentRoad::CopyBackingFieldsToState(System.Boolean)
+// 0x0000021B System.Void FragmentRoad::CopyBackingFieldsToState(System.Boolean)
 extern void FragmentRoad_CopyBackingFieldsToState_mCE6A502EC03D8BE724B503E4943EEC5F70D81224 (void);
-// 0x00000214 System.Void FragmentRoad::CopyStateToBackingFields()
+// 0x0000021C System.Void FragmentRoad::CopyStateToBackingFields()
 extern void FragmentRoad_CopyStateToBackingFields_mEB3D39E846672079FFC69A12B311918C60FB37AF (void);
-// 0x00000215 System.Void GameStarter::SpawnRoad()
+// 0x0000021D System.Void GameStarter::SpawnRoad()
 extern void GameStarter_SpawnRoad_m30442EE20022CC5DBF2B40C165DEA86E0315C640 (void);
-// 0x00000216 System.Void GameStarter::StartGame()
+// 0x0000021E System.Collections.IEnumerator GameStarter::StartCountdown()
+extern void GameStarter_StartCountdown_m3099E7633D488141D71A8DFDE1807D767253F7F0 (void);
+// 0x0000021F System.Void GameStarter::StartGame()
 extern void GameStarter_StartGame_m49A307203BCB9A6F36DB0F5F91C7EB3051E7223D (void);
-// 0x00000217 System.Void GameStarter::.ctor()
+// 0x00000220 System.Void GameStarter::.ctor()
 extern void GameStarter__ctor_m3208D2AE4620259FF6F2211930931EB0E54D3904 (void);
-// 0x00000218 System.Void GameStarter::CopyBackingFieldsToState(System.Boolean)
+// 0x00000221 System.Void GameStarter::CopyBackingFieldsToState(System.Boolean)
 extern void GameStarter_CopyBackingFieldsToState_m10F53F2A788B4B31A2F8E90987847B07597D3C77 (void);
-// 0x00000219 System.Void GameStarter::CopyStateToBackingFields()
+// 0x00000222 System.Void GameStarter::CopyStateToBackingFields()
 extern void GameStarter_CopyStateToBackingFields_m06938AAD8A3F18136A58DDD158A5C50BE32C9A0B (void);
-// 0x0000021A System.Collections.IEnumerator CarObstacle::ObstacleEffect(MovingForwardPlayer)
+// 0x00000223 System.Void GameStarter/<StartCountdown>d__7::.ctor(System.Int32)
+extern void U3CStartCountdownU3Ed__7__ctor_m13DAB9601F084D0B0EC09232E7CBDEFDF3F85AFE (void);
+// 0x00000224 System.Void GameStarter/<StartCountdown>d__7::System.IDisposable.Dispose()
+extern void U3CStartCountdownU3Ed__7_System_IDisposable_Dispose_m6D1FF073D285E912A6AE64995900D11EB9B57E5B (void);
+// 0x00000225 System.Boolean GameStarter/<StartCountdown>d__7::MoveNext()
+extern void U3CStartCountdownU3Ed__7_MoveNext_m0CA3275E9E9104A2344E466B873EB6741B9B9579 (void);
+// 0x00000226 System.Object GameStarter/<StartCountdown>d__7::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CStartCountdownU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5106190901F6E1E7E1959D4273C27BB4DD7D2BE2 (void);
+// 0x00000227 System.Void GameStarter/<StartCountdown>d__7::System.Collections.IEnumerator.Reset()
+extern void U3CStartCountdownU3Ed__7_System_Collections_IEnumerator_Reset_mECD75B3235A777296CD692DE0751B86CDD2DDC90 (void);
+// 0x00000228 System.Object GameStarter/<StartCountdown>d__7::System.Collections.IEnumerator.get_Current()
+extern void U3CStartCountdownU3Ed__7_System_Collections_IEnumerator_get_Current_mFAACB6B2FAE40788D712F2A40D758210A87319BA (void);
+// 0x00000229 System.Collections.IEnumerator CarObstacle::ObstacleEffect(MovingForwardPlayer)
 extern void CarObstacle_ObstacleEffect_mA1C953875FD6E4C8448F66A47DA4F3F7A6A20836 (void);
-// 0x0000021B System.Void CarObstacle::.ctor()
+// 0x0000022A System.Void CarObstacle::.ctor()
 extern void CarObstacle__ctor_mE08E117D449FB4BFEF7ADF12AF1856E25AF6A594 (void);
-// 0x0000021C System.Void CarObstacle::CopyBackingFieldsToState(System.Boolean)
+// 0x0000022B System.Void CarObstacle::CopyBackingFieldsToState(System.Boolean)
 extern void CarObstacle_CopyBackingFieldsToState_mE3A5CAB87A6FE709F1F0A37CA7B60132DDF9939F (void);
-// 0x0000021D System.Void CarObstacle::CopyStateToBackingFields()
+// 0x0000022C System.Void CarObstacle::CopyStateToBackingFields()
 extern void CarObstacle_CopyStateToBackingFields_m2C7028DEC5AF9C06200C7859B46F1C15DBD6E3CF (void);
-// 0x0000021E System.Void CarObstacle/<ObstacleEffect>d__2::.ctor(System.Int32)
+// 0x0000022D System.Void CarObstacle/<ObstacleEffect>d__2::.ctor(System.Int32)
 extern void U3CObstacleEffectU3Ed__2__ctor_mE2CF33260B3294ED6FFED752FFBB7A105A747495 (void);
-// 0x0000021F System.Void CarObstacle/<ObstacleEffect>d__2::System.IDisposable.Dispose()
+// 0x0000022E System.Void CarObstacle/<ObstacleEffect>d__2::System.IDisposable.Dispose()
 extern void U3CObstacleEffectU3Ed__2_System_IDisposable_Dispose_m8B3DDB752C60AFB7AD56ED41C06A6D0E012D5B3F (void);
-// 0x00000220 System.Boolean CarObstacle/<ObstacleEffect>d__2::MoveNext()
+// 0x0000022F System.Boolean CarObstacle/<ObstacleEffect>d__2::MoveNext()
 extern void U3CObstacleEffectU3Ed__2_MoveNext_mCC0CB22003D09CB6E166782BDC306347AF22E216 (void);
-// 0x00000221 System.Object CarObstacle/<ObstacleEffect>d__2::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000230 System.Object CarObstacle/<ObstacleEffect>d__2::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CObstacleEffectU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m7AB5C23A656F34D935D06640CB6F88B8FCA8A9C2 (void);
-// 0x00000222 System.Void CarObstacle/<ObstacleEffect>d__2::System.Collections.IEnumerator.Reset()
+// 0x00000231 System.Void CarObstacle/<ObstacleEffect>d__2::System.Collections.IEnumerator.Reset()
 extern void U3CObstacleEffectU3Ed__2_System_Collections_IEnumerator_Reset_mB3327D4CA59204EB1733348BBA1607896EAEA678 (void);
-// 0x00000223 System.Object CarObstacle/<ObstacleEffect>d__2::System.Collections.IEnumerator.get_Current()
+// 0x00000232 System.Object CarObstacle/<ObstacleEffect>d__2::System.Collections.IEnumerator.get_Current()
 extern void U3CObstacleEffectU3Ed__2_System_Collections_IEnumerator_get_Current_m56799FBFEAB51F25DA01C6B020EB554A5AF73915 (void);
-// 0x00000224 System.Collections.IEnumerator IObstacleEffect::ObstacleEffect(MovingForwardPlayer)
-// 0x00000225 System.Void MovingForwardObstacle::FixedUpdateNetwork()
+// 0x00000233 System.Collections.IEnumerator IObstacleEffect::ObstacleEffect(MovingForwardPlayer)
+// 0x00000234 System.Void MovingForwardObstacle::FixedUpdateNetwork()
 extern void MovingForwardObstacle_FixedUpdateNetwork_mB19CDD27A0FEA4EFE6518490148CEABE03A2C88A (void);
-// 0x00000226 System.Void MovingForwardObstacle::.ctor()
+// 0x00000235 System.Void MovingForwardObstacle::.ctor()
 extern void MovingForwardObstacle__ctor_m11DB6B21F72740508CFDDEA47DE21B19F8E1F328 (void);
-// 0x00000227 System.Void MovingForwardObstacle::CopyBackingFieldsToState(System.Boolean)
+// 0x00000236 System.Void MovingForwardObstacle::CopyBackingFieldsToState(System.Boolean)
 extern void MovingForwardObstacle_CopyBackingFieldsToState_mEAA3E338E616DCCE3B2FBA848A3D689B157D8CE4 (void);
-// 0x00000228 System.Void MovingForwardObstacle::CopyStateToBackingFields()
+// 0x00000237 System.Void MovingForwardObstacle::CopyStateToBackingFields()
 extern void MovingForwardObstacle_CopyStateToBackingFields_m78EE143EC988667901FE4456AE57DE77A35D757C (void);
-// 0x00000229 System.Collections.IEnumerator NitroObstacle::ObstacleEffect(MovingForwardPlayer)
+// 0x00000238 System.Collections.IEnumerator NitroObstacle::ObstacleEffect(MovingForwardPlayer)
 extern void NitroObstacle_ObstacleEffect_m4DE47DE02C4AC06A6949C3398664ED7178FC731B (void);
-// 0x0000022A System.Void NitroObstacle::.ctor()
+// 0x00000239 System.Void NitroObstacle::.ctor()
 extern void NitroObstacle__ctor_m27782E0E3C3F604250ADF2509DB98A19EAD07B38 (void);
-// 0x0000022B System.Void NitroObstacle::CopyBackingFieldsToState(System.Boolean)
+// 0x0000023A System.Void NitroObstacle::CopyBackingFieldsToState(System.Boolean)
 extern void NitroObstacle_CopyBackingFieldsToState_m964FC01AAE48938682089F69CD26DE0C74EEB55E (void);
-// 0x0000022C System.Void NitroObstacle::CopyStateToBackingFields()
+// 0x0000023B System.Void NitroObstacle::CopyStateToBackingFields()
 extern void NitroObstacle_CopyStateToBackingFields_m53BF84F14C4EDB892B0D07E7D2D4D443AB048777 (void);
-// 0x0000022D System.Void NitroObstacle/<ObstacleEffect>d__2::.ctor(System.Int32)
+// 0x0000023C System.Void NitroObstacle/<ObstacleEffect>d__2::.ctor(System.Int32)
 extern void U3CObstacleEffectU3Ed__2__ctor_mBF9FCBB6B6F3AD1BC1ADA2CBDA7186B404BC814B (void);
-// 0x0000022E System.Void NitroObstacle/<ObstacleEffect>d__2::System.IDisposable.Dispose()
+// 0x0000023D System.Void NitroObstacle/<ObstacleEffect>d__2::System.IDisposable.Dispose()
 extern void U3CObstacleEffectU3Ed__2_System_IDisposable_Dispose_m0C317727B08C7EDDA76F60FAAB954539D684A698 (void);
-// 0x0000022F System.Boolean NitroObstacle/<ObstacleEffect>d__2::MoveNext()
+// 0x0000023E System.Boolean NitroObstacle/<ObstacleEffect>d__2::MoveNext()
 extern void U3CObstacleEffectU3Ed__2_MoveNext_m1A75BA268A551574AC814972CB3736B75193A1F3 (void);
-// 0x00000230 System.Object NitroObstacle/<ObstacleEffect>d__2::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000023F System.Object NitroObstacle/<ObstacleEffect>d__2::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CObstacleEffectU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mAE6E1F87589024C51482DF65094067429B28415C (void);
-// 0x00000231 System.Void NitroObstacle/<ObstacleEffect>d__2::System.Collections.IEnumerator.Reset()
+// 0x00000240 System.Void NitroObstacle/<ObstacleEffect>d__2::System.Collections.IEnumerator.Reset()
 extern void U3CObstacleEffectU3Ed__2_System_Collections_IEnumerator_Reset_mE8DAA1C441831733A85BA1A2F82E745706AF1FE2 (void);
-// 0x00000232 System.Object NitroObstacle/<ObstacleEffect>d__2::System.Collections.IEnumerator.get_Current()
+// 0x00000241 System.Object NitroObstacle/<ObstacleEffect>d__2::System.Collections.IEnumerator.get_Current()
 extern void U3CObstacleEffectU3Ed__2_System_Collections_IEnumerator_get_Current_mFB1CECC86CFD4E37536D912F3A6AEC2883B6C0D4 (void);
-// 0x00000233 System.Collections.IEnumerator OilObstacle::ObstacleEffect(MovingForwardPlayer)
+// 0x00000242 System.Collections.IEnumerator OilObstacle::ObstacleEffect(MovingForwardPlayer)
 extern void OilObstacle_ObstacleEffect_m44E12261D4082DA1D4DEA75611F0F194AC7DCD91 (void);
-// 0x00000234 System.Void OilObstacle::.ctor()
+// 0x00000243 System.Void OilObstacle::.ctor()
 extern void OilObstacle__ctor_m7C1DEC4AE36FCDDCD006F8AB0169EEC26DFB3CAA (void);
-// 0x00000235 System.Void OilObstacle::CopyBackingFieldsToState(System.Boolean)
+// 0x00000244 System.Void OilObstacle::CopyBackingFieldsToState(System.Boolean)
 extern void OilObstacle_CopyBackingFieldsToState_m9AEA7DBED6547614ABC7EDBF4297A1ECC243C1E9 (void);
-// 0x00000236 System.Void OilObstacle::CopyStateToBackingFields()
+// 0x00000245 System.Void OilObstacle::CopyStateToBackingFields()
 extern void OilObstacle_CopyStateToBackingFields_m7DC343FEDDF9A2BAE5E61979296D1F6A08AD81DF (void);
-// 0x00000237 System.Void OilObstacle/<ObstacleEffect>d__1::.ctor(System.Int32)
+// 0x00000246 System.Void OilObstacle/<ObstacleEffect>d__1::.ctor(System.Int32)
 extern void U3CObstacleEffectU3Ed__1__ctor_mC3E4CA6D280FE18F125802B36BD4DF2C5BB9151E (void);
-// 0x00000238 System.Void OilObstacle/<ObstacleEffect>d__1::System.IDisposable.Dispose()
+// 0x00000247 System.Void OilObstacle/<ObstacleEffect>d__1::System.IDisposable.Dispose()
 extern void U3CObstacleEffectU3Ed__1_System_IDisposable_Dispose_mAFE7124756216D2320A1EE1E38B26EE2416458AB (void);
-// 0x00000239 System.Boolean OilObstacle/<ObstacleEffect>d__1::MoveNext()
+// 0x00000248 System.Boolean OilObstacle/<ObstacleEffect>d__1::MoveNext()
 extern void U3CObstacleEffectU3Ed__1_MoveNext_mF1C0EA7DE875264A5FEF8C85D384A469E9243C15 (void);
-// 0x0000023A System.Object OilObstacle/<ObstacleEffect>d__1::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x00000249 System.Object OilObstacle/<ObstacleEffect>d__1::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CObstacleEffectU3Ed__1_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mB67D4E7E9B7BAFDAC1B31D25FCAA8F5358355861 (void);
-// 0x0000023B System.Void OilObstacle/<ObstacleEffect>d__1::System.Collections.IEnumerator.Reset()
+// 0x0000024A System.Void OilObstacle/<ObstacleEffect>d__1::System.Collections.IEnumerator.Reset()
 extern void U3CObstacleEffectU3Ed__1_System_Collections_IEnumerator_Reset_mC2F93441C01010DA9E8859CD2A3DF7F8894B552E (void);
-// 0x0000023C System.Object OilObstacle/<ObstacleEffect>d__1::System.Collections.IEnumerator.get_Current()
+// 0x0000024B System.Object OilObstacle/<ObstacleEffect>d__1::System.Collections.IEnumerator.get_Current()
 extern void U3CObstacleEffectU3Ed__1_System_Collections_IEnumerator_get_Current_m03D8BC1D478F889FA0A606F6F5E23FDAFE8C4959 (void);
-// 0x0000023D System.Void SpawnPoints::.ctor()
+// 0x0000024C System.Void SpawnPoints::.ctor()
 extern void SpawnPoints__ctor_mA57A9BB93729788FEA6B771B20F33D7CBCA0E22C (void);
-// 0x0000023E System.Void TestSessionSecret::SecretTask()
+// 0x0000024D System.Void TestSessionSecret::SecretTask()
 extern void TestSessionSecret_SecretTask_mD8855BFF2976EDFCD4E5AD233C055566FDAD4AEB (void);
-// 0x0000023F System.Void TestSessionSecret::SecretTaskOff()
+// 0x0000024E System.Void TestSessionSecret::SecretTaskOff()
 extern void TestSessionSecret_SecretTaskOff_m203E97F782B513FCEE7FFB9331EC43597F1B94DE (void);
-// 0x00000240 System.Void TestSessionSecret::.ctor()
+// 0x0000024F System.Void TestSessionSecret::.ctor()
 extern void TestSessionSecret__ctor_m0CC3671BE70578F3059F388E5BFF94217B337036 (void);
-// 0x00000241 System.Void TestSessionSecret::CopyBackingFieldsToState(System.Boolean)
+// 0x00000250 System.Void TestSessionSecret::CopyBackingFieldsToState(System.Boolean)
 extern void TestSessionSecret_CopyBackingFieldsToState_m3621C24A3483ADF6377E55074887627BF05DD0E6 (void);
-// 0x00000242 System.Void TestSessionSecret::CopyStateToBackingFields()
+// 0x00000251 System.Void TestSessionSecret::CopyStateToBackingFields()
 extern void TestSessionSecret_CopyStateToBackingFields_mE6225AF4E684D0EFA6B7718C927D1098FE7B0707 (void);
-// 0x00000243 System.Void AvatarController::Start()
+// 0x00000252 System.Void AvatarController::Start()
 extern void AvatarController_Start_m9FBAF9CED8B124C94EB4AD6716CAAA703C55CDA4 (void);
-// 0x00000244 System.Void AvatarController::SetAvatarStart(System.Int32)
+// 0x00000253 System.Void AvatarController::SetAvatarStart(System.Int32)
 extern void AvatarController_SetAvatarStart_m5FF4C8464956EF0416554690AD632205DF39AE01 (void);
-// 0x00000245 System.Void AvatarController::.ctor()
+// 0x00000254 System.Void AvatarController::.ctor()
 extern void AvatarController__ctor_m68C14ECE7F9855E5C399DF6E2EAFE191385A24E0 (void);
-// 0x00000246 System.Void ButtonAvatarChanger::Initialize(UnityEngine.Sprite,UnityEngine.UI.Image,FirebaseDatabaseControllerMenu,System.Int32)
+// 0x00000255 System.Void ButtonAvatarChanger::Initialize(UnityEngine.Sprite,UnityEngine.UI.Image,FirebaseDatabaseControllerMenu,System.Int32)
 extern void ButtonAvatarChanger_Initialize_mD4711EF0DDB3084E7CB7CD462D1D97EA186F78C7 (void);
-// 0x00000247 System.Void ButtonAvatarChanger::ChangeIcon()
+// 0x00000256 System.Void ButtonAvatarChanger::ChangeIcon()
 extern void ButtonAvatarChanger_ChangeIcon_m6E42913FB81302E17550400C4068C1F669E84B07 (void);
-// 0x00000248 System.Void ButtonAvatarChanger::.ctor()
+// 0x00000257 System.Void ButtonAvatarChanger::.ctor()
 extern void ButtonAvatarChanger__ctor_mE282891C83B4CBCF66226794797D318A85EB3161 (void);
-// 0x00000249 System.Void LeaderBoardItem::.ctor()
+// 0x00000258 System.Void LeaderBoardItem::.ctor()
 extern void LeaderBoardItem__ctor_mF316693F4995FAF523F6596A5A17297040B4C8F5 (void);
-// 0x0000024A System.Void OptionsManager::SetActiveOptions(System.Boolean)
+// 0x00000259 System.Void OptionsManager::SetActiveOptions(System.Boolean)
 extern void OptionsManager_SetActiveOptions_m2CF0B01F9691919F50976F8B271490501582B00F (void);
-// 0x0000024B System.Void OptionsManager::LeaveGame()
+// 0x0000025A System.Void OptionsManager::LeaveGame()
 extern void OptionsManager_LeaveGame_m63896D90F0B96E15ABFBA6C5A96D07984CA14717 (void);
-// 0x0000024C System.Void OptionsManager::.ctor()
+// 0x0000025B System.Void OptionsManager::.ctor()
 extern void OptionsManager__ctor_m6A3C5E29B9DB452B284588BDD82449F5EDEF0336 (void);
-// 0x0000024D System.Void AxleInfo::.ctor()
+// 0x0000025C System.Void AxleInfo::.ctor()
 extern void AxleInfo__ctor_m6AEBB35270D53694D8D51B412507D9A53E7CFC08 (void);
-// 0x0000024E System.Void SimpleCarController::ApplyLocalPositionToVisuals(UnityEngine.WheelCollider)
+// 0x0000025D System.Void SimpleCarController::ApplyLocalPositionToVisuals(UnityEngine.WheelCollider)
 extern void SimpleCarController_ApplyLocalPositionToVisuals_m35D13CADFBD0D8CAE6FBE9B839AF48C841E83BDD (void);
-// 0x0000024F System.Void SimpleCarController::FixedUpdate()
+// 0x0000025E System.Void SimpleCarController::FixedUpdate()
 extern void SimpleCarController_FixedUpdate_m3A304260EEB49E004B9EA979D1E3F6BBC5972268 (void);
-// 0x00000250 System.Void SimpleCarController::.ctor()
+// 0x0000025F System.Void SimpleCarController::.ctor()
 extern void SimpleCarController__ctor_mA98893572317F3EC1A30301D0A0C2BD2FB6ECFB9 (void);
-// 0x00000251 System.Void Fusion.FusionRuntimeCheck::RuntimeCheck()
+// 0x00000260 System.Void Fusion.FusionRuntimeCheck::RuntimeCheck()
 extern void FusionRuntimeCheck_RuntimeCheck_m6358CB373141B490D879449D97F0E0F0E9256E7C (void);
-// 0x00000252 System.Func`2<System.Object,System.Int32> Fusion.FusionUnityLogger::get_GetColor()
+// 0x00000261 System.Func`2<System.Object,System.Int32> Fusion.FusionUnityLogger::get_GetColor()
 extern void FusionUnityLogger_get_GetColor_mEEAFC347BD6451A1369D7A57EDAF453E2FCE033B (void);
-// 0x00000253 System.Void Fusion.FusionUnityLogger::set_GetColor(System.Func`2<System.Object,System.Int32>)
+// 0x00000262 System.Void Fusion.FusionUnityLogger::set_GetColor(System.Func`2<System.Object,System.Int32>)
 extern void FusionUnityLogger_set_GetColor_m91F84BF1AEB7B3FB6A8B0E88DC68F2A261A9E58A (void);
-// 0x00000254 System.Void Fusion.FusionUnityLogger::.ctor()
+// 0x00000263 System.Void Fusion.FusionUnityLogger::.ctor()
 extern void FusionUnityLogger__ctor_m0287DD77CE2EF2B6BA6C1E8B0AA63BCC70049904 (void);
-// 0x00000255 System.Void Fusion.FusionUnityLogger::Log(Fusion.LogType,System.String,T&,System.String)
-// 0x00000256 System.Void Fusion.FusionUnityLogger::LogException(System.String,T&,System.Exception)
-// 0x00000257 System.Int32 Fusion.FusionUnityLogger::GetRandomColor(System.Int32)
+// 0x00000264 System.Void Fusion.FusionUnityLogger::Log(Fusion.LogType,System.String,T&,System.String)
+// 0x00000265 System.Void Fusion.FusionUnityLogger::LogException(System.String,T&,System.Exception)
+// 0x00000266 System.Int32 Fusion.FusionUnityLogger::GetRandomColor(System.Int32)
 extern void FusionUnityLogger_GetRandomColor_m23D8E545D94FFA41142600B60C309D90770F5C9E (void);
-// 0x00000258 System.Int32 Fusion.FusionUnityLogger::GetRandomColor(System.Int32,UnityEngine.Color32,UnityEngine.Color32,UnityEngine.Color32)
+// 0x00000267 System.Int32 Fusion.FusionUnityLogger::GetRandomColor(System.Int32,UnityEngine.Color32,UnityEngine.Color32,UnityEngine.Color32)
 extern void FusionUnityLogger_GetRandomColor_m94CAFE5848B0E399DB4A87B965216F89CF8DE81B (void);
-// 0x00000259 System.Int32 Fusion.FusionUnityLogger::Color32ToRGB24(UnityEngine.Color32)
+// 0x00000268 System.Int32 Fusion.FusionUnityLogger::Color32ToRGB24(UnityEngine.Color32)
 extern void FusionUnityLogger_Color32ToRGB24_m9246A5C5346D725FF475588ECB6A0B49C6E8CC87 (void);
-// 0x0000025A System.String Fusion.FusionUnityLogger::Color32ToRGBString(UnityEngine.Color32)
+// 0x00000269 System.String Fusion.FusionUnityLogger::Color32ToRGBString(UnityEngine.Color32)
 extern void FusionUnityLogger_Color32ToRGBString_m2B8F683E20DA62F1C35E55FDB831B256E823F23D (void);
-// 0x0000025B System.Void Fusion.FusionUnityLogger::Initialize()
+// 0x0000026A System.Void Fusion.FusionUnityLogger::Initialize()
 extern void FusionUnityLogger_Initialize_m5DDDBA45EAF98A0390F27110EBD088C5D44CCA41 (void);
-// 0x0000025C System.Int32 Fusion.FusionUnityLogger::<.ctor>b__12_0(System.Object)
+// 0x0000026B System.Int32 Fusion.FusionUnityLogger::<.ctor>b__12_0(System.Object)
 extern void FusionUnityLogger_U3C_ctorU3Eb__12_0_mF2706CCE9E8E1F5D73E5AE62E4A6152D28D2D7E1 (void);
-// 0x0000025D System.Boolean Fusion.NetworkRunnerExtensions::SetActiveScene(Fusion.NetworkRunner,System.String)
+// 0x0000026C System.Boolean Fusion.NetworkRunnerExtensions::SetActiveScene(Fusion.NetworkRunner,System.String)
 extern void NetworkRunnerExtensions_SetActiveScene_mDF83E2E6D46CB59BFA4E5F97DE1D314FEC2483DC (void);
-// 0x0000025E Fusion.NetworkRunner Fusion.NetworkSceneManagerBase::get_Runner()
+// 0x0000026D Fusion.NetworkRunner Fusion.NetworkSceneManagerBase::get_Runner()
 extern void NetworkSceneManagerBase_get_Runner_mF8B87B67B95D6AED3216762FE558FF8B54526DB4 (void);
-// 0x0000025F System.Void Fusion.NetworkSceneManagerBase::set_Runner(Fusion.NetworkRunner)
+// 0x0000026E System.Void Fusion.NetworkSceneManagerBase::set_Runner(Fusion.NetworkRunner)
 extern void NetworkSceneManagerBase_set_Runner_mF623A2AFBBBC35E86821F577FDEFF7F58336EE31 (void);
-// 0x00000260 System.Void Fusion.NetworkSceneManagerBase::OnEnable()
+// 0x0000026F System.Void Fusion.NetworkSceneManagerBase::OnEnable()
 extern void NetworkSceneManagerBase_OnEnable_mF5A5082B160A730A28C6AD84AB164B84C255313B (void);
-// 0x00000261 System.Void Fusion.NetworkSceneManagerBase::OnDisable()
+// 0x00000270 System.Void Fusion.NetworkSceneManagerBase::OnDisable()
 extern void NetworkSceneManagerBase_OnDisable_m1C68601F7AD1C9362F9C2135B905E8143963C0B1 (void);
-// 0x00000262 System.Void Fusion.NetworkSceneManagerBase::LateUpdate()
+// 0x00000271 System.Void Fusion.NetworkSceneManagerBase::LateUpdate()
 extern void NetworkSceneManagerBase_LateUpdate_mACA7A29E6AD55511629D45C501B7191D56480A90 (void);
-// 0x00000263 System.Boolean Fusion.NetworkSceneManagerBase::IsScenePathOrNameEqual(UnityEngine.SceneManagement.Scene,System.String)
+// 0x00000272 System.Boolean Fusion.NetworkSceneManagerBase::IsScenePathOrNameEqual(UnityEngine.SceneManagement.Scene,System.String)
 extern void NetworkSceneManagerBase_IsScenePathOrNameEqual_mC2CE51F43406C6FAAA58B1986B08CC52DC5604C2 (void);
-// 0x00000264 System.Boolean Fusion.NetworkSceneManagerBase::TryGetScenePathFromBuildSettings(Fusion.SceneRef,System.String&)
+// 0x00000273 System.Boolean Fusion.NetworkSceneManagerBase::TryGetScenePathFromBuildSettings(Fusion.SceneRef,System.String&)
 extern void NetworkSceneManagerBase_TryGetScenePathFromBuildSettings_m812F9F046C78EC35701702B7AB07FD6A77F36704 (void);
-// 0x00000265 System.Boolean Fusion.NetworkSceneManagerBase::TryGetScenePath(Fusion.SceneRef,System.String&)
+// 0x00000274 System.Boolean Fusion.NetworkSceneManagerBase::TryGetScenePath(Fusion.SceneRef,System.String&)
 extern void NetworkSceneManagerBase_TryGetScenePath_m6950A503AB28219AF9E038A44A015B0FF8DEDA73 (void);
-// 0x00000266 System.Boolean Fusion.NetworkSceneManagerBase::TryGetSceneRef(System.String,Fusion.SceneRef&)
+// 0x00000275 System.Boolean Fusion.NetworkSceneManagerBase::TryGetSceneRef(System.String,Fusion.SceneRef&)
 extern void NetworkSceneManagerBase_TryGetSceneRef_mC5CCC150CFE07EA570C12487AF8E92A7EF2138BD (void);
-// 0x00000267 System.Boolean Fusion.NetworkSceneManagerBase::IsScenePathOrNameEqual(UnityEngine.SceneManagement.Scene,Fusion.SceneRef)
+// 0x00000276 System.Boolean Fusion.NetworkSceneManagerBase::IsScenePathOrNameEqual(UnityEngine.SceneManagement.Scene,Fusion.SceneRef)
 extern void NetworkSceneManagerBase_IsScenePathOrNameEqual_mC14E4BA82C144610610A51D6C5B2D90AA5499E51 (void);
-// 0x00000268 System.Collections.Generic.List`1<Fusion.NetworkObject> Fusion.NetworkSceneManagerBase::FindNetworkObjects(UnityEngine.SceneManagement.Scene,System.Boolean,System.Boolean)
+// 0x00000277 System.Collections.Generic.List`1<Fusion.NetworkObject> Fusion.NetworkSceneManagerBase::FindNetworkObjects(UnityEngine.SceneManagement.Scene,System.Boolean,System.Boolean)
 extern void NetworkSceneManagerBase_FindNetworkObjects_mD5801F1D58BC4EB5E25A10D7D83B4A7CBED1CFBF (void);
-// 0x00000269 System.Void Fusion.NetworkSceneManagerBase::Fusion.INetworkSceneManager.Initialize(Fusion.NetworkRunner)
+// 0x00000278 System.Void Fusion.NetworkSceneManagerBase::Fusion.INetworkSceneManager.Initialize(Fusion.NetworkRunner)
 extern void NetworkSceneManagerBase_Fusion_INetworkSceneManager_Initialize_m0C3B45BE8330566A2CB4A46BB6C6DD6B4C483BF8 (void);
-// 0x0000026A System.Void Fusion.NetworkSceneManagerBase::Fusion.INetworkSceneManager.Shutdown(Fusion.NetworkRunner)
+// 0x00000279 System.Void Fusion.NetworkSceneManagerBase::Fusion.INetworkSceneManager.Shutdown(Fusion.NetworkRunner)
 extern void NetworkSceneManagerBase_Fusion_INetworkSceneManager_Shutdown_mF0CB37991A5B687F93B6C5DE12AF86018BAAEDF2 (void);
-// 0x0000026B System.Boolean Fusion.NetworkSceneManagerBase::Fusion.INetworkSceneManager.IsReady(Fusion.NetworkRunner)
+// 0x0000027A System.Boolean Fusion.NetworkSceneManagerBase::Fusion.INetworkSceneManager.IsReady(Fusion.NetworkRunner)
 extern void NetworkSceneManagerBase_Fusion_INetworkSceneManager_IsReady_m958E093B2E69B61B742A10944B40712C591E51ED (void);
-// 0x0000026C System.Void Fusion.NetworkSceneManagerBase::Initialize(Fusion.NetworkRunner)
+// 0x0000027B System.Void Fusion.NetworkSceneManagerBase::Initialize(Fusion.NetworkRunner)
 extern void NetworkSceneManagerBase_Initialize_mE47BFABEE120215430FC0A45B325C121BF91BB9B (void);
-// 0x0000026D System.Void Fusion.NetworkSceneManagerBase::Shutdown(Fusion.NetworkRunner)
+// 0x0000027C System.Void Fusion.NetworkSceneManagerBase::Shutdown(Fusion.NetworkRunner)
 extern void NetworkSceneManagerBase_Shutdown_m96B474FE91EE21AEDCFBDA1E2544401F24FBCDF9 (void);
-// 0x0000026E System.Collections.IEnumerator Fusion.NetworkSceneManagerBase::SwitchScene(Fusion.SceneRef,Fusion.SceneRef,Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate)
-// 0x0000026F System.Void Fusion.NetworkSceneManagerBase::LogTrace(System.String)
+// 0x0000027D System.Collections.IEnumerator Fusion.NetworkSceneManagerBase::SwitchScene(Fusion.SceneRef,Fusion.SceneRef,Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate)
+// 0x0000027E System.Void Fusion.NetworkSceneManagerBase::LogTrace(System.String)
 extern void NetworkSceneManagerBase_LogTrace_m328DD14F4AEC1371B25920607A6FF57C54089EE7 (void);
-// 0x00000270 System.Void Fusion.NetworkSceneManagerBase::LogError(System.String)
+// 0x0000027F System.Void Fusion.NetworkSceneManagerBase::LogError(System.String)
 extern void NetworkSceneManagerBase_LogError_m6636890C17C51DF975A4BFD17A0B3771A9912E56 (void);
-// 0x00000271 System.Void Fusion.NetworkSceneManagerBase::LogWarn(System.String)
+// 0x00000280 System.Void Fusion.NetworkSceneManagerBase::LogWarn(System.String)
 extern void NetworkSceneManagerBase_LogWarn_mD5326B515097E0C302A0ADDB469FF4762B59C29C (void);
-// 0x00000272 System.Collections.IEnumerator Fusion.NetworkSceneManagerBase::SwitchSceneWrapper(Fusion.SceneRef,Fusion.SceneRef)
+// 0x00000281 System.Collections.IEnumerator Fusion.NetworkSceneManagerBase::SwitchSceneWrapper(Fusion.SceneRef,Fusion.SceneRef)
 extern void NetworkSceneManagerBase_SwitchSceneWrapper_m4E190732E2E2EC8F8306F685483CDF7E07A503E2 (void);
-// 0x00000273 System.Void Fusion.NetworkSceneManagerBase::.ctor()
+// 0x00000282 System.Void Fusion.NetworkSceneManagerBase::.ctor()
 extern void NetworkSceneManagerBase__ctor_m13487B9BF6F36D69D7C02D77BB7B66DA77CDAFBB (void);
-// 0x00000274 System.Void Fusion.NetworkSceneManagerBase::.cctor()
+// 0x00000283 System.Void Fusion.NetworkSceneManagerBase::.cctor()
 extern void NetworkSceneManagerBase__cctor_mD28E1552D9D224A835C74082E365E86743F40BEF (void);
-// 0x00000275 System.Void Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate::.ctor(System.Object,System.IntPtr)
+// 0x00000284 System.Void Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate::.ctor(System.Object,System.IntPtr)
 extern void FinishedLoadingDelegate__ctor_m2AA5AAD37381CFEF578C392654121C8D166C7E2C (void);
-// 0x00000276 System.Void Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate::Invoke(System.Collections.Generic.IEnumerable`1<Fusion.NetworkObject>)
+// 0x00000285 System.Void Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate::Invoke(System.Collections.Generic.IEnumerable`1<Fusion.NetworkObject>)
 extern void FinishedLoadingDelegate_Invoke_m5985BF0FC5C6F837CBC645E1881BC19BD46B6648 (void);
-// 0x00000277 System.IAsyncResult Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate::BeginInvoke(System.Collections.Generic.IEnumerable`1<Fusion.NetworkObject>,System.AsyncCallback,System.Object)
+// 0x00000286 System.IAsyncResult Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate::BeginInvoke(System.Collections.Generic.IEnumerable`1<Fusion.NetworkObject>,System.AsyncCallback,System.Object)
 extern void FinishedLoadingDelegate_BeginInvoke_m0DDF8FF49E0F5672BE18E5D27ED9144890F4882C (void);
-// 0x00000278 System.Void Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate::EndInvoke(System.IAsyncResult)
+// 0x00000287 System.Void Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate::EndInvoke(System.IAsyncResult)
 extern void FinishedLoadingDelegate_EndInvoke_m00D9DA0972EA46269F0D944C16C5E818ABDF554F (void);
-// 0x00000279 System.Void Fusion.NetworkSceneManagerBase/<>c__DisplayClass28_0::.ctor()
+// 0x00000288 System.Void Fusion.NetworkSceneManagerBase/<>c__DisplayClass28_0::.ctor()
 extern void U3CU3Ec__DisplayClass28_0__ctor_m7BEB425C7DE30BB200824CB120B8CAFFE9EF4E0F (void);
-// 0x0000027A System.Void Fusion.NetworkSceneManagerBase/<>c__DisplayClass28_0::<SwitchSceneWrapper>b__0(System.Collections.Generic.IEnumerable`1<Fusion.NetworkObject>)
+// 0x00000289 System.Void Fusion.NetworkSceneManagerBase/<>c__DisplayClass28_0::<SwitchSceneWrapper>b__0(System.Collections.Generic.IEnumerable`1<Fusion.NetworkObject>)
 extern void U3CU3Ec__DisplayClass28_0_U3CSwitchSceneWrapperU3Eb__0_mEFFFBA8A93762384C16339C5F40EBC6BFABF329F (void);
-// 0x0000027B System.Void Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::.ctor(System.Int32)
+// 0x0000028A System.Void Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::.ctor(System.Int32)
 extern void U3CSwitchSceneWrapperU3Ed__28__ctor_m5D7E1F82843B7DB0AF907BF42425AC594AE5409B (void);
-// 0x0000027C System.Void Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::System.IDisposable.Dispose()
+// 0x0000028B System.Void Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::System.IDisposable.Dispose()
 extern void U3CSwitchSceneWrapperU3Ed__28_System_IDisposable_Dispose_m82DBC9B900BE5DA529316BD9B2D91C85D25E4C14 (void);
-// 0x0000027D System.Boolean Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::MoveNext()
+// 0x0000028C System.Boolean Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::MoveNext()
 extern void U3CSwitchSceneWrapperU3Ed__28_MoveNext_m1599B466CD57BEDBBD2C6B6C22C8302DBE16853E (void);
-// 0x0000027E System.Void Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::<>m__Finally1()
+// 0x0000028D System.Void Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::<>m__Finally1()
 extern void U3CSwitchSceneWrapperU3Ed__28_U3CU3Em__Finally1_mE742A05B26B9668F08E29DF384DC4E7887F78BBB (void);
-// 0x0000027F System.Object Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000028E System.Object Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CSwitchSceneWrapperU3Ed__28_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m1C2CC2A1C32B79AB2D5D9CDBFCACE382766C97D9 (void);
-// 0x00000280 System.Void Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::System.Collections.IEnumerator.Reset()
+// 0x0000028F System.Void Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::System.Collections.IEnumerator.Reset()
 extern void U3CSwitchSceneWrapperU3Ed__28_System_Collections_IEnumerator_Reset_mFFB7E9B0F115D946802999069489B7D0CE83F2D9 (void);
-// 0x00000281 System.Object Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::System.Collections.IEnumerator.get_Current()
+// 0x00000290 System.Object Fusion.NetworkSceneManagerBase/<SwitchSceneWrapper>d__28::System.Collections.IEnumerator.get_Current()
 extern void U3CSwitchSceneWrapperU3Ed__28_System_Collections_IEnumerator_get_Current_m622677BBD492D3E42E98723B8B49537F47418C8E (void);
-// 0x00000282 UnityEngine.YieldInstruction Fusion.NetworkSceneManagerDefault::LoadSceneAsync(Fusion.SceneRef,UnityEngine.SceneManagement.LoadSceneParameters,System.Action`1<UnityEngine.SceneManagement.Scene>)
+// 0x00000291 UnityEngine.YieldInstruction Fusion.NetworkSceneManagerDefault::LoadSceneAsync(Fusion.SceneRef,UnityEngine.SceneManagement.LoadSceneParameters,System.Action`1<UnityEngine.SceneManagement.Scene>)
 extern void NetworkSceneManagerDefault_LoadSceneAsync_m36CF7AA7A1C6FD72BA9BB228F868D27921408534 (void);
-// 0x00000283 UnityEngine.YieldInstruction Fusion.NetworkSceneManagerDefault::UnloadSceneAsync(UnityEngine.SceneManagement.Scene)
+// 0x00000292 UnityEngine.YieldInstruction Fusion.NetworkSceneManagerDefault::UnloadSceneAsync(UnityEngine.SceneManagement.Scene)
 extern void NetworkSceneManagerDefault_UnloadSceneAsync_mDC4810C964B9599F22C93D56E03D75D30763992D (void);
-// 0x00000284 System.Collections.IEnumerator Fusion.NetworkSceneManagerDefault::SwitchScene(Fusion.SceneRef,Fusion.SceneRef,Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate)
+// 0x00000293 System.Collections.IEnumerator Fusion.NetworkSceneManagerDefault::SwitchScene(Fusion.SceneRef,Fusion.SceneRef,Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate)
 extern void NetworkSceneManagerDefault_SwitchScene_m1ACA3323F963A187D7F10DED31C26FA32B5C1B06 (void);
-// 0x00000285 System.Collections.IEnumerator Fusion.NetworkSceneManagerDefault::SwitchSceneMultiplePeer(Fusion.SceneRef,Fusion.SceneRef,Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate)
+// 0x00000294 System.Collections.IEnumerator Fusion.NetworkSceneManagerDefault::SwitchSceneMultiplePeer(Fusion.SceneRef,Fusion.SceneRef,Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate)
 extern void NetworkSceneManagerDefault_SwitchSceneMultiplePeer_m94AEB70D18B57730DBEB20A1C567A9FE0C9522C2 (void);
-// 0x00000286 System.Collections.IEnumerator Fusion.NetworkSceneManagerDefault::SwitchSceneSinglePeer(Fusion.SceneRef,Fusion.SceneRef,Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate)
+// 0x00000295 System.Collections.IEnumerator Fusion.NetworkSceneManagerDefault::SwitchSceneSinglePeer(Fusion.SceneRef,Fusion.SceneRef,Fusion.NetworkSceneManagerBase/FinishedLoadingDelegate)
 extern void NetworkSceneManagerDefault_SwitchSceneSinglePeer_m7AADB820DCF18CADAB71FE7C572705047D8BCE0B (void);
-// 0x00000287 System.Void Fusion.NetworkSceneManagerDefault::.ctor()
+// 0x00000296 System.Void Fusion.NetworkSceneManagerDefault::.ctor()
 extern void NetworkSceneManagerDefault__ctor_mBF0971F25CC1C7F5C9DB61B81131F355F0032B8A (void);
-// 0x00000288 System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass1_0::.ctor()
+// 0x00000297 System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass1_0::.ctor()
 extern void U3CU3Ec__DisplayClass1_0__ctor_m9878516CC321F91FA505845F027BFDF84F218BB9 (void);
-// 0x00000289 System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass1_0::<LoadSceneAsync>b__0(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
+// 0x00000298 System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass1_0::<LoadSceneAsync>b__0(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
 extern void U3CU3Ec__DisplayClass1_0_U3CLoadSceneAsyncU3Eb__0_m4B059F1800104229F1D8516434F60658B7F97851 (void);
-// 0x0000028A System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass1_0::<LoadSceneAsync>b__1(UnityEngine.AsyncOperation)
+// 0x00000299 System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass1_0::<LoadSceneAsync>b__1(UnityEngine.AsyncOperation)
 extern void U3CU3Ec__DisplayClass1_0_U3CLoadSceneAsyncU3Eb__1_m1806E6321B96A0D8071C4314923E8EFF4C7A7491 (void);
-// 0x0000028B System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass4_0::.ctor()
+// 0x0000029A System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass4_0::.ctor()
 extern void U3CU3Ec__DisplayClass4_0__ctor_mF67F08B5221ED03356CA8D388C220C639AF83454 (void);
-// 0x0000028C System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass4_0::<SwitchSceneMultiplePeer>b__0(UnityEngine.SceneManagement.Scene)
+// 0x0000029B System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass4_0::<SwitchSceneMultiplePeer>b__0(UnityEngine.SceneManagement.Scene)
 extern void U3CU3Ec__DisplayClass4_0_U3CSwitchSceneMultiplePeerU3Eb__0_m4D508569C6E5E2605A5E766A3ECF3066DCC86A72 (void);
-// 0x0000028D System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::.ctor(System.Int32)
+// 0x0000029C System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::.ctor(System.Int32)
 extern void U3CSwitchSceneMultiplePeerU3Ed__4__ctor_mAA45B70FFC8FD30FC82FAF9CB3EFD4EADB908183 (void);
-// 0x0000028E System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::System.IDisposable.Dispose()
+// 0x0000029D System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::System.IDisposable.Dispose()
 extern void U3CSwitchSceneMultiplePeerU3Ed__4_System_IDisposable_Dispose_m0556E01B759D48A7AC5BF51D9D9ED9070B02D305 (void);
-// 0x0000028F System.Boolean Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::MoveNext()
+// 0x0000029E System.Boolean Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::MoveNext()
 extern void U3CSwitchSceneMultiplePeerU3Ed__4_MoveNext_mCCAF9BAD9D8DBB44E791E4561F77F3F5BA7EACAD (void);
-// 0x00000290 System.Object Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x0000029F System.Object Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CSwitchSceneMultiplePeerU3Ed__4_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m503D5DBC66BD8D090A27C13C422136A4ADD60AC9 (void);
-// 0x00000291 System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::System.Collections.IEnumerator.Reset()
+// 0x000002A0 System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::System.Collections.IEnumerator.Reset()
 extern void U3CSwitchSceneMultiplePeerU3Ed__4_System_Collections_IEnumerator_Reset_m42947312456A7F84159B07569579F4DA1A7B7BAF (void);
-// 0x00000292 System.Object Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::System.Collections.IEnumerator.get_Current()
+// 0x000002A1 System.Object Fusion.NetworkSceneManagerDefault/<SwitchSceneMultiplePeer>d__4::System.Collections.IEnumerator.get_Current()
 extern void U3CSwitchSceneMultiplePeerU3Ed__4_System_Collections_IEnumerator_get_Current_m793D0AE5729A5632AA8671EF6292ED5B34796914 (void);
-// 0x00000293 System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass5_0::.ctor()
+// 0x000002A2 System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass5_0::.ctor()
 extern void U3CU3Ec__DisplayClass5_0__ctor_mB65A57C225C7F50ED007903C075A53E59C91EDC5 (void);
-// 0x00000294 System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass5_0::<SwitchSceneSinglePeer>b__0(UnityEngine.SceneManagement.Scene)
+// 0x000002A3 System.Void Fusion.NetworkSceneManagerDefault/<>c__DisplayClass5_0::<SwitchSceneSinglePeer>b__0(UnityEngine.SceneManagement.Scene)
 extern void U3CU3Ec__DisplayClass5_0_U3CSwitchSceneSinglePeerU3Eb__0_m82BCA4D1AE3A23C1230106556968AA005B4E93E5 (void);
-// 0x00000295 System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::.ctor(System.Int32)
+// 0x000002A4 System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::.ctor(System.Int32)
 extern void U3CSwitchSceneSinglePeerU3Ed__5__ctor_mBED5520059D653A64415C85CDC65D7C2411EB6B8 (void);
-// 0x00000296 System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::System.IDisposable.Dispose()
+// 0x000002A5 System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::System.IDisposable.Dispose()
 extern void U3CSwitchSceneSinglePeerU3Ed__5_System_IDisposable_Dispose_m78DB90556B69657EAD32A6FD4C17AC15E2A54CC3 (void);
-// 0x00000297 System.Boolean Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::MoveNext()
+// 0x000002A6 System.Boolean Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::MoveNext()
 extern void U3CSwitchSceneSinglePeerU3Ed__5_MoveNext_mAC4FF417C4452B42641D11DFCE5281B848BF272E (void);
-// 0x00000298 System.Object Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+// 0x000002A7 System.Object Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
 extern void U3CSwitchSceneSinglePeerU3Ed__5_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m14563F08C781C0C10AD545FBDC5492582D5C705F (void);
-// 0x00000299 System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::System.Collections.IEnumerator.Reset()
+// 0x000002A8 System.Void Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::System.Collections.IEnumerator.Reset()
 extern void U3CSwitchSceneSinglePeerU3Ed__5_System_Collections_IEnumerator_Reset_m1C3DD543555F33C88C9F974C36682A1451D8B751 (void);
-// 0x0000029A System.Object Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::System.Collections.IEnumerator.get_Current()
+// 0x000002A9 System.Object Fusion.NetworkSceneManagerDefault/<SwitchSceneSinglePeer>d__5::System.Collections.IEnumerator.get_Current()
 extern void U3CSwitchSceneSinglePeerU3Ed__5_System_Collections_IEnumerator_get_Current_m9B5FF7F2A56F7B5FC64C90A1948A4A664E9B5AFC (void);
-// 0x0000029B System.Int32 Fusion.FusionUnitySceneManagerUtils::GetSceneBuildIndex(System.String)
+// 0x000002AA System.Int32 Fusion.FusionUnitySceneManagerUtils::GetSceneBuildIndex(System.String)
 extern void FusionUnitySceneManagerUtils_GetSceneBuildIndex_m00DFD27BDF735FBB77D4660D66FB9CD634861049 (void);
-// 0x0000029C System.Int32 Fusion.FusionUnitySceneManagerUtils::GetSceneIndex(System.Collections.Generic.IList`1<System.String>,System.String)
+// 0x000002AB System.Int32 Fusion.FusionUnitySceneManagerUtils::GetSceneIndex(System.Collections.Generic.IList`1<System.String>,System.String)
 extern void FusionUnitySceneManagerUtils_GetSceneIndex_m24718984F511F350762EDB3114C8EE2BDDFCC0B1 (void);
-// 0x0000029D System.Void Fusion.FusionUnitySceneManagerUtils::GetFileNameWithoutExtensionPosition(System.String,System.Int32&,System.Int32&)
+// 0x000002AC System.Void Fusion.FusionUnitySceneManagerUtils::GetFileNameWithoutExtensionPosition(System.String,System.Int32&,System.Int32&)
 extern void FusionUnitySceneManagerUtils_GetFileNameWithoutExtensionPosition_mE158C1A4E616CB5A26C288580210645485FE36D2 (void);
-// 0x0000029E UnityEngine.Bounds Fusion.Editor.BoundsTools::CollectMyBounds(UnityEngine.GameObject,Fusion.Editor.BoundsTools/BoundsType,System.Int32&,System.Boolean,System.Boolean)
+// 0x000002AD UnityEngine.Bounds Fusion.Editor.BoundsTools::CollectMyBounds(UnityEngine.GameObject,Fusion.Editor.BoundsTools/BoundsType,System.Int32&,System.Boolean,System.Boolean)
 extern void BoundsTools_CollectMyBounds_m5379F1050B6212683327FC35D5D25D42B62BFF1D (void);
-// 0x0000029F UnityEngine.Bounds Fusion.Editor.BoundsTools::CollectMyBounds(UnityEngine.GameObject,Fusion.Editor.BoundsTools/BoundsType,System.Boolean)
+// 0x000002AE UnityEngine.Bounds Fusion.Editor.BoundsTools::CollectMyBounds(UnityEngine.GameObject,Fusion.Editor.BoundsTools/BoundsType,System.Boolean)
 extern void BoundsTools_CollectMyBounds_m9EC00C46177155F8E99780F6D394B368F48B1842 (void);
-// 0x000002A0 System.Void Fusion.Editor.BoundsTools::.cctor()
+// 0x000002AF System.Void Fusion.Editor.BoundsTools::.cctor()
 extern void BoundsTools__cctor_mE1A9422B7B355469F841A8632384C2E7F82A042D (void);
-// 0x000002A1 System.Void Fusion.StatsInternal.IFusionStatsView::Initialize()
-// 0x000002A2 System.Void Fusion.StatsInternal.IFusionStatsView::CalculateLayout()
-// 0x000002A3 System.Void Fusion.StatsInternal.IFusionStatsView::Refresh()
-// 0x000002A4 System.Boolean Fusion.StatsInternal.IFusionStatsView::get_isActiveAndEnabled()
-// 0x000002A5 UnityEngine.Transform Fusion.StatsInternal.IFusionStatsView::get_transform()
-// 0x000002A6 System.Collections.Generic.List`1<System.String> Fusion.StatsInternal.FusionStatsUtilities::get_CachedTelemetryNames()
+// 0x000002B0 System.Void Fusion.StatsInternal.IFusionStatsView::Initialize()
+// 0x000002B1 System.Void Fusion.StatsInternal.IFusionStatsView::CalculateLayout()
+// 0x000002B2 System.Void Fusion.StatsInternal.IFusionStatsView::Refresh()
+// 0x000002B3 System.Boolean Fusion.StatsInternal.IFusionStatsView::get_isActiveAndEnabled()
+// 0x000002B4 UnityEngine.Transform Fusion.StatsInternal.IFusionStatsView::get_transform()
+// 0x000002B5 System.Collections.Generic.List`1<System.String> Fusion.StatsInternal.FusionStatsUtilities::get_CachedTelemetryNames()
 extern void FusionStatsUtilities_get_CachedTelemetryNames_m4EF617534D4BF0AE87C4AD4E6B3C0314EA32E2A7 (void);
-// 0x000002A7 UnityEngine.Font Fusion.StatsInternal.FusionStatsUtilities::get_Font()
+// 0x000002B6 UnityEngine.Font Fusion.StatsInternal.FusionStatsUtilities::get_Font()
 extern void FusionStatsUtilities_get_Font_m0A68FC691677A6E5C3D40EF80F03A21A5884BCB6 (void);
-// 0x000002A8 UnityEngine.Texture2D Fusion.StatsInternal.FusionStatsUtilities::get_MeterTexture()
+// 0x000002B7 UnityEngine.Texture2D Fusion.StatsInternal.FusionStatsUtilities::get_MeterTexture()
 extern void FusionStatsUtilities_get_MeterTexture_m90EFF436369E1674A158841F6CC6A22ED8D928AE (void);
-// 0x000002A9 UnityEngine.Sprite Fusion.StatsInternal.FusionStatsUtilities::get_MeterSprite()
+// 0x000002B8 UnityEngine.Sprite Fusion.StatsInternal.FusionStatsUtilities::get_MeterSprite()
 extern void FusionStatsUtilities_get_MeterSprite_m64DEB33D78886B88FEF586633E8060CBD0C52B2D (void);
-// 0x000002AA UnityEngine.Texture2D Fusion.StatsInternal.FusionStatsUtilities::get_Circle32Texture()
+// 0x000002B9 UnityEngine.Texture2D Fusion.StatsInternal.FusionStatsUtilities::get_Circle32Texture()
 extern void FusionStatsUtilities_get_Circle32Texture_m0A5924BDC2322AB6031675581430FB2FF1932B8D (void);
-// 0x000002AB UnityEngine.Sprite Fusion.StatsInternal.FusionStatsUtilities::get_CircleSprite()
+// 0x000002BA UnityEngine.Sprite Fusion.StatsInternal.FusionStatsUtilities::get_CircleSprite()
 extern void FusionStatsUtilities_get_CircleSprite_m67796DF7F4AC7AE651A196E1A9F37296F68C3CF1 (void);
-// 0x000002AC System.Boolean Fusion.StatsInternal.FusionStatsUtilities::TryFindActiveRunner(FusionStats,Fusion.NetworkRunner&,System.Nullable`1<Fusion.SimulationModes>)
+// 0x000002BB System.Boolean Fusion.StatsInternal.FusionStatsUtilities::TryFindActiveRunner(FusionStats,Fusion.NetworkRunner&,System.Nullable`1<Fusion.SimulationModes>)
 extern void FusionStatsUtilities_TryFindActiveRunner_m38423B785327D741D81696021B39DE67D8E5DC3B (void);
-// 0x000002AD UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::CreateRectTransform(UnityEngine.Transform,System.String,System.Boolean)
+// 0x000002BC UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::CreateRectTransform(UnityEngine.Transform,System.String,System.Boolean)
 extern void FusionStatsUtilities_CreateRectTransform_m7A8DEE2C21D6DE7F2605BBD0543272BA88EC347D (void);
-// 0x000002AE UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::CreateRectTransform(System.String,UnityEngine.Transform,System.Boolean)
+// 0x000002BD UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::CreateRectTransform(System.String,UnityEngine.Transform,System.Boolean)
 extern void FusionStatsUtilities_CreateRectTransform_m1675E9484D572892003A9137DC5F14DA637DF187 (void);
-// 0x000002AF UnityEngine.UI.Dropdown Fusion.StatsInternal.FusionStatsUtilities::CreateDropdown(UnityEngine.RectTransform,System.Single,UnityEngine.Color)
+// 0x000002BE UnityEngine.UI.Dropdown Fusion.StatsInternal.FusionStatsUtilities::CreateDropdown(UnityEngine.RectTransform,System.Single,UnityEngine.Color)
 extern void FusionStatsUtilities_CreateDropdown_mFFB3B7571078BBF68382CB56885566823976332F (void);
-// 0x000002B0 UnityEngine.UI.Text Fusion.StatsInternal.FusionStatsUtilities::AddText(UnityEngine.RectTransform,System.String,UnityEngine.TextAnchor,UnityEngine.Color)
+// 0x000002BF UnityEngine.UI.Text Fusion.StatsInternal.FusionStatsUtilities::AddText(UnityEngine.RectTransform,System.String,UnityEngine.TextAnchor,UnityEngine.Color)
 extern void FusionStatsUtilities_AddText_mFD8B562B4998731594FD883780675BEDCE5B5035 (void);
-// 0x000002B1 System.Void Fusion.StatsInternal.FusionStatsUtilities::MakeButton(UnityEngine.RectTransform,UnityEngine.UI.Button&,System.String,System.String,UnityEngine.UI.Text&,UnityEngine.UI.Text&,UnityEngine.Events.UnityAction)
+// 0x000002C0 System.Void Fusion.StatsInternal.FusionStatsUtilities::MakeButton(UnityEngine.RectTransform,UnityEngine.UI.Button&,System.String,System.String,UnityEngine.UI.Text&,UnityEngine.UI.Text&,UnityEngine.Events.UnityAction)
 extern void FusionStatsUtilities_MakeButton_m413E63BD1103CA84F7ED6387FF4CFD0E3AD64F55 (void);
-// 0x000002B2 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddHorizontalLayoutGroup(UnityEngine.RectTransform,System.Single,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
+// 0x000002C1 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddHorizontalLayoutGroup(UnityEngine.RectTransform,System.Single,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
 extern void FusionStatsUtilities_AddHorizontalLayoutGroup_m6D58F85FF9FC0AED3F06B5FDD7BE61C6A3AF25AF (void);
-// 0x000002B3 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddVerticalLayoutGroup(UnityEngine.RectTransform,System.Single,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
+// 0x000002C2 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddVerticalLayoutGroup(UnityEngine.RectTransform,System.Single,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
 extern void FusionStatsUtilities_AddVerticalLayoutGroup_m02E282D00785B5E72B7C0C5272F0A51289378729 (void);
-// 0x000002B4 UnityEngine.UI.GridLayoutGroup Fusion.StatsInternal.FusionStatsUtilities::AddGridlLayoutGroup(UnityEngine.RectTransform,System.Single,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
+// 0x000002C3 UnityEngine.UI.GridLayoutGroup Fusion.StatsInternal.FusionStatsUtilities::AddGridlLayoutGroup(UnityEngine.RectTransform,System.Single,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>,System.Nullable`1<System.Int32>)
 extern void FusionStatsUtilities_AddGridlLayoutGroup_mBBAB671B86201349ECA7C16B28A1A03D80DD389D (void);
-// 0x000002B5 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddImage(UnityEngine.RectTransform,UnityEngine.Color)
+// 0x000002C4 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddImage(UnityEngine.RectTransform,UnityEngine.Color)
 extern void FusionStatsUtilities_AddImage_m4CFD8E916D3FB2CDC5190CE01AF35E8458FF9A1D (void);
-// 0x000002B6 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddCircleSprite(UnityEngine.RectTransform,UnityEngine.Color)
+// 0x000002C5 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddCircleSprite(UnityEngine.RectTransform,UnityEngine.Color)
 extern void FusionStatsUtilities_AddCircleSprite_m868ADFDE733471E4E602D2D7E132E05833094AB5 (void);
-// 0x000002B7 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddCircleSprite(UnityEngine.RectTransform,UnityEngine.Color,UnityEngine.UI.Image&)
+// 0x000002C6 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::AddCircleSprite(UnityEngine.RectTransform,UnityEngine.Color,UnityEngine.UI.Image&)
 extern void FusionStatsUtilities_AddCircleSprite_m69F6F36AB48728596D1995ED60B0413230DFD90C (void);
-// 0x000002B8 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::ExpandAnchor(UnityEngine.RectTransform,System.Nullable`1<System.Single>)
+// 0x000002C7 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::ExpandAnchor(UnityEngine.RectTransform,System.Nullable`1<System.Single>)
 extern void FusionStatsUtilities_ExpandAnchor_mF92B15AFF1097DF8830C7FFD281DABD78F3400A2 (void);
-// 0x000002B9 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::ExpandTopAnchor(UnityEngine.RectTransform,System.Nullable`1<System.Single>)
+// 0x000002C8 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::ExpandTopAnchor(UnityEngine.RectTransform,System.Nullable`1<System.Single>)
 extern void FusionStatsUtilities_ExpandTopAnchor_m530C8708BADC6F38F24CA63D215CEA2FDFCBF918 (void);
-// 0x000002BA UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::ExpandMiddleLeft(UnityEngine.RectTransform)
+// 0x000002C9 UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::ExpandMiddleLeft(UnityEngine.RectTransform)
 extern void FusionStatsUtilities_ExpandMiddleLeft_mA2CD721239D300B4C3AE85ED3C98E0705A826C6A (void);
-// 0x000002BB UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::SetSizeDelta(UnityEngine.RectTransform,System.Single,System.Single)
+// 0x000002CA UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::SetSizeDelta(UnityEngine.RectTransform,System.Single,System.Single)
 extern void FusionStatsUtilities_SetSizeDelta_m804D1D4527F390D49DE0E00EE7C41BF68E707E54 (void);
-// 0x000002BC UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::SetOffsets(UnityEngine.RectTransform,System.Single,System.Single,System.Single,System.Single)
+// 0x000002CB UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::SetOffsets(UnityEngine.RectTransform,System.Single,System.Single,System.Single,System.Single)
 extern void FusionStatsUtilities_SetOffsets_mF86A3F48C4AE6F2C79B9C8ABE0A344FF76A25189 (void);
-// 0x000002BD UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::SetPivot(UnityEngine.RectTransform,System.Single,System.Single)
+// 0x000002CC UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::SetPivot(UnityEngine.RectTransform,System.Single,System.Single)
 extern void FusionStatsUtilities_SetPivot_m69CD470096B35900B4542114B6E2A2042867ABC3 (void);
-// 0x000002BE UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::SetAnchors(UnityEngine.RectTransform,System.Single,System.Single,System.Single,System.Single)
+// 0x000002CD UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::SetAnchors(UnityEngine.RectTransform,System.Single,System.Single,System.Single,System.Single)
 extern void FusionStatsUtilities_SetAnchors_mAD5F796E116A48BF7F473664EDDF54E92C501BB8 (void);
-// 0x000002BF UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::MakeGuides(UnityEngine.RectTransform)
+// 0x000002CE UnityEngine.RectTransform Fusion.StatsInternal.FusionStatsUtilities::MakeGuides(UnityEngine.RectTransform)
 extern void FusionStatsUtilities_MakeGuides_mEA6F5A51FE40CE859382DA3007A26554DA2D8A9B (void);
-// 0x000002C0 System.Void Fusion.StatsInternal.FusionStatsUtilities::.cctor()
+// 0x000002CF System.Void Fusion.StatsInternal.FusionStatsUtilities::.cctor()
 extern void FusionStatsUtilities__cctor_mA5EA2B7B463E8768E545EE39812457942BA8CE83 (void);
-static Il2CppMethodPointer s_methodPointers[704] = 
+static Il2CppMethodPointer s_methodPointers[719] = 
 {
 	FusionGraph_get_Shader_m187066516BC5B65BF5686D6719F96D2C09B9059D,
 	FusionGraph_get_Layout_m19B223AC6B3A92B6A8B320909331BE12F7A66E9F,
@@ -1909,20 +1939,35 @@ static Il2CppMethodPointer s_methodPointers[704] =
 	PlayerStatus__ctor_m20BAAC8C03626832727B7F2080F4675639B1E1B2,
 	PlayerStatus_CopyBackingFieldsToState_mE510573222908FA52BF00F424F5F02E3FE01D796,
 	PlayerStatus_CopyStateToBackingFields_m9E0CFEF918DF7D7EB838ABCC04C200707B85A941,
+	InterfaceController_get_isStart_m2210E3D814CBF530ADBB00B0824FF9FE90EC0473,
+	InterfaceController_set_isStart_m75FAB2A4E03C9B227262CCF47FA52033D39F6FB3,
 	InterfaceController_Start_m82F90A83DEB30CEB3B2384EB618B36D7DDBA1251,
 	InterfaceController_Update_m0B1FAB5B22F31A48BF7B048432D65D9BFE03AE90,
+	InterfaceController_UpdateTimer_m58EBDD1D2789406822FF0E20F53D628FCE1FADB0,
+	InterfaceController_Find_AnotherPlayer_m430CEFED356FB4815DEE3144E60016D0355D02D3,
+	InterfaceController_Rpc_Init_m5B2AA49C3E4489A040B1E58BADE00787BB914BC1,
+	InterfaceController_OnChangeMethode_mD770D2ADB3FDAAFB6B912C1ED1174CCF6335F886,
+	InterfaceController_OnChangeMethode_m0AEDD87376B94656416C9C550B34CCCF0A8F4937,
 	InterfaceController__ctor_m042275A459A1B958C9D1D4FD75174546AB666F55,
 	InterfaceController_CopyBackingFieldsToState_mB0B5A83507AFC59FF8176FFF72AD222754B92B1C,
 	InterfaceController_CopyStateToBackingFields_m32ACAC04B66E09BA40D5F557F5A96B3D5F3E7746,
+	InterfaceController_Rpc_InitU40Invoker_m9F4FDBFA7C6911745EC4666A02C4E328D9C1C82C,
 	FragmentRoad_SpawnWave_mD4ECCE61C3E7E8CEC218A7F1580FA82E96B36AB2,
 	FragmentRoad__ctor_mE88D37A366B9199258BD4A27F24AA47A2231608F,
 	FragmentRoad_CopyBackingFieldsToState_mCE6A502EC03D8BE724B503E4943EEC5F70D81224,
 	FragmentRoad_CopyStateToBackingFields_mEB3D39E846672079FFC69A12B311918C60FB37AF,
 	GameStarter_SpawnRoad_m30442EE20022CC5DBF2B40C165DEA86E0315C640,
+	GameStarter_StartCountdown_m3099E7633D488141D71A8DFDE1807D767253F7F0,
 	GameStarter_StartGame_m49A307203BCB9A6F36DB0F5F91C7EB3051E7223D,
 	GameStarter__ctor_m3208D2AE4620259FF6F2211930931EB0E54D3904,
 	GameStarter_CopyBackingFieldsToState_m10F53F2A788B4B31A2F8E90987847B07597D3C77,
 	GameStarter_CopyStateToBackingFields_m06938AAD8A3F18136A58DDD158A5C50BE32C9A0B,
+	U3CStartCountdownU3Ed__7__ctor_m13DAB9601F084D0B0EC09232E7CBDEFDF3F85AFE,
+	U3CStartCountdownU3Ed__7_System_IDisposable_Dispose_m6D1FF073D285E912A6AE64995900D11EB9B57E5B,
+	U3CStartCountdownU3Ed__7_MoveNext_m0CA3275E9E9104A2344E466B873EB6741B9B9579,
+	U3CStartCountdownU3Ed__7_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m5106190901F6E1E7E1959D4273C27BB4DD7D2BE2,
+	U3CStartCountdownU3Ed__7_System_Collections_IEnumerator_Reset_mECD75B3235A777296CD692DE0751B86CDD2DDC90,
+	U3CStartCountdownU3Ed__7_System_Collections_IEnumerator_get_Current_mFAACB6B2FAE40788D712F2A40D758210A87319BA,
 	CarObstacle_ObstacleEffect_mA1C953875FD6E4C8448F66A47DA4F3F7A6A20836,
 	CarObstacle__ctor_mE08E117D449FB4BFEF7ADF12AF1856E25AF6A594,
 	CarObstacle_CopyBackingFieldsToState_mE3A5CAB87A6FE709F1F0A37CA7B60132DDF9939F,
@@ -2106,26 +2151,26 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[6] =
 	{ 0x060001C2, U3COnHostMigrationU3Ed__19_MoveNext_m244B4181F2753BEBB94215AF8398830AF1F0BAAB_AdjustorThunk },
 	{ 0x060001C3, U3COnHostMigrationU3Ed__19_SetStateMachine_m7CED26C80ED471C2FD25B89609F5876A13770B34_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[704] = 
+static const int32_t s_InvokerIndices[719] = 
 {
-	7889,
-	5091,
+	7892,
+	5092,
 	4223,
-	5091,
+	5092,
 	4223,
-	5044,
+	5045,
 	4171,
-	5044,
+	5045,
 	4223,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
 	4223,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
 	4162,
 	4162,
 	4162,
@@ -2133,267 +2178,264 @@ static const int32_t s_InvokerIndices[704] =
 	901,
 	1859,
 	4162,
-	6037,
+	6039,
 	1214,
-	5243,
-	5243,
-	6031,
-	5511,
-	7927,
-	7874,
-	5044,
-	5044,
-	5091,
+	5245,
+	5245,
+	6033,
+	5513,
+	7930,
+	7877,
+	5045,
+	5045,
+	5092,
 	4223,
-	5044,
+	5045,
 	4171,
-	5091,
+	5092,
 	4223,
-	5154,
-	4279,
-	5154,
-	4279,
-	5091,
+	5156,
+	4280,
+	5156,
+	4280,
+	5092,
 	4223,
-	5044,
+	5045,
 	4171,
-	5044,
+	5045,
 	4171,
-	5091,
+	5092,
 	4223,
-	5044,
+	5045,
 	4171,
-	5044,
-	5133,
-	5091,
+	5045,
+	5135,
+	5092,
 	4223,
-	5091,
+	5092,
 	4223,
-	5091,
+	5092,
 	4223,
-	5133,
-	4259,
-	5091,
+	5135,
+	4260,
+	5092,
 	4223,
-	5091,
+	5092,
 	4223,
-	5091,
+	5092,
 	4223,
-	5044,
-	5046,
-	5046,
-	5046,
-	5046,
-	5046,
-	5046,
-	5046,
-	5046,
-	5154,
-	5243,
-	5133,
+	5045,
+	5047,
+	5047,
+	5047,
+	5047,
+	5047,
+	5047,
+	5047,
+	5047,
+	5156,
+	5245,
+	5135,
 	4223,
 	383,
-	5243,
-	5243,
-	5243,
-	5243,
-	7860,
-	5243,
-	5044,
-	5243,
-	4259,
-	4259,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
+	5245,
+	7863,
+	5245,
+	5045,
+	5245,
+	4260,
+	4260,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
 	1069,
-	5243,
-	5243,
+	5245,
+	5245,
 	2067,
-	5243,
-	7927,
-	5091,
+	5245,
+	7930,
+	5092,
 	4223,
-	5091,
+	5092,
 	4223,
-	5133,
+	5135,
 	4171,
-	5044,
-	5046,
-	5133,
-	5133,
-	5243,
-	5243,
+	5045,
+	5047,
+	5135,
+	5135,
+	5245,
+	5245,
 	0,
 	0,
-	5044,
-	5243,
-	4259,
-	5243,
-	5044,
-	5133,
-	5243,
-	5243,
-	5243,
-	4259,
-	5133,
-	5243,
-	5243,
-	7927,
-	5243,
-	5046,
-	5243,
-	5243,
-	5243,
+	5045,
+	5245,
+	4260,
+	5245,
+	5045,
+	5135,
+	5245,
+	5245,
+	5245,
+	4260,
+	5135,
+	5245,
+	5245,
+	7930,
+	5245,
+	5047,
+	5245,
+	5245,
+	5245,
 	4193,
 	4193,
-	5243,
-	5513,
-	5243,
-	5243,
-	5243,
-	5243,
-	7008,
-	5243,
+	5245,
+	5515,
+	5245,
+	5245,
+	5245,
+	5245,
+	7010,
+	5245,
 	714,
-	5243,
-	5243,
-	5243,
-	7927,
-	5044,
-	5133,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
+	7930,
+	5045,
+	5135,
+	5245,
+	5245,
+	5245,
 	4171,
-	5243,
-	5234,
-	4349,
-	5044,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
+	5245,
+	5236,
+	4350,
+	5045,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
 	4171,
-	5243,
+	5245,
 	2357,
 	1290,
-	4259,
+	4260,
 	1276,
 	1284,
-	4259,
+	4260,
 	2360,
 	2360,
 	2363,
 	2352,
 	2359,
 	1289,
-	4259,
-	4259,
+	4260,
+	4260,
 	2359,
 	2359,
-	5243,
+	5245,
 	3022,
 	3022,
-	5044,
+	5045,
 	4171,
-	5234,
-	4349,
-	5234,
-	5234,
-	5133,
-	4259,
-	5243,
-	5243,
-	5243,
-	5243,
+	5236,
+	4350,
+	5236,
+	5236,
+	5135,
+	4260,
+	5245,
+	5245,
+	5245,
+	5245,
 	1923,
-	4349,
-	5243,
+	4350,
+	5245,
 	4171,
-	5243,
-	5091,
+	5245,
+	5092,
 	4223,
-	5091,
+	5092,
 	4223,
-	5091,
+	5092,
 	4223,
-	5044,
-	5044,
-	5044,
-	5044,
-	5044,
-	5044,
-	5243,
+	5045,
+	5045,
+	5045,
+	5045,
+	5045,
+	5045,
+	5245,
 	2949,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
 	4223,
 	4223,
 	4223,
 	4223,
 	4223,
-	5243,
+	5245,
 	1075,
-	5243,
-	5243,
+	5245,
+	5245,
 	1817,
 	1070,
 	371,
-	5243,
-	7927,
-	5243,
-	4259,
+	5245,
+	7930,
+	5245,
+	4260,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
-	5243,
-	5243,
-	5091,
-	5243,
-	5243,
-	5133,
-	5243,
-	5243,
-	4259,
-	4259,
-	4259,
-	4259,
-	4259,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
+	5245,
+	5245,
+	5092,
+	5245,
+	5245,
+	5135,
+	5245,
+	5245,
+	4260,
+	4260,
+	4260,
+	4260,
+	4260,
 	0,
-	5243,
+	5245,
 	2382,
-	5243,
+	5245,
 	0,
 	0,
-	5243,
-	5243,
-	0,
-	0,
-	0,
+	5245,
+	5245,
 	0,
 	0,
 	0,
@@ -2412,414 +2454,432 @@ static const int32_t s_InvokerIndices[704] =
 	0,
 	0,
 	0,
-	5243,
-	5243,
+	0,
+	0,
+	0,
+	5245,
+	5245,
 	4223,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
 	4223,
-	5243,
-	7771,
-	5506,
-	7850,
-	5243,
-	5133,
-	5133,
-	5243,
-	5243,
+	5245,
+	7774,
+	5508,
+	7853,
+	5245,
+	5135,
+	5135,
+	5245,
+	5245,
 	2359,
-	5243,
+	5245,
 	1834,
-	7927,
-	5243,
-	5243,
-	5243,
-	5044,
+	7930,
+	5245,
+	5245,
+	5245,
+	5045,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
-	5243,
-	5044,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
+	5245,
+	5045,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
-	5243,
-	5044,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
+	5245,
+	5045,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
-	5243,
-	5243,
-	5243,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
+	5245,
+	5245,
+	5245,
 	1096,
-	5243,
-	5243,
-	5243,
-	4259,
-	5243,
-	5044,
-	5243,
-	5044,
+	5245,
+	5245,
+	5245,
+	4260,
+	5245,
+	5045,
+	5245,
+	5045,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
-	4259,
-	5133,
-	5243,
-	5133,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
+	4260,
+	5135,
+	5245,
+	5135,
 	3770,
 	229,
 	229,
-	5243,
-	5243,
-	5044,
+	5245,
+	5245,
+	5045,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
-	5243,
-	5044,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
+	5245,
+	5045,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
 	229,
-	7889,
-	7465,
-	7583,
-	5243,
-	5243,
-	4259,
-	5133,
-	5243,
-	7889,
-	7771,
-	5091,
+	7892,
+	7467,
+	7585,
+	5245,
+	5245,
+	4260,
+	5135,
+	5245,
+	7892,
+	7774,
+	5092,
 	4223,
-	5243,
-	4271,
-	5243,
-	5243,
-	5243,
+	5245,
+	4272,
+	5245,
+	5245,
+	5245,
 	4171,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
 	4171,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
 	113,
 	2359,
-	5243,
-	5243,
+	5245,
+	5245,
 	3770,
-	5243,
-	5243,
-	4259,
-	5133,
-	5243,
+	5245,
+	5245,
+	4260,
+	5135,
+	5245,
 	1673,
 	2357,
 	2182,
 	2360,
-	4259,
+	4260,
 	1276,
 	1284,
 	2359,
-	4259,
+	4260,
 	2359,
 	1290,
 	2360,
 	1289,
-	4259,
-	4259,
+	4260,
+	4260,
 	2359,
 	2352,
 	2363,
-	5243,
-	5243,
-	4259,
-	5243,
-	5243,
+	5245,
+	5245,
+	4260,
+	5245,
+	5245,
 	4223,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	5243,
-	4259,
-	5243,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	4260,
+	5245,
 	4171,
-	5243,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
+	5245,
 	4171,
-	5243,
-	5243,
+	5245,
+	5245,
 	4223,
 	4223,
-	5243,
+	5245,
 	4171,
-	5243,
-	7187,
-	5243,
-	5243,
-	4301,
-	5243,
-	5243,
-	4301,
-	5243,
-	4301,
-	4301,
-	4301,
-	5243,
+	5245,
+	7189,
+	5245,
+	5245,
+	4302,
+	5245,
+	5245,
+	4302,
+	5245,
+	4302,
+	4302,
+	4302,
+	5245,
 	4171,
-	5243,
-	7187,
-	7187,
-	7187,
-	4259,
-	4259,
-	4259,
-	4259,
-	5243,
-	4301,
-	5091,
-	5091,
-	5243,
-	4301,
-	5091,
-	5091,
-	5243,
+	5245,
+	7189,
+	7189,
+	7189,
+	4260,
+	4260,
+	4260,
+	4260,
+	5245,
+	4302,
+	5092,
+	5092,
+	5245,
+	4302,
+	5092,
+	5092,
+	5245,
 	0,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
 	4223,
-	5124,
-	4259,
-	5243,
-	5243,
+	5126,
+	4260,
+	5245,
+	5245,
 	4171,
-	5243,
-	5243,
-	5243,
-	5243,
+	5245,
+	5122,
+	4248,
+	5245,
+	5245,
+	5245,
+	5245,
+	5245,
+	7761,
+	5245,
+	5245,
 	4171,
-	5243,
-	5243,
-	5243,
+	5245,
+	7189,
+	5245,
+	5245,
 	4171,
-	5243,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5135,
+	5245,
+	5245,
 	4171,
-	5243,
+	5245,
+	4223,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
 	3770,
-	5243,
+	5245,
 	4171,
-	5243,
+	5245,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
 	0,
-	5243,
-	5243,
+	5245,
+	5245,
 	4171,
-	5243,
+	5245,
 	3770,
-	5243,
+	5245,
 	4171,
-	5243,
+	5245,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
 	3770,
-	5243,
+	5245,
 	4171,
-	5243,
+	5245,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
-	5243,
-	5243,
-	5243,
-	5243,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
+	5245,
+	5245,
+	5245,
+	5245,
 	4171,
-	5243,
-	5243,
+	5245,
+	5245,
 	4223,
-	5243,
+	5245,
 	876,
-	5243,
-	5243,
-	5243,
+	5245,
+	5245,
+	5245,
 	4171,
-	5243,
-	5243,
-	5243,
-	4259,
-	5243,
-	5243,
-	7927,
-	5133,
-	4259,
-	5243,
+	5245,
+	5245,
+	5245,
+	4260,
+	5245,
+	5245,
+	7930,
+	5135,
+	4260,
+	5245,
 	0,
 	0,
 	3539,
-	5889,
-	7456,
-	7570,
-	7927,
+	5891,
+	7458,
+	7572,
+	7930,
 	3566,
-	6791,
-	5133,
-	4259,
-	5243,
-	5243,
-	5243,
-	6809,
+	6793,
+	5135,
+	4260,
+	5245,
+	5245,
+	5245,
 	6811,
+	6813,
 	1506,
 	1468,
 	1505,
 	1104,
-	4259,
-	4259,
+	4260,
+	4260,
 	3059,
-	4259,
-	4259,
+	4260,
+	4260,
 	0,
-	4259,
-	4259,
-	4259,
+	4260,
+	4260,
+	4260,
 	1837,
-	5243,
-	7927,
+	5245,
+	7930,
 	2354,
-	4259,
+	4260,
 	1096,
-	4259,
-	5243,
-	4259,
+	4260,
+	5245,
+	4260,
 	4223,
-	5243,
-	5044,
-	5243,
-	5133,
-	5243,
-	5133,
+	5245,
+	5045,
+	5245,
+	5135,
+	5245,
+	5135,
 	1105,
 	3774,
 	1106,
 	1106,
 	1106,
-	5243,
-	5243,
+	5245,
+	5245,
 	2390,
-	4259,
-	5243,
-	4295,
+	4260,
+	5245,
+	4296,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
-	5243,
-	4295,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
+	5245,
+	4296,
 	4223,
-	5243,
-	5044,
-	5133,
-	5243,
-	5133,
-	7465,
-	6921,
-	6624,
-	5564,
-	6224,
-	7927,
+	5245,
+	5045,
+	5135,
+	5245,
+	5135,
+	7467,
+	6923,
+	6626,
+	5566,
+	6226,
+	7930,
 	0,
 	0,
 	0,
 	0,
 	0,
-	7889,
-	7889,
-	7889,
-	7889,
-	7889,
-	7889,
-	6257,
-	6433,
-	6433,
-	6440,
-	6042,
-	5456,
-	5521,
-	5521,
-	5521,
-	6998,
-	6998,
-	6425,
-	6994,
-	6994,
-	7583,
-	6441,
-	5728,
-	6441,
-	5728,
-	7583,
-	7927,
+	7892,
+	7892,
+	7892,
+	7892,
+	7892,
+	7892,
+	6259,
+	6435,
+	6435,
+	6442,
+	6044,
+	5458,
+	5523,
+	5523,
+	5523,
+	7000,
+	7000,
+	6427,
+	6996,
+	6996,
+	7585,
+	6443,
+	5730,
+	6443,
+	5730,
+	7585,
+	7930,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[5] = 
 {
 	{ 0x0200001F, { 6, 11 } },
 	{ 0x02000022, { 17, 7 } },
 	{ 0x06000114, { 0, 6 } },
-	{ 0x06000255, { 24, 2 } },
-	{ 0x06000256, { 26, 2 } },
+	{ 0x06000264, { 24, 2 } },
+	{ 0x06000265, { 26, 2 } },
 };
 extern const uint32_t g_rgctx_Dictionary_2_t539F52E2B5546F074278B90A82B78945BF4D5BE2;
 extern const uint32_t g_rgctx_Dictionary_2__ctor_m370152FFA6C450FA06B648EE47A33AB8C556BA32;
@@ -2884,7 +2944,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	704,
+	719,
 	s_methodPointers,
 	6,
 	s_adjustorThunks,

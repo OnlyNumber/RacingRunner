@@ -156,6 +156,7 @@ MonoBehaviour:
   leaderBoardGrid: {fileID: 1841859926}
   avatarController: {fileID: 2072598551}
   _leaderBoardItem: {fileID: -1100422858664075623, guid: 2cf0fae12a4cb53488c3eb0461f218cb, type: 3}
+  carSwitcher: {fileID: 1905026026}
 --- !u!4 &40231867
 Transform:
   m_ObjectHideFlags: 0
@@ -5186,6 +5187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distanceBetweenCars: 15
   maxCars: 4
+  _firebase: {fileID: 40231866}
 --- !u!1 &2005125159
 GameObject:
   m_ObjectHideFlags: 0
