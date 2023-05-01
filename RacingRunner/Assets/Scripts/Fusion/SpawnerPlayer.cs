@@ -44,23 +44,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
         gameStarter = FindObjectOfType<GameStarter>();
 
-        //Debug.Log("Start SpawnerPlayer" + gameStarter.gameObject.name);
-
-        
-
-        if(gameStarter == null)
-        {
-            Debug.Log("NUll gameStarter");
-            gameStarter = FindObjectOfType<GameStarter>();
-        }
-
-        /*if (gameStarter == null)
-        {
-            Debug.Log("NUll gameStarter2");
-        }*/
-
-        
-
     }
 
     int GetPlayerToken(NetworkRunner runner, PlayerRef player)

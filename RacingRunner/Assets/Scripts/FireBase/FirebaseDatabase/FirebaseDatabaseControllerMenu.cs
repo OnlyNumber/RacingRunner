@@ -10,12 +10,15 @@ public class FirebaseDatabaseControllerMenu : MonoBehaviour
     private TMP_Text coinsText;
 
     [SerializeField]
-    private GameObject leaderBoard;
+    private GameObject leaderBoardGrid;
 
     private DatabaseReference dbRef;
 
     [SerializeField]
     private AvatarController avatarController;
+
+    [SerializeField]
+    private LeaderBoardItem _leaderBoardItem;
 
     public UserData userDataTransfer { private set; get; }
 
@@ -23,14 +26,18 @@ public class FirebaseDatabaseControllerMenu : MonoBehaviour
     {
         dbRef = FirebaseDatabase.DefaultInstance.RootReference;
 
-        Debug.Log(DataHolder.firebaseUser.UserId.ToString());
+        //Debug.Log(DataHolder.firebaseUser.UserId.ToString());
 
         StartCoroutine(LoadData(DataHolder.firebaseUser.UserId.ToString()));
+
+        StartCoroutine(LoadAllUserByScore());
     }
 
-    /*private IEnumerator LoadAllUserByScore()
+    private IEnumerator LoadAllUserByScore()
     {
-        var user = dbRef.Child("users").OrderByChild("score").GetValueAsync();
+        Debug.Log("LoadAllUserByScore");
+
+        var user = dbRef.Child("users").OrderByChild("bestTime").GetValueAsync();
 
         yield return new WaitUntil(predicate: () => user.IsCompleted);
 
@@ -51,12 +58,25 @@ public class FirebaseDatabaseControllerMenu : MonoBehaviour
 
             foreach (DataSnapshot clidSnapshot in snapshot.Children)
             {
+                Debug.Log("clidSnapshot");
                 reverseList.Add(clidSnapshot);
             }
 
             reverseList.Reverse();
 
-            for (int i = 0; i < 10; i++)
+            LeaderBoardItem leaderBoardItemtransfer;
+
+            foreach (var item in reverseList)
+            {
+                leaderBoardItemtransfer = Instantiate(_leaderBoardItem);//.GetComponent<LeaderBoardItem>();
+
+                leaderBoardItemtransfer.transform.SetParent(leaderBoardGrid.transform);
+
+                leaderBoardItemtransfer.nameItem.text = item.Child("nickName").Value.ToString();
+                leaderBoardItemtransfer.timeItem.text = item.Child("bestTime").Value.ToString();
+            }
+
+            /*for (int i = 0; i < 10; i++)
             {
                 if (reverseList.Count > i)
                 {
@@ -66,14 +86,14 @@ public class FirebaseDatabaseControllerMenu : MonoBehaviour
                 {
                     leaderBoardFields[i].text = "";
                 }
-            }
+            }*/
 
-            loadingScreen.GetComponent<HidingPanel>().Fading();
+            //loadingScreen.GetComponent<HidingPanel>().Fading();
 
         }
 
 
-    }*/
+    }
 
     private IEnumerator LoadData(string userID)
     {

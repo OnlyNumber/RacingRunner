@@ -153,8 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsText: {fileID: 575447906}
-  leaderBoard: {fileID: 0}
+  leaderBoardGrid: {fileID: 1841859926}
   avatarController: {fileID: 2072598551}
+  _leaderBoardItem: {fileID: -1100422858664075623, guid: 2cf0fae12a4cb53488c3eb0461f218cb, type: 3}
 --- !u!4 &40231867
 Transform:
   m_ObjectHideFlags: 0
@@ -1990,7 +1991,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000010967, y: 43}
+  m_AnchoredPosition: {x: -0.000010967, y: 27.369}
   m_SizeDelta: {x: 219.1347, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623942536
@@ -2547,7 +2548,7 @@ GameObject:
   - component: {fileID: 836100090}
   - component: {fileID: 836100089}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: LeaderBoardPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4445,7 +4446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1617684400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4945,7 +4946,7 @@ GameObject:
   - component: {fileID: 1762024010}
   - component: {fileID: 1762024009}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: LeaderBoardText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5216,7 +5217,7 @@ GameObject:
   - component: {fileID: 1841859929}
   - component: {fileID: 1841859928}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: LeaderBoardGrid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5240,7 +5241,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.0005493164, y: -28.352}
-  m_SizeDelta: {x: -0.0021362305, y: -56.70453}
+  m_SizeDelta: {x: -0.0021, y: -56.704}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841859928
 MonoBehaviour:
@@ -5262,7 +5263,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
