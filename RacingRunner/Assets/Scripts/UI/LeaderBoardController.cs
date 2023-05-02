@@ -20,16 +20,30 @@ public class LeaderBoardController : MonoBehaviour
 
     private void InitializeLeaderBoard()
     {
+        float timer;
+
         LeaderBoardItem leaderBoardItemtransfer;
 
         foreach (var item in _firebase.reverseList)
         {
+            timer = float.Parse(item.Child("bestTime").Value.ToString());
+
             leaderBoardItemtransfer = Instantiate(_leaderBoardItem);
 
             leaderBoardItemtransfer.transform.SetParent(leaderBoardGrid.transform);
 
             leaderBoardItemtransfer.nameItem.text = item.Child("nickName").Value.ToString();
-            leaderBoardItemtransfer.timeItem.text = item.Child("bestTime").Value.ToString();
+
+            if (timer % 60 > 10)
+            {
+                leaderBoardItemtransfer.timeItem.text = $" {(int)(timer / 60)} : {(int)(timer % 60)}";
+            }
+            else
+            {
+                leaderBoardItemtransfer.timeItem.text = $" {(int)(timer / 60)} : 0{(int)(timer % 60)}";
+            }
+
+            //leaderBoardItemtransfer.timeItem.text = item.Child("bestTime").Value.ToString();
         }
     }
 }

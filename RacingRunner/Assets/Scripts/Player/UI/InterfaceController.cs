@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Fusion;
+using UnityEngine.SceneManagement;
 
 public class InterfaceController : NetworkBehaviour
 {
@@ -12,13 +13,14 @@ public class InterfaceController : NetworkBehaviour
 
     private TMP_Text _timerText;
 
-    private float _timeTicker;
+    public float _timeTicker { private set; get; }
 
     public Transform antoherPlayer;
 
+
+
     [Networked(OnChanged = nameof(OnChangeMethode))]
     private NetworkBool isStart { get; set; }
-
 
     public void Start()
     {
@@ -29,13 +31,13 @@ public class InterfaceController : NetworkBehaviour
 
     private void Update()
     {
-        if (HasInputAuthority && antoherPlayer != null)
+        if (HasInputAuthority)
         {
             dist.text = $"{(int)transform.position.z}";
 
             UpdateTimer();
 
-            if (antoherPlayer.position.z < transform.position.z)
+            if (antoherPlayer != null && antoherPlayer.position.z < transform.position.z)
             {
                 _place.text = "1/2";
             }
@@ -58,7 +60,6 @@ public class InterfaceController : NetworkBehaviour
         {
             _timerText.text = $" {(int)(_timeTicker / 60)} : 0{(int)(_timeTicker % 60)}";
         }
-
     }
 
     [ContextMenu("Find_AnotherPlayer")]
@@ -82,7 +83,6 @@ public class InterfaceController : NetworkBehaviour
     {
         isStart = true;
     }
-
 
     private static void OnChangeMethode(Changed<InterfaceController> changed)
     {

@@ -12,56 +12,14 @@ public class FirebaseDatabaseController : MonoBehaviour
 
     public List<DataSnapshot> reverseList { private set; get; }
 
-    public UserData userDataTransfer { private set; get; }
-    
-    ////////////////////////////// isDataLoadedPlayer
+    private UserData _userData;
+
+    public UserData UserDataTransfer => _userData;
+
     public event Action onDataLoadedPlayer;
 
-    private bool isDataLoadedPlayer;
-
-    public bool IsDataLoadedPlayer
-    {
-        get
-        {
-            return isDataLoadedPlayer;
-        }
-
-        private set
-        {
-            isDataLoadedPlayer = value;
-
-            if (isDataLoadedPlayer)
-            {
-                onDataLoadedPlayer?.Invoke();
-            }
-
-
-        }
-
-    }
-
-    ////////////////////////////// isDataLoadedScore
     public event Action onDataLoadedScore;
 
-    private bool isDataLoadedScore;
-    public bool IsDataLoadedScore
-    {
-        get
-        {
-            return isDataLoadedScore;
-        }
-
-        private set
-        {
-            isDataLoadedScore = value;
-
-            if (isDataLoadedScore)
-            {
-                onDataLoadedScore?.Invoke();
-            }
-        }
-
-    }
 
 
     private void Start()
@@ -70,12 +28,20 @@ public class FirebaseDatabaseController : MonoBehaviour
 
         StartCoroutine(LoadData(DataHolder.firebaseUser.UserId.ToString()));
 
+        Debug.Log(DataHolder.firebaseUser.UserId.ToString());
+
         StartCoroutine(LoadAllUserByScore());
+
+    }
+
+    private void Update()
+    {
+        //if(_userData != null)
+        //Debug.Log(_userData.nickName);
     }
 
     private IEnumerator LoadAllUserByScore()
     {
-        IsDataLoadedScore = false;
 
         reverseList = new List<DataSnapshot>();
 
@@ -99,19 +65,17 @@ public class FirebaseDatabaseController : MonoBehaviour
 
             foreach (DataSnapshot clidSnapshot in snapshot.Children)
             {
-                Debug.Log("clidSnapshot");
                 reverseList.Add(clidSnapshot);
             }
 
             reverseList.Reverse();
 
-            IsDataLoadedScore = true;
+            onDataLoadedScore?.Invoke();
         }
     }
 
     private IEnumerator LoadData(string userID)
     {
-        IsDataLoadedPlayer = false;
 
         var user = dbRef.Child("users").Child(userID).GetValueAsync();
 
@@ -130,23 +94,24 @@ public class FirebaseDatabaseController : MonoBehaviour
         {
             DataSnapshot snapshot = user.Result;
 
-            userDataTransfer = new UserData(snapshot.Child("id").Value.ToString(),
+            _userData = new UserData(
+
+                snapshot.Child("id").Value.ToString(),
                 snapshot.Child("nickName").Value.ToString(),
                 int.Parse(snapshot.Child("goldCoins").Value.ToString()),
                 int.Parse(snapshot.Child("avatarIcon").Value.ToString()),
-                int.Parse(snapshot.Child("bestTime").Value.ToString()),
+                float.Parse(snapshot.Child("bestTime").Value.ToString()),
                 int.Parse(snapshot.Child("car").Value.ToString())
+                
                 );
 
-            IsDataLoadedPlayer = true;
-
-
+            onDataLoadedPlayer?.Invoke();
         }
     }
 
     public void ChangeCurrentUser(string id, string nickName, int goldCoins, int avatarIcon, float bestTime, int car)
     {
-        userDataTransfer = new UserData(id, nickName, goldCoins, avatarIcon, bestTime, car);
+        _userData = new UserData(id, nickName, goldCoins, avatarIcon, bestTime, car);
 
         SaveData(id, nickName, goldCoins, avatarIcon, bestTime, car);
 

@@ -33,4 +33,10 @@ public class CarObstacle : NetworkBehaviour, IObstacleEffect
 
     }
 
+    private void OnDestroy()
+    {
+        Debug.Log("OnDestroy CarObstacle");
+    }
+
+
 }

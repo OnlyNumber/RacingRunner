@@ -18,7 +18,9 @@ public class CoinsController : MonoBehaviour
 
     private void InitializeCoins()
     {
-        _coinsText.text = _firebase.userDataTransfer.goldCoins.ToString();
+        Debug.Log("Coins" + _firebase.UserDataTransfer.goldCoins);
+
+        _coinsText.text = _firebase.UserDataTransfer.goldCoins.ToString();
     }
 
 

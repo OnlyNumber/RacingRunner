@@ -104,18 +104,19 @@ public class MovingForwardPlayer : NetworkBehaviour
 
 
 
-    [Rpc(RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
     private void Rpc_RequestSpeed(float changeSpeed)
     {
 
+        Debug.Log("Rpc_RequestSpeed");
         speed = changeSpeed;
 
     }
 
-    [Rpc(RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
     private void Rpc_RequestSpeedBoost(float changeSpeedIncreace)
     {
-
+        Debug.Log("Rpc_RequestSpeedBoost");
         currentBoost = changeSpeedIncreace;
 
     }

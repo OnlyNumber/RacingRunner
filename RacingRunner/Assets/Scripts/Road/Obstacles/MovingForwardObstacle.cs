@@ -10,7 +10,7 @@ public class MovingForwardObstacle : NetworkBehaviour
 
     public override void FixedUpdateNetwork()
     {
-
+        if(Time.deltaTime < 0.1)
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
     }

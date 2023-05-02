@@ -26,7 +26,7 @@ public class ButtonAvatarChanger : MonoBehaviour
     {
         _changeIcon.sprite = _icon;
 
-        _firebase.ChangeCurrentUser(_firebase.userDataTransfer.id, _firebase.userDataTransfer.nickName, _firebase.userDataTransfer.goldCoins, _iconNumber, _firebase.userDataTransfer.bestTime, _firebase.userDataTransfer.car);
+        _firebase.ChangeCurrentUser(_firebase.UserDataTransfer.id, _firebase.UserDataTransfer.nickName, _firebase.UserDataTransfer.goldCoins, _iconNumber, _firebase.UserDataTransfer.bestTime, _firebase.UserDataTransfer.car);
     }
 
 }

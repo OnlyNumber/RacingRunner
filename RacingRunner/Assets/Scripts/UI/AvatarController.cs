@@ -48,7 +48,7 @@ public class AvatarController : MonoBehaviour
 
     public void SetAvatarStart()
     {
-        avatarIcon.sprite = _avatarImages[firebase.userDataTransfer.avatarIcon];
+        avatarIcon.sprite = _avatarImages[firebase.UserDataTransfer.avatarIcon];
     }
  
     

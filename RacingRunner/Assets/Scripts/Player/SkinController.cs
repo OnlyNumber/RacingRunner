@@ -12,12 +12,9 @@ public class SkinController : NetworkBehaviour
     [Networked(OnChanged = nameof(OnSkinChanged))]
     private int skinNumber { get; set; }
 
-
-
-
     private void Start()
     {
-        skinNumber = -1;
+        //skinNumber = -1;
         Rpc_RequestChangeSkin(DataHolder.car);
     }
 

@@ -15,15 +15,42 @@ public class ColliderChecker : NetworkBehaviour
     [SerializeField]
     private MovingForwardPlayer movingForward;
 
-    [SerializeField]
-    private Finish finish;
+    /*private void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.layer)
+        {
+            case OBSTACLE_LAYER:
+                {
+                    StartCoroutine(collision.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
+                    break;
+                }
+            case USEFUL_ITEM_LAYER:
+                {
+                    StartCoroutine(collision.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
+                    break;
+                }
 
-    //public bool isOiled;
+            case FINISH_LAYER:
+                {
+
+                    movingForward.ChangeBoostMultiply(0);
+                    movingForward.ChangeCurrentSpeedMultiply(0);
+
+                    GetComponent<BoxCollider>().enabled = false;
+
+                    if(HasInputAuthority)
+                        collision.gameObject.GetComponent<Finish>().FinshGame(GetComponent<InterfaceController>()._timeTicker);
+
+                    //finish.FinshGame();
+                    //StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
+                    break;
+                }
+        }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
-        
-
+        if(HasStateAuthority)
         switch (other.gameObject.layer)
         {
             case OBSTACLE_LAYER:
@@ -36,16 +63,9 @@ public class ColliderChecker : NetworkBehaviour
                     StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
                     break;
                 }
-
-            case FINISH_LAYER:
-                {
-                    //finish.FinshGame();
-                    //StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
-                    break;
-                }
         }
-
     }
+
 
 
 }

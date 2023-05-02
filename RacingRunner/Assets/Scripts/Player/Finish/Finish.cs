@@ -5,7 +5,7 @@ using Fusion;
 
 public class Finish : NetworkBehaviour
 {
-    private int place;
+    private int place = 1;
 
     private FinishElements _finishElements;
 
@@ -14,7 +14,6 @@ public class Finish : NetworkBehaviour
     [SerializeField]
     private int prize;
 
-
     private void Start()
     {
        _finishElements = FindObjectOfType<FinishElements>();
@@ -22,31 +21,52 @@ public class Finish : NetworkBehaviour
        _firebase = FindObjectOfType<FirebaseDatabaseController>();
     }
 
-    public void FinshGame()
+    public void FinshGame(float timer)
     {
-
-
+        float time = _firebase.UserDataTransfer.bestTime;
 
         //movingForwardPlayer.ChangeBoostMultiply(0);
         //movingForwardPlayer.ChangeCurrentSpeedMultiply(0);
 
         _finishElements.SetActivityUI(true);
 
-        _finishElements.Txt_Prize.text = prize.ToString();
+        _finishElements.Txt_Prize.text = $"{prize.ToString()}";
+        _finishElements.Txt_SumPrize.text = $"{_firebase.UserDataTransfer.goldCoins.ToString()} + { prize}";
 
-        _finishElements.Txt_SumPrize.text = _firebase.userDataTransfer.goldCoins.ToString() + prize;
+        if (timer % 60 > 10)
+        {
+            _finishElements.Txt_FinishTime.text = $" {(int)(timer / 60)} : {(int)(timer % 60)}";
+        }
+        else
+        {
+            _finishElements.Txt_FinishTime.text = $" {(int)(timer / 60)} : 0{(int)(timer % 60)}";
+        }
+
+        //_finishElements.Txt_FinishTime.text = " ";
+        _finishElements.Txt_FinishPlace.text = $"Your place: {place}";
+
+        if(time < 0)
+        {
+            time = timer;
+        }
+        else if(_firebase.UserDataTransfer.bestTime > timer)
+        {
+            time = timer;
+        }
 
 
-        _finishElements.Txt_FinishTime.text = " ";
 
-        _finishElements.Txt_FinishPlace.text = $"{place}";
+        _firebase.ChangeCurrentUser(_firebase.UserDataTransfer.id, _firebase.UserDataTransfer.nickName, _firebase.UserDataTransfer.goldCoins + prize, _firebase.UserDataTransfer.avatarIcon, time, _firebase.UserDataTransfer.car);
 
-
-        _firebase.ChangeCurrentUser(_firebase.userDataTransfer.id, _firebase.userDataTransfer.nickName, _firebase.userDataTransfer.goldCoins + prize, _firebase.userDataTransfer.avatarIcon, _firebase.userDataTransfer.bestTime, _firebase.userDataTransfer.car);
-
-
-
+        Rpc_ChangePlace(place + 1);
 
     }
+
+    [Rpc]
+    private void Rpc_ChangePlace(int place)
+    {
+        this.place = place;
+    }
+
 
 }

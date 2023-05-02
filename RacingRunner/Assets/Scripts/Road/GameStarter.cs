@@ -19,8 +19,8 @@ public class GameStarter : NetworkBehaviour
     [SerializeField]
     private int _roadLegth;
 
-    [SerializeField]
-    private InterfaceController interfaceController;
+    //[SerializeField]
+    //private InterfaceController interfaceController;
 
     private List<FragmentRoad> road = new List<FragmentRoad>();
 
@@ -39,17 +39,16 @@ public class GameStarter : NetworkBehaviour
                 road.Add(Runner.Spawn(_roadFragment, new Vector3(0, 0, _distanceToNextFragment * i)));
             }
 
-
             Runner.Spawn(_finishFragment, new Vector3(0, 0, _distanceToNextFragment * _roadLegth)).transform.SetParent(gameObject.transform);
-
-
-        //}
+    
     }
 
 
     public IEnumerator StartCountdown()
     {
         yield return new WaitForSeconds(5);
+
+        
 
         StartGame();
     }
@@ -75,6 +74,7 @@ public class GameStarter : NetworkBehaviour
 
         foreach (var localPlayer in movingPlayers)
         {
+            if( !localPlayer.HasInputAuthority)
             localPlayer.GetComponent<MovingForwardPlayer>().ChangeBoostToNormalStart();
 
             localPlayer.GetComponent<InterfaceController>().Rpc_Init();

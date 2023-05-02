@@ -32,7 +32,6 @@ public class CarSwitcher : MonoBehaviour
         {
             currentCar += distance;
 
-
             targetPosition = new Vector3(distanceBetweenCars * -currentCar, 0, -3);
         }
 
@@ -41,14 +40,14 @@ public class CarSwitcher : MonoBehaviour
 
     public void ChangeCar()
     {
-        _firebase.ChangeCurrentUser(_firebase.userDataTransfer.id, _firebase.userDataTransfer.nickName, _firebase.userDataTransfer.goldCoins, _firebase.userDataTransfer.avatarIcon, _firebase.userDataTransfer.bestTime, currentCar);
+        _firebase.ChangeCurrentUser(_firebase.UserDataTransfer.id, _firebase.UserDataTransfer.nickName, _firebase.UserDataTransfer.goldCoins, _firebase.UserDataTransfer.avatarIcon, _firebase.UserDataTransfer.bestTime, currentCar);
 
         DataHolder.car = currentCar;
     }
 
     private void InitializeCar()
     {
-        Move(_firebase.userDataTransfer.car);
+        Move(_firebase.UserDataTransfer.car);
     }
 
 
