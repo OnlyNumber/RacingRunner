@@ -12,9 +12,9 @@ public class ButtonAvatarChanger : MonoBehaviour
 
     private int _iconNumber;
 
-    private FirebaseDatabaseControllerMenu _firebase;
+    private FirebaseDatabaseController _firebase;
 
-    public void Initialize(Sprite icon, Image changeIcon, FirebaseDatabaseControllerMenu firebase, int iconNumber)
+    public void Initialize(Sprite icon, Image changeIcon, FirebaseDatabaseController firebase, int iconNumber)
     {
         this._icon = icon;
         this._changeIcon = changeIcon;
@@ -27,9 +27,6 @@ public class ButtonAvatarChanger : MonoBehaviour
         _changeIcon.sprite = _icon;
 
         _firebase.ChangeCurrentUser(_firebase.userDataTransfer.id, _firebase.userDataTransfer.nickName, _firebase.userDataTransfer.goldCoins, _iconNumber, _firebase.userDataTransfer.bestTime, _firebase.userDataTransfer.car);
-
-        _firebase.SaveData(_firebase.userDataTransfer.id, _firebase.userDataTransfer.nickName, _firebase.userDataTransfer.goldCoins, _firebase.userDataTransfer.avatarIcon, _firebase.userDataTransfer.bestTime, _firebase.userDataTransfer.car);
-
     }
 
 }

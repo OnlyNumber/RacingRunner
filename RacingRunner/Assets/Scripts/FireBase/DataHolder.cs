@@ -7,4 +7,7 @@ using Firebase.Auth;
 public static class DataHolder
 {
     public static FirebaseUser firebaseUser;
+
+    public static int car;
+
 }

@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Fusion;
 
-public class OptionsManager : MonoBehaviour
+public class OptionsManager : NetworkBehaviour
 {
     [SerializeField]
     private GameObject _optionsPanel;
@@ -17,6 +18,7 @@ public class OptionsManager : MonoBehaviour
 
     public void LeaveGame()
     {
+        Runner.Shutdown();
         SceneManager.LoadScene(MENU_SCENE);
     }
 

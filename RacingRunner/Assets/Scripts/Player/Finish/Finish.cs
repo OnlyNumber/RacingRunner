@@ -17,10 +17,13 @@ public class Finish : MonoBehaviour
 
     public void FinshGame()
     {
+
         movingForwardPlayer.ChangeBoostMultiply(0);
         movingForwardPlayer.ChangeCurrentSpeedMultiply(0);
 
         _finishElements.SetActivityUI(true);
+
+        
 
     }
 

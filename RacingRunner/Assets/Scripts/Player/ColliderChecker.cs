@@ -12,7 +12,6 @@ public class ColliderChecker : NetworkBehaviour
 
     private const int USEFUL_ITEM_LAYER = 9;
 
-
     [SerializeField]
     private MovingForwardPlayer movingForward;
 
@@ -40,7 +39,7 @@ public class ColliderChecker : NetworkBehaviour
 
             case FINISH_LAYER:
                 {
-                    finish.FinshGame();
+                    //finish.FinshGame();
                     //StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
                     break;
                 }

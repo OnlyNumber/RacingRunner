@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 5949776965230983342}
   - component: {fileID: 2560127959766305237}
   - component: {fileID: 4915240365330814869}
+  - component: {fileID: -499876878259005971}
   m_Layer: 7
   m_Name: PlayerPF
   m_TagString: Untagged
@@ -101,6 +102,7 @@ MonoBehaviour:
   - {fileID: 8389270902011061585}
   - {fileID: 5949776965230983342}
   - {fileID: 4915240365330814869}
+  - {fileID: -499876878259005971}
   SimulationBehaviours: []
 --- !u!114 &1168415741225615652
 MonoBehaviour:
@@ -254,6 +256,24 @@ MonoBehaviour:
     RotTeleportRadians: 1.5
   UseLegacySharedModeInterpolation: 0
   TargetInterpolationDelay: 0.03
+--- !u!114 &-499876878259005971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3954143759811083748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79e8861c56ac4e74bba99da5daa38a9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  _carList:
+  - {fileID: 5942484276092139824}
+  - {fileID: 2778159480723231264}
+  - {fileID: 2233262710221898246}
+  - {fileID: 8248987586199491615}
 --- !u!1 &3980294915376147048
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +467,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7787006724376129808, guid: f72370de302a80041bae150bb0c16de7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f72370de302a80041bae150bb0c16de7, type: 3}
+--- !u!1 &2778159480723231264 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2574759349909886386, guid: f72370de302a80041bae150bb0c16de7, type: 3}
+  m_PrefabInstance: {fileID: 375312421320574866}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3298273167538391194 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2950052713818148616, guid: f72370de302a80041bae150bb0c16de7, type: 3}
@@ -530,6 +555,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6066477635953555589, guid: b20100df8a1c4c34fa3a9ff1d83adcb0, type: 3}
   m_PrefabInstance: {fileID: 4721322112848732217}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2233262710221898246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6880275272301322815, guid: b20100df8a1c4c34fa3a9ff1d83adcb0, type: 3}
+  m_PrefabInstance: {fileID: 4721322112848732217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6175895853133018782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -540,6 +570,10 @@ PrefabInstance:
     - target: {fileID: 559222026902818734, guid: e1ed3a106d14a5040b7af687e3e1b545, type: 3}
       propertyPath: m_Name
       value: Free Racing Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 559222026902818734, guid: e1ed3a106d14a5040b7af687e3e1b545, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 903272806298260756, guid: e1ed3a106d14a5040b7af687e3e1b545, type: 3}
       propertyPath: m_RootOrder
@@ -599,6 +633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ed3a106d14a5040b7af687e3e1b545, type: 3}
+--- !u!1 &5942484276092139824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 559222026902818734, guid: e1ed3a106d14a5040b7af687e3e1b545, type: 3}
+  m_PrefabInstance: {fileID: 6175895853133018782}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6430051040512484234 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 903272806298260756, guid: e1ed3a106d14a5040b7af687e3e1b545, type: 3}
@@ -677,6 +716,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a9f34c4ee7dae14ca4ece8bd7d1f7b7, type: 3}
+--- !u!1 &8248987586199491615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1761769036603674968, guid: 2a9f34c4ee7dae14ca4ece8bd7d1f7b7, type: 3}
+  m_PrefabInstance: {fileID: 7640714229154858311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8732930673376448165 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1385102309943086050, guid: 2a9f34c4ee7dae14ca4ece8bd7d1f7b7, type: 3}

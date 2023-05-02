@@ -23,10 +23,12 @@ public class AvatarController : MonoBehaviour
     private MenuController menuController;
 
     [SerializeField]
-    private FirebaseDatabaseControllerMenu firebase;
+    private FirebaseDatabaseController firebase;
 
     private void Start()
     {
+        firebase.onDataLoadedPlayer += SetAvatarStart;
+
         Button transferButton;
 
         int i = 0;
@@ -44,9 +46,9 @@ public class AvatarController : MonoBehaviour
         menuController.GoToMainUI();
     }
 
-    public void SetAvatarStart(int imageNumber)
+    public void SetAvatarStart()
     {
-        avatarIcon.sprite = _avatarImages[imageNumber];
+        avatarIcon.sprite = _avatarImages[firebase.userDataTransfer.avatarIcon];
     }
  
     

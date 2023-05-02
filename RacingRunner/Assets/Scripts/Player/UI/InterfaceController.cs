@@ -29,7 +29,6 @@ public class InterfaceController : NetworkBehaviour
 
     private void Update()
     {
-
         if (HasInputAuthority && antoherPlayer != null)
         {
             dist.text = $"{transform.position.z}";
@@ -38,11 +37,11 @@ public class InterfaceController : NetworkBehaviour
 
             if (antoherPlayer.position.z < transform.position.z)
             {
-                _place.text = "1";
+                _place.text = "1/2";
             }
             else
             {
-                _place.text = "2";
+                _place.text = "1/2";
             }
         }
     }

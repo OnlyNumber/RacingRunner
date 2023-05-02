@@ -1,18 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fusion;
 
-public class SkinController : MonoBehaviour
+public class SkinController : NetworkBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField]
+    private List<GameObject> _carList;
+
+    [Networked(OnChanged = nameof(OnSkinChanged))]
+    private int skinNumber { get; set; }
+
+
+
+
+    private void Start()
     {
-        
+        skinNumber = -1;
+        Rpc_RequestChangeSkin(DataHolder.car);
     }
 
-    // Update is called once per frame
-    void Update()
+    [Rpc(RpcSources.InputAuthority, RpcTargets.StateAuthority)]
+    private void Rpc_RequestChangeSkin(int skinNumber, RpcInfo info = default)
     {
-        
+        this.skinNumber = skinNumber;
     }
+
+    static void OnSkinChanged(Changed<SkinController> changed)
+    {
+        changed.Behaviour.OnSkinChange();
+    }
+
+    private void OnSkinChange()
+    {
+        _carList[0].SetActive(false);
+        _carList[skinNumber].SetActive(true);
+    
+    }
+
+
 }
