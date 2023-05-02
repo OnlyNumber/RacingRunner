@@ -57,6 +57,9 @@ public class GameStarter : NetworkBehaviour
     [ContextMenu("StartGame")]
     public void StartGame()
     {
+        Runner.SessionInfo.IsOpen = false;
+        Runner.SessionInfo.IsVisible = false;
+
         foreach (var item in road)
         {
             item.SpawnWave();

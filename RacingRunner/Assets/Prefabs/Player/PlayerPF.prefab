@@ -100,6 +100,7 @@ MonoBehaviour:
   - {fileID: 6533040817349943296}
   - {fileID: 1853324295705234214}
   - {fileID: 8389270902011061585}
+  - {fileID: 7085484484445709563}
   - {fileID: 5949776965230983342}
   - {fileID: 4915240365330814869}
   - {fileID: -499876878259005971}
@@ -197,7 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb180cd71333b0747a7427629cbfd0c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingForwardPlayer: {fileID: 6533040817349943296}
+  _interpolationDataSource: 0
+  prize: 0
 --- !u!114 &5949776965230983342
 MonoBehaviour:
   m_ObjectHideFlags: 0

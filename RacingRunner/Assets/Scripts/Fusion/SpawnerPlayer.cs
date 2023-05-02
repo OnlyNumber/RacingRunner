@@ -40,7 +40,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
         mapTokenIdWithNetworkPlayer = new Dictionary<int, NetworkPlayer>();
         
         _sessionFinder = FindObjectOfType<SessionFinder>(true);
-        
 
         gameStarter = FindObjectOfType<GameStarter>();
 
@@ -69,13 +68,10 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     public void OnInput(NetworkRunner runner, NetworkInput input)
     {
-
         if (characterInputHandler == null && NetworkPlayer.local)
         {
             characterInputHandler = NetworkPlayer.local.GetComponent<PlayerInputHandler>();
         }
-
-
 
         if(characterInputHandler != null)
         {

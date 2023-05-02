@@ -59,8 +59,6 @@ public class FirebaseDatabaseController : MonoBehaviour
             {
                 onDataLoadedScore?.Invoke();
             }
-
-
         }
 
     }

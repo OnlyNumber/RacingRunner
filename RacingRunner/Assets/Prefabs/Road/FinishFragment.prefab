@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 6118392707285798342}
   - component: {fileID: 7832364429754618980}
   - component: {fileID: 288521208044338627}
+  - component: {fileID: 6732530872356627448}
   m_Layer: 10
   m_Name: FinishFragment
   m_TagString: Untagged
@@ -173,6 +174,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 7832364429754618980}
   - {fileID: 288521208044338627}
+  - {fileID: 6732530872356627448}
   SimulationBehaviours: []
 --- !u!114 &7832364429754618980
 MonoBehaviour:
@@ -223,6 +225,20 @@ MonoBehaviour:
     RotTeleportRadians: 1.5
   UseLegacySharedModeInterpolation: 0
   TargetInterpolationDelay: 0.03
+--- !u!114 &6732530872356627448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6118392707285798336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb180cd71333b0747a7427629cbfd0c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
+  prize: 0
 --- !u!1 &6118392707444293820
 GameObject:
   m_ObjectHideFlags: 0

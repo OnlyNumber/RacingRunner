@@ -31,7 +31,7 @@ public class InterfaceController : NetworkBehaviour
     {
         if (HasInputAuthority && antoherPlayer != null)
         {
-            dist.text = $"{transform.position.z}";
+            dist.text = $"{(int)transform.position.z}";
 
             UpdateTimer();
 
@@ -41,7 +41,7 @@ public class InterfaceController : NetworkBehaviour
             }
             else
             {
-                _place.text = "1/2";
+                _place.text = "2/2";
             }
         }
     }

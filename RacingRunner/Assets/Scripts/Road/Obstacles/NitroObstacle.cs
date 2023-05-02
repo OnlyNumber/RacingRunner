@@ -23,7 +23,7 @@ public class NitroObstacle : NetworkBehaviour, IObstacleEffect
 
         yield return new WaitForSecondsRealtime(timer);
 
-        //Debug.Log("ObstacleEffect2");
+        Debug.Log("NitroObstacleEffect");
 
         movingForward.ChangeBoostToNormal();
     }
