@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   changeModificator: 3
-  timer: 4
+  timer: 10
 --- !u!136 &6925916139123297680
 CapsuleCollider:
   m_ObjectHideFlags: 0

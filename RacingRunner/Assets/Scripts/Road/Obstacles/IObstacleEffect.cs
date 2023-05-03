@@ -11,6 +11,6 @@ public interface IObstacleEffect
 
     public IEnumerator ObstacleEffect(MovingForwardPlayer movingForward);
 
-    
+    public void StopEffect();
 
 }

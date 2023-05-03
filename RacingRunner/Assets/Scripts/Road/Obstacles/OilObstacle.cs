@@ -20,9 +20,9 @@ public class OilObstacle : NetworkBehaviour, IObstacleEffect
             movingForward.GetComponent<ColliderChecker>().isOiled = true;
         }*/
 
-        Runner.Despawn(GetComponent<NetworkObject>());
+        //Runner.Despawn(GetComponent<NetworkObject>());
 
-        Debug.Log("OilObstacleEffect");
+        //Debug.Log("OilObstacleEffect");
 
         movingForward.ChangeBoostToNormal();
 
@@ -35,8 +35,14 @@ public class OilObstacle : NetworkBehaviour, IObstacleEffect
         //Debug.Log("ObstacleEffect2");
 
         movingForward.ChangeBoostToNormal();
+        
         gameObject.SetActive(true);
         //movingForward.GetComponent<ColliderChecker>().isOiled = false;
 
+    }
+
+    public void StopEffect()
+    {
+        StopAllCoroutines();
     }
 }

@@ -34,15 +34,8 @@ public class FirebaseDatabaseController : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        //if(_userData != null)
-        //Debug.Log(_userData.nickName);
-    }
-
     private IEnumerator LoadAllUserByScore()
     {
-
         reverseList = new List<DataSnapshot>();
 
         Debug.Log("LoadAllUserByScore");

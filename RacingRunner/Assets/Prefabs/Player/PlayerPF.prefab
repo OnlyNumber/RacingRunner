@@ -185,7 +185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
   movingForward: {fileID: 6533040817349943296}
-  finish: {fileID: 7085484484445709563}
 --- !u!114 &7085484484445709563
 MonoBehaviour:
   m_ObjectHideFlags: 0

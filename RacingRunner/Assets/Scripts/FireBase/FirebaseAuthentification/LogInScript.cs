@@ -78,9 +78,6 @@ public class LogInScript : MonoBehaviour
     {
         if(user != null)
         {
-            //DataHolder.name = user.DisplayName;
-            //DataHolder.id = user.UserId;
-
             DataHolder.firebaseUser = user;
 
             if(DataHolder.firebaseUser == null)
@@ -92,10 +89,10 @@ public class LogInScript : MonoBehaviour
 
             SceneManager.LoadScene(MENU_SCENE);
         }
-        else
+        /*else
         {
 
-        }
+        }*/
     }
 
     private void InitializeFirebase()

@@ -74,7 +74,7 @@ public class GameStarter : NetworkBehaviour
 
         foreach (var localPlayer in movingPlayers)
         {
-            if( !localPlayer.HasInputAuthority)
+            //if( !localPlayer.HasInputAuthority)
             localPlayer.GetComponent<MovingForwardPlayer>().ChangeBoostToNormalStart();
 
             localPlayer.GetComponent<InterfaceController>().Rpc_Init();

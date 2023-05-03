@@ -47,21 +47,67 @@ public class ColliderChecker : NetworkBehaviour
                 }
         }
     }*/
-
+    Coroutine nowEf;
+    IObstacleEffect stateList;
     private void OnTriggerEnter(Collider other)
     {
+        
+
         if(HasStateAuthority)
         switch (other.gameObject.layer)
         {
             case OBSTACLE_LAYER:
                 {
-                    StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
+
+                        if (stateList != null)
+                        {
+                            stateList.StopEffect();
+                        }
+
+                        stateList = other.gameObject.GetComponent<IObstacleEffect>();
+
+                        //Debug.Log()
+
+                        /* stateList.Add(other.gameObject.GetComponent<NetworkBehaviour>());
+
+                         //stateList[2].StopAllCoroutines
+
+                         foreach (var item in stateList)
+                         {
+                             item.StopAllCoroutines();
+                         }*/
+
+
+
+
+                        StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
+                        
                     break;
                 }
             case USEFUL_ITEM_LAYER:
                 {
-                    StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
-                    break;
+                        //stateList.Add(other.gameObject.GetComponent<NetworkBehaviour>());
+                        if(stateList != null)
+                        {
+                            stateList.StopEffect();
+                        }
+                        if(nowEf != null)
+                        {
+                            StopCoroutine(nowEf);
+                        }
+
+
+
+                        stateList = other.gameObject.GetComponent<IObstacleEffect>();
+                        /*foreach (var item in stateList)
+                        {
+                            item.StopAllCoroutines();
+                        }*/
+
+                        //GetComponent<MovingForwardPlayer>().StopAllCoroutines();
+
+                        nowEf = StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
+                        break;
                 }
         }
     }

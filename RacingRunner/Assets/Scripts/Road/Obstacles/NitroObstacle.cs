@@ -23,9 +23,17 @@ public class NitroObstacle : NetworkBehaviour, IObstacleEffect
 
         yield return new WaitForSecondsRealtime(timer);
 
-        Debug.Log("NitroObstacleEffect");
+        Debug.Log("StopEffectNitro");
 
         movingForward.ChangeBoostToNormal();
+    }
+
+    public void StopEffect()
+    {
+        Debug.Log("StopEffect");
+        StopCoroutine("ObstacleEffect");
+
+        StopAllCoroutines();
     }
 
 }

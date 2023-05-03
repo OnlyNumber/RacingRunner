@@ -37,6 +37,9 @@ public class CarObstacle : NetworkBehaviour, IObstacleEffect
     {
         Debug.Log("OnDestroy CarObstacle");
     }
-
+    public void StopEffect()
+    {
+        StopAllCoroutines();
+    }
 
 }
