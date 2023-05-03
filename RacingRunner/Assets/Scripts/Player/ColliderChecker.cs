@@ -19,19 +19,14 @@ public class ColliderChecker : NetworkBehaviour
     {
         switch (collision.gameObject.layer)
         {
-            /*case OBSTACLE_LAYER:
-                {
-                    StartCoroutine(collision.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
-                    break;
-                }
-            case USEFUL_ITEM_LAYER:
-                {
-                    StartCoroutine(collision.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
-                    break;
-                }*/
+            
 
             case FINISH_LAYER:
                 {
+                    if (nowEf != null)
+                    {
+                        StopCoroutine(nowEf);
+                    }
 
                     movingForward.ChangeBoostMultiply(0);
                     movingForward.ChangeCurrentSpeedMultiply(0);

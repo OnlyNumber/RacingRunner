@@ -13,6 +13,8 @@ public class InterfaceController : NetworkBehaviour
 
     private TMP_Text _timerText;
 
+    private GameObject _waitingPanel;
+
     public float _timeTicker { private set; get; }
 
     public Transform antoherPlayer;
@@ -24,6 +26,7 @@ public class InterfaceController : NetworkBehaviour
 
     public void Start()
     {
+        _waitingPanel = GameObject.Find("WaitingPanel");
         _place = GameObject.Find("PlaceInRaceText").GetComponent<TMP_Text>();
         dist = GameObject.Find("DistanceToStartText").GetComponent<TMP_Text>();
         _timerText = GameObject.Find("TimerText").GetComponent<TMP_Text>();
@@ -31,7 +34,7 @@ public class InterfaceController : NetworkBehaviour
 
     private void Update()
     {
-        if (HasInputAuthority)
+        if (isStart && HasInputAuthority)
         {
             dist.text = $"{(int)transform.position.z}";
 
@@ -65,6 +68,8 @@ public class InterfaceController : NetworkBehaviour
     [ContextMenu("Find_AnotherPlayer")]
     public void Find_AnotherPlayer()
     {
+        _waitingPanel.SetActive(false);
+
         foreach (var anotherPlayer in FindObjectsOfType<MovingForwardPlayer>())
         {
             Debug.Log(anotherPlayer.gameObject.name);

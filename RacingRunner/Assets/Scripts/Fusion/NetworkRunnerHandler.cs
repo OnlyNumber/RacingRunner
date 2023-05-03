@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System;
 using Fusion;
 using Fusion.Sockets;
@@ -35,10 +36,10 @@ public class NetworkRunnerHandler : MonoBehaviour
 
             networkRunner.name = "Network runner";
 
-            if (SceneManager.GetActiveScene().name != MENU_SCENE)
+            /*if (SceneManager.GetActiveScene().name != MENU_SCENE)
             {
                 var clientTask = InitializeNetworkRunner(networkRunner, GameMode.AutoHostOrClient, "TestSessionName", GameManager.instance.GetConnectionToken(), NetAddress.Any(), SceneManager.GetActiveScene().buildIndex, null);
-            }
+            }*/
 
             Debug.Log("Server NetworkRunner started");
         }

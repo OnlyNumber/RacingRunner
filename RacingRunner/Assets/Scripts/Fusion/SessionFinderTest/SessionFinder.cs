@@ -2,6 +2,9 @@ using UnityEngine;
 using Fusion;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 
 public class SessionFinder : MonoBehaviour
 {
@@ -9,10 +12,25 @@ public class SessionFinder : MonoBehaviour
 
     private const string GAME_PLAY_SCENE = "GamePlay";
 
+    Task ads;
+
+   /* private void Start()
+    {
+        StartSearch();
+    }*/
+
+    private void Update()
+    {
+        if (ads == null)
+        StartSearch();
+    }
+
+
     public void StartSearch()
     {
-        var ads = StartPlayer(FindObjectOfType<NetworkRunner>());
+        ads = StartPlayer(FindObjectOfType<NetworkRunner>());
     }
+
 
     public async Task StartPlayer(NetworkRunner runner)
     {

@@ -19,15 +19,7 @@ public class LineController : NetworkBehaviour
 
     public override void FixedUpdateNetwork()
     {
-        /*if (GetInput(out NetworkInputData networkInput))
-        {
-            if (networkInput.line != 0) 
-            Debug.Log(networkInput.line);
-
-            MoveToLine(networkInput.line);*/
-
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(lines[targetLine].x, transform.position.y, transform.position.z), speed * Time.deltaTime);
-        //}
+        transform.position = Vector3.MoveTowards(transform.position, new Vector3(lines[targetLine].x, transform.position.y, transform.position.z), speed * Time.deltaTime);
     }
 
     public void MoveToLine(int lineIndex)

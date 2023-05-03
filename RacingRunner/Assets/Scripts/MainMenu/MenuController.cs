@@ -77,5 +77,8 @@ public class MenuController : MonoBehaviour
         _avatarIconsUI.SetActive(false);
     }
 
-
+    public void GoToSearchScene()
+    {
+        SceneManager.LoadScene("LoadScene");
+    }
 }
