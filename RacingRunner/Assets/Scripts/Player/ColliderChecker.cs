@@ -15,11 +15,11 @@ public class ColliderChecker : NetworkBehaviour
     [SerializeField]
     private MovingForwardPlayer movingForward;
 
-    /*private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         switch (collision.gameObject.layer)
         {
-            case OBSTACLE_LAYER:
+            /*case OBSTACLE_LAYER:
                 {
                     StartCoroutine(collision.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
                     break;
@@ -28,7 +28,7 @@ public class ColliderChecker : NetworkBehaviour
                 {
                     StartCoroutine(collision.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
                     break;
-                }
+                }*/
 
             case FINISH_LAYER:
                 {
@@ -46,7 +46,7 @@ public class ColliderChecker : NetworkBehaviour
                     break;
                 }
         }
-    }*/
+    }
     Coroutine nowEf;
     IObstacleEffect stateList;
     private void OnTriggerEnter(Collider other)
