@@ -52,7 +52,6 @@ public class PlayerInputHandler : MonoBehaviour
     void PressButton()
     {
         isPressedBrake = !isPressedBrake;
-        //Debug.Log(isPressedBrake);
     }
 
     private void ChooseDirection(IPlatform.Directions direction)
@@ -62,14 +61,16 @@ public class PlayerInputHandler : MonoBehaviour
             case (IPlatform.Directions.right):
                 {
                     Debug.Log("Right");
-                    /*linePos = 1;*/myPlayer.MoveToLine(1);
+                    //linePos = 1;
+                    myPlayer.MoveToLine(1);
                     break;
                 }
 
             case (IPlatform.Directions.left):
                 {
                     Debug.Log("Left");
-                    /*linePos = -1;*/ myPlayer.MoveToLine(-1);
+                    //linePos = -1;
+                    myPlayer.MoveToLine(-1);
                     break;
                 }
         }

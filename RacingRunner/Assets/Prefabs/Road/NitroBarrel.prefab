@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -2795032635149157715}
   - component: {fileID: -3325903677517418322}
   - component: {fileID: 6925916139123297680}
+  - component: {fileID: 2144186142578001308}
   m_Layer: 9
   m_Name: NitroBarrel
   m_TagString: Untagged
@@ -88,6 +89,7 @@ MonoBehaviour:
   NetworkedBehaviours:
   - {fileID: 170776755476968351}
   - {fileID: -3325903677517418322}
+  - {fileID: 2144186142578001308}
   SimulationBehaviours: []
 --- !u!114 &-3325903677517418322
 MonoBehaviour:
@@ -118,6 +120,19 @@ CapsuleCollider:
   m_Height: 2.452074
   m_Direction: 1
   m_Center: {x: 0.016804695, y: 1.306037, z: -0.014287949}
+--- !u!114 &2144186142578001308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5539538728048755878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d480068520e2cec4aa106bcfa9378469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _interpolationDataSource: 0
 --- !u!1 &5539538729364493718
 GameObject:
   m_ObjectHideFlags: 0

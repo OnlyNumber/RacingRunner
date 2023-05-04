@@ -25,9 +25,6 @@ public class Finish : NetworkBehaviour
     {
         float time = _firebase.UserDataTransfer.bestTime;
 
-        //movingForwardPlayer.ChangeBoostMultiply(0);
-        //movingForwardPlayer.ChangeCurrentSpeedMultiply(0);
-
         _finishElements.SetActivityUI(true);
 
         _finishElements.Txt_Prize.text = $"{prize.ToString()}";
@@ -42,7 +39,6 @@ public class Finish : NetworkBehaviour
             _finishElements.Txt_FinishTime.text = $" {(int)(timer / 60)} : 0{(int)(timer % 60)}";
         }
 
-        //_finishElements.Txt_FinishTime.text = " ";
         _finishElements.Txt_FinishPlace.text = $"Your place: {place}";
 
         if(time < 0)
@@ -53,8 +49,6 @@ public class Finish : NetworkBehaviour
         {
             time = timer;
         }
-
-
 
         _firebase.ChangeCurrentUser(_firebase.UserDataTransfer.id, _firebase.UserDataTransfer.nickName, _firebase.UserDataTransfer.goldCoins + prize, _firebase.UserDataTransfer.avatarIcon, time, _firebase.UserDataTransfer.car);
 

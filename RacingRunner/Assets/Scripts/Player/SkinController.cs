@@ -5,7 +5,6 @@ using Fusion;
 
 public class SkinController : NetworkBehaviour
 {
-
     [SerializeField]
     private List<GameObject> _carList;
 
@@ -14,7 +13,6 @@ public class SkinController : NetworkBehaviour
 
     private void Start()
     {
-        //skinNumber = -1;
         Rpc_RequestChangeSkin(DataHolder.car);
     }
 
@@ -35,6 +33,4 @@ public class SkinController : NetworkBehaviour
         _carList[skinNumber].SetActive(true);
     
     }
-
-
 }

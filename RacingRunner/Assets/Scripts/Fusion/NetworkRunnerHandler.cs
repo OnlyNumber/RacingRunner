@@ -9,13 +9,13 @@ using UnityEngine.SceneManagement;
 
 public class NetworkRunnerHandler : MonoBehaviour
 {
-    private int maxPlayers = 2;
+    //private int maxPlayers = 2;
 
     public NetworkRunner networkRunnerPrefab;
 
     private NetworkRunner networkRunner;
 
-    private const string MENU_SCENE = "MenuScene";
+    //private const string MENU_SCENE = "MenuScene";
 
     private void Awake()
     {
@@ -36,16 +36,11 @@ public class NetworkRunnerHandler : MonoBehaviour
 
             networkRunner.name = "Network runner";
 
-            /*if (SceneManager.GetActiveScene().name != MENU_SCENE)
-            {
-                var clientTask = InitializeNetworkRunner(networkRunner, GameMode.AutoHostOrClient, "TestSessionName", GameManager.instance.GetConnectionToken(), NetAddress.Any(), SceneManager.GetActiveScene().buildIndex, null);
-            }*/
-
             Debug.Log("Server NetworkRunner started");
         }
     }
 
-    protected virtual Task InitializeNetworkRunner(NetworkRunner runner, GameMode gameMode, string sessionName, byte[] connectionToken, NetAddress addres, SceneRef scene, Action<NetworkRunner> initialized)
+    /*protected virtual Task InitializeNetworkRunner(NetworkRunner runner, GameMode gameMode, string sessionName, byte[] connectionToken, NetAddress addres, SceneRef scene, Action<NetworkRunner> initialized)
     {
 
         Debug.Log("InitializeNetworkRunner  TestSessionName");
@@ -76,7 +71,7 @@ public class NetworkRunnerHandler : MonoBehaviour
         Debug.Log($"Create session {sessionName} scene {sceneName} build Index {SceneUtility.GetBuildIndexByScenePath($"scenes/{sceneName}")}");
 
         var clientTask = InitializeNetworkRunner(networkRunner, GameMode.Host, sessionName, GameManager.instance.GetConnectionToken(), NetAddress.Any(), SceneUtility.GetBuildIndexByScenePath($"scenes/{sceneName}"), null);
-    }
+    }*/
 
 
 

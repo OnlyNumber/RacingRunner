@@ -20,7 +20,7 @@ static Il2CppMethodPointer s_methodPointers[1] =
 };
 static const int32_t s_InvokerIndices[1] = 
 {
-	5636,
+	5635,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Fusion_Addressables_CodeGenModule;
 const Il2CppCodeGenModule g_Fusion_Addressables_CodeGenModule = 
