@@ -13,6 +13,8 @@ public class NitroObstacle : NetworkBehaviour, IObstacleEffect
 
     public IEnumerator ObstacleEffect(MovingForwardPlayer movingForward)
     {
+        gameObject.SetActive(false);
+
         Debug.Log("NitroObstacleEffect");
 
         movingForward.ChangeBoostToNormal();

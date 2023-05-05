@@ -6,6 +6,8 @@ using System;
 
 public class GameStarter : NetworkBehaviour
 {
+    [SerializeField]
+    private GameObject _startPanel;
 
     [SerializeField]
     private float _distanceToNextFragment;
@@ -46,6 +48,8 @@ public class GameStarter : NetworkBehaviour
 
     public IEnumerator StartCountdown()
     {
+        _startPanel.SetActive(false);
+
         yield return new WaitForSeconds(5);
 
         

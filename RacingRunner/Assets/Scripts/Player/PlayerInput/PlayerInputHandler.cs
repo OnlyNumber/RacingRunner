@@ -33,13 +33,13 @@ public class PlayerInputHandler : MonoBehaviour
             if (!isMobile)
             {
 
-                platformControl = new IComputerPlatform(checkZone);
+                platformControl = new ComputerPlatform(checkZone);
 
             }
             else
             {
 
-                platformControl = new IMobilePlatform(checkZone);
+                platformControl = new MobilePlatform(checkZone);
             }
 
     }

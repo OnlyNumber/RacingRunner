@@ -13,6 +13,8 @@ public class CarObstacle : NetworkBehaviour, IObstacleEffect
 
     public IEnumerator ObstacleEffect(MovingForwardPlayer movingForward)
     {
+        gameObject.SetActive(false);
+
         movingForward.gameObject.layer = IObstacleEffect.UNTOUCHABLE_LAYER;
 
         if (transform.position.z - teleportDistance > 0)

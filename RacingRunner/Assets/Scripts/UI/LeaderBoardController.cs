@@ -26,7 +26,13 @@ public class LeaderBoardController : MonoBehaviour
 
         foreach (var item in _firebase.reverseList)
         {
+
             timer = float.Parse(item.Child("bestTime").Value.ToString());
+
+            if(timer < 0)
+            {
+                continue;
+            }
 
             leaderBoardItemtransfer = Instantiate(_leaderBoardItem);
 

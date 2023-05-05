@@ -17,7 +17,7 @@ public class RegistrationScript : MonoBehaviour
     public FirebaseUser user;
 
     private const string LOG_IN_MENU_SCENE = "LogInMenu";
-    private const string GAME_PLAY_SCENE = "GamePlay";
+    private const string MAIN_SCENE = "MenuScene";
 
     [SerializeField]
     private TMP_InputField emailField;
@@ -131,7 +131,7 @@ public class RegistrationScript : MonoBehaviour
 
                         SaveData();
 
-                        SceneManager.LoadScene(GAME_PLAY_SCENE);
+                        SceneManager.LoadScene(MAIN_SCENE);
 
 
                     }

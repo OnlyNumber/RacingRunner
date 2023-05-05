@@ -21,7 +21,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     private const string GAME_PLAY = "GamePlay";
 
-    private SessionFinder _sessionFinder;
+    //private SessionFinder _sessionFinder;
 
     public Dictionary<PlayerRef, NetworkPlayer> GetSpawnedPlayers()
     {
@@ -39,7 +39,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
     {
         mapTokenIdWithNetworkPlayer = new Dictionary<int, NetworkPlayer>();
         
-        _sessionFinder = FindObjectOfType<SessionFinder>(true);
+        //_sessionFinder = FindObjectOfType<SessionFinder>(true);
 
         gameStarter = FindObjectOfType<GameStarter>();
 
@@ -118,6 +118,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
                 if(runner.SessionInfo.PlayerCount == runner.SessionInfo.MaxPlayers)
                 {
+                    Debug.Log("gameStarter.StartCountdown()");
                     StartCoroutine(gameStarter.StartCountdown());
                 }
                 

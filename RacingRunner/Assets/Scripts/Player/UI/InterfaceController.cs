@@ -7,68 +7,62 @@ using UnityEngine.SceneManagement;
 
 public class InterfaceController : NetworkBehaviour
 {
-    private TMP_Text dist;
+    private PlayerIndicators _playerIndicators;
 
-    private TMP_Text _place;
+    public float TimeTicker { private set; get; }
 
-    private TMP_Text _timerText;
+    public Transform AntoherPlayer;
 
-    private GameObject _waitingPanel;
+    private Material _playerMaterial;
 
-    public float _timeTicker { private set; get; }
-
-    public Transform antoherPlayer;
-
-
+    //private Renderer _playerShader;
 
     [Networked(OnChanged = nameof(OnChangeMethode))]
-    private NetworkBool isStart { get; set; }
+    private NetworkBool _isStart { get; set; }
 
     public void Start()
     {
-        _waitingPanel = GameObject.Find("WaitingPanel");
-        _place = GameObject.Find("PlaceInRaceText").GetComponent<TMP_Text>();
-        dist = GameObject.Find("DistanceToStartText").GetComponent<TMP_Text>();
-        _timerText = GameObject.Find("TimerText").GetComponent<TMP_Text>();
+        _playerIndicators = FindObjectOfType<PlayerIndicators>();
+
     }
 
     private void Update()
     {
-        if (isStart && HasInputAuthority)
+        if (_isStart && HasInputAuthority)
         {
-            dist.text = $"{(int)transform.position.z}";
+            _playerIndicators.Distance.text = $"{(int)transform.position.z}";
 
             UpdateTimer();
 
-            if (antoherPlayer != null && antoherPlayer.position.z < transform.position.z)
+            if (AntoherPlayer != null && AntoherPlayer.position.z < transform.position.z)
             {
-                _place.text = "1/2";
+                _playerIndicators.Place.text = "1/2";
             }
             else
             {
-                _place.text = "2/2";
+                _playerIndicators.Place.text = "2/2";
             }
         }
     }
 
     private void UpdateTimer()
     {
-        _timeTicker += Time.deltaTime;
+        TimeTicker += Time.deltaTime;
 
-        if (_timeTicker % 60 > 10)
+        if (TimeTicker % 60 > 10)
         {
-            _timerText.text = $" {(int)(_timeTicker / 60)} : {(int)(_timeTicker % 60)}";
+            _playerIndicators.Time.text = $" {(int)(TimeTicker / 60)} : {(int)(TimeTicker % 60)}";
         }
         else
         {
-            _timerText.text = $" {(int)(_timeTicker / 60)} : 0{(int)(_timeTicker % 60)}";
+            _playerIndicators.Time.text = $" {(int)(TimeTicker / 60)} : 0{(int)(TimeTicker % 60)}";
         }
     }
 
     [ContextMenu("Find_AnotherPlayer")]
     public void Find_AnotherPlayer()
     {
-        _waitingPanel.SetActive(false);
+        _playerIndicators.WaitingPanel.SetActive(false);
 
         foreach (var anotherPlayer in FindObjectsOfType<MovingForwardPlayer>())
         {
@@ -78,7 +72,7 @@ public class InterfaceController : NetworkBehaviour
             {
                 Debug.Log(anotherPlayer.gameObject.name);
 
-                this.antoherPlayer = anotherPlayer.transform;
+                this.AntoherPlayer = anotherPlayer.transform;
             }
         }
     }
@@ -86,7 +80,7 @@ public class InterfaceController : NetworkBehaviour
     [Rpc(RpcSources.StateAuthority, RpcTargets.InputAuthority)]
     public void Rpc_Init()
     {
-        isStart = true;
+        _isStart = true;
     }
 
     private static void OnChangeMethode(Changed<InterfaceController> changed)

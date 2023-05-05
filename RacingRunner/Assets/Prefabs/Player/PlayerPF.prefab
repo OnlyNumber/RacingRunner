@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  antoherPlayer: {fileID: 0}
+  AntoherPlayer: {fileID: 0}
 --- !u!54 &2560127959766305237
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -545,6 +545,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2931682610510235097, guid: e1ed3a106d14a5040b7af687e3e1b545, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07f44fe3e9c462146a7769b976c50ec4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1ed3a106d14a5040b7af687e3e1b545, type: 3}
 --- !u!1 &5942484276092139824 stripped

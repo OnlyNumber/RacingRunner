@@ -34,7 +34,7 @@ public class ColliderChecker : NetworkBehaviour
                     GetComponent<BoxCollider>().enabled = false;
 
                     if(HasInputAuthority)
-                        collision.gameObject.GetComponent<Finish>().FinshGame(GetComponent<InterfaceController>()._timeTicker);
+                        collision.gameObject.GetComponent<Finish>().FinshGame(GetComponent<InterfaceController>().TimeTicker);
 
                     //finish.FinshGame();
                     //StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));

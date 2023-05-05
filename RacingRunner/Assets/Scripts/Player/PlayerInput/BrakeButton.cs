@@ -8,7 +8,6 @@ public class BrakeButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public event Action onPointerDown;
 
-
     public void OnPointerDown(PointerEventData eventData)
     {
         onPointerDown?.Invoke();

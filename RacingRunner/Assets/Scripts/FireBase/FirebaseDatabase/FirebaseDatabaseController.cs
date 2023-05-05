@@ -20,8 +20,6 @@ public class FirebaseDatabaseController : MonoBehaviour
 
     public event Action onDataLoadedScore;
 
-
-
     private void Start()
     {
         dbRef = FirebaseDatabase.DefaultInstance.RootReference;
