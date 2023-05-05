@@ -11,21 +11,12 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
 
     public PlayerRef checkRef;
 
-    //private Button exitButton;
-
     [Networked] public int token { get; set; }
-
-    private void Start()
-    {
-        //FindObjectOfType<LeaderBoardShowInformation>().exitButton.onClick.AddListener(GetOut);
-    
-
-    }
 
 
     public void PlayerLeft(PlayerRef player)
     {
-        //Debug.Log(player.PlayerId);
+
     }
 
     public override void Spawned()
@@ -33,10 +24,6 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
         if(Object.HasInputAuthority)
         {
             local = this;
-
-            //Camera.main.gameObject.SetActive(false);
-
-            //FindObjectOfType<>
 
             Debug.Log("Spawn object");
         }

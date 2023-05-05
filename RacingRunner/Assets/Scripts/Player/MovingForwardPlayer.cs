@@ -6,24 +6,32 @@ using Fusion;
 public class MovingForwardPlayer : NetworkBehaviour
 {
     [SerializeField]
-    private float speed;
+    private float _speed;
 
     [SerializeField]
-    private float startSpeed;
+    private float _startSpeed;
 
     [SerializeField]
-    private float currentBoost;
+    private float _currentBoost;
 
     [SerializeField]
-    private float normalSpeedIncreacer;
+    private float _normalSpeedIncreacer;
 
     [SerializeField]
-    private float speedDecreacer;
+    private float _speedDecreacer;
 
     [SerializeField]
-    private float maxSpeed;
+    private float _maxSpeed;
 
     private bool isBrake;
+
+    [SerializeField]
+    private NetworkRigidbody _networkRigidbody;
+
+    private void Start()
+    {
+        
+    }
 
     public override void FixedUpdateNetwork()
     {
@@ -32,30 +40,37 @@ public class MovingForwardPlayer : NetworkBehaviour
             isBrake = networkInputData.isPressedBrake;
         }
 
-        MoveForward();
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        //MoveForward();
+        //transform.Translate(Vector3.forward * _speed * Time.deltaTime);
+        //_networkRigidbody.Rigidbody.MovePosition(transform.position + Vector3.forward * _speed * Runner.DeltaTime);
+
+        _networkRigidbody.TeleportToPosition(transform.position + Vector3.forward * _speed * Runner.DeltaTime);
+
+        Debug.Log(Vector3.forward);
+
+        Debug.Log(Vector3.forward * _speed * Time.deltaTime);
     }
 
-    private void MoveForward()
+    private void SpeedChanger()
     {
         if (isBrake)
         {
-            if (speed - speedDecreacer * Time.deltaTime > 0)
+            if (_speed - _speedDecreacer * Time.deltaTime > 0)
             {
-                speed -= speedDecreacer * Time.deltaTime;
+                _speed -= _speedDecreacer * Time.deltaTime;
             }
             else
             {
-                speed = 0;
+                _speed = 0;
             }
 
         }
         else
         {
-            if (speed < maxSpeed)
+            if (_speed < _maxSpeed)
             {
-                if(currentBoost * Time.deltaTime < 1)
-                speed += currentBoost * Time.deltaTime; //* (maxSpeed / speed);
+                if(_currentBoost * Time.deltaTime < 1)
+                _speed += _currentBoost * Time.deltaTime; //* (maxSpeed / speed);
             }
             
         }
@@ -64,7 +79,7 @@ public class MovingForwardPlayer : NetworkBehaviour
 
     public void ChangeBoostMultiply(float changeSpeed)
     {
-        Rpc_RequestSpeedBoost(currentBoost * changeSpeed);
+        Rpc_RequestSpeedBoost(_currentBoost * changeSpeed);
     }
 
     public void StopBoost()
@@ -77,21 +92,21 @@ public class MovingForwardPlayer : NetworkBehaviour
     {
         //Debug.Log("ChangeSpeedIncreaceToNormal");
 
-        Rpc_RequestSpeedBoost(normalSpeedIncreacer);
+        Rpc_RequestSpeedBoost(_normalSpeedIncreacer);
     }
 
     public void ChangeCurrentSpeedMultiply(float speedEffect)
     {
         //Debug.Log(speed + " * " + speedEffect + " = " + speed * speedEffect);
 
-        Rpc_RequestSpeed(speed * speedEffect);
+        Rpc_RequestSpeed(_speed * speedEffect);
     }
 
     public void ChangeBoostToNormalStart()
     {
         Debug.Log("ChangeSpeedIncreaceToNormal");
 
-        Rpc_RequestSpeedBoostStart(normalSpeedIncreacer);
+        Rpc_RequestSpeedBoostStart(_normalSpeedIncreacer);
     }
 
     [Rpc(RpcSources.All, RpcTargets.All)]
@@ -99,7 +114,7 @@ public class MovingForwardPlayer : NetworkBehaviour
     {
         //Debug.Log("Rpc_RequestSpeedBoostStart");
 
-        currentBoost = changeSpeedIncreace;
+        _currentBoost = changeSpeedIncreace;
     }
 
 
@@ -107,17 +122,15 @@ public class MovingForwardPlayer : NetworkBehaviour
     [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
     private void Rpc_RequestSpeed(float changeSpeed)
     {
-
         Debug.Log("Rpc_RequestSpeed");
-        speed = changeSpeed;
-
+        _speed = changeSpeed;
     }
 
     [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
     private void Rpc_RequestSpeedBoost(float changeSpeedIncreace)
     {
         Debug.Log("Rpc_RequestSpeedBoost");
-        currentBoost = changeSpeedIncreace;
+        _currentBoost = changeSpeedIncreace;
 
     }
 

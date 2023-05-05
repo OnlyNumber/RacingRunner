@@ -35974,30 +35974,32 @@ struct MovingForwardObstacle_tC56DC1B6D8DBBDD37E6110FDEB37C575525F2299_StaticFie
 // MovingForwardPlayer
 struct MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41  : public NetworkBehaviour_t6DC912DE6ED4D9C556AE37A4CC23D247C52C57B3
 {
-	// System.Single MovingForwardPlayer::speed
-	float ___speed_17;
-	// System.Single MovingForwardPlayer::startSpeed
-	float ___startSpeed_18;
-	// System.Single MovingForwardPlayer::currentBoost
-	float ___currentBoost_19;
-	// System.Single MovingForwardPlayer::normalSpeedIncreacer
-	float ___normalSpeedIncreacer_20;
-	// System.Single MovingForwardPlayer::speedDecreacer
-	float ___speedDecreacer_21;
-	// System.Single MovingForwardPlayer::maxSpeed
-	float ___maxSpeed_22;
+	// System.Single MovingForwardPlayer::_speed
+	float ____speed_17;
+	// System.Single MovingForwardPlayer::_startSpeed
+	float ____startSpeed_18;
+	// System.Single MovingForwardPlayer::_currentBoost
+	float ____currentBoost_19;
+	// System.Single MovingForwardPlayer::_normalSpeedIncreacer
+	float ____normalSpeedIncreacer_20;
+	// System.Single MovingForwardPlayer::_speedDecreacer
+	float ____speedDecreacer_21;
+	// System.Single MovingForwardPlayer::_maxSpeed
+	float ____maxSpeed_22;
 	// System.Boolean MovingForwardPlayer::isBrake
 	bool ___isBrake_23;
+	// Fusion.NetworkRigidbody MovingForwardPlayer::_networkRigidbody
+	NetworkRigidbody_t8C7CC60387BBB2593E760C434737ECECA46E1902* ____networkRigidbody_24;
 };
 
 struct MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41_StaticFields
 {
 	// Fusion.Changed`1<MovingForwardPlayer> MovingForwardPlayer::$IL2CPP_CHANGED
-	Changed_1_t5D5A5D39E79C602B51B0F1C3E40D389C9BA76639 ___U24IL2CPP_CHANGED_24;
+	Changed_1_t5D5A5D39E79C602B51B0F1C3E40D389C9BA76639 ___U24IL2CPP_CHANGED_25;
 	// Fusion.ChangedDelegate`1<MovingForwardPlayer> MovingForwardPlayer::$IL2CPP_CHANGED_DELEGATE
-	ChangedDelegate_1_t498CC9D3EC31BF8C774CFD843091C0011D476ED5* ___U24IL2CPP_CHANGED_DELEGATE_25;
+	ChangedDelegate_1_t498CC9D3EC31BF8C774CFD843091C0011D476ED5* ___U24IL2CPP_CHANGED_DELEGATE_26;
 	// Fusion.NetworkBehaviourCallbacks`1<MovingForwardPlayer> MovingForwardPlayer::$IL2CPP_NETWORK_BEHAVIOUR_CALLBACKS
-	NetworkBehaviourCallbacks_1_tC1C3806573B1181A11156B504F8E9BB5EB225D1D* ___U24IL2CPP_NETWORK_BEHAVIOUR_CALLBACKS_26;
+	NetworkBehaviourCallbacks_1_tC1C3806573B1181A11156B504F8E9BB5EB225D1D* ___U24IL2CPP_NETWORK_BEHAVIOUR_CALLBACKS_27;
 };
 
 // Fusion.NetworkAreaOfInterestBehaviour
@@ -40721,9 +40723,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4876[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4877[6] = 
 {
 	static_cast<int32_t>(offsetof(LineController_t7926587ACCBB72CCFFFE6F53ADFC0E33FC601EC7, ___speed_17)),static_cast<int32_t>(offsetof(LineController_t7926587ACCBB72CCFFFE6F53ADFC0E33FC601EC7, ___lines_18)),static_cast<int32_t>(offsetof(LineController_t7926587ACCBB72CCFFFE6F53ADFC0E33FC601EC7, ___targetLine_19)),static_cast<int32_t>(offsetof(LineController_t7926587ACCBB72CCFFFE6F53ADFC0E33FC601EC7_StaticFields, ___U24IL2CPP_CHANGED_20)),static_cast<int32_t>(offsetof(LineController_t7926587ACCBB72CCFFFE6F53ADFC0E33FC601EC7_StaticFields, ___U24IL2CPP_CHANGED_DELEGATE_21)),static_cast<int32_t>(offsetof(LineController_t7926587ACCBB72CCFFFE6F53ADFC0E33FC601EC7_StaticFields, ___U24IL2CPP_NETWORK_BEHAVIOUR_CALLBACKS_22)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4878[10] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4878[11] = 
 {
-	static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ___speed_17)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ___startSpeed_18)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ___currentBoost_19)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ___normalSpeedIncreacer_20)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ___speedDecreacer_21)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ___maxSpeed_22)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ___isBrake_23)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41_StaticFields, ___U24IL2CPP_CHANGED_24)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41_StaticFields, ___U24IL2CPP_CHANGED_DELEGATE_25)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41_StaticFields, ___U24IL2CPP_NETWORK_BEHAVIOUR_CALLBACKS_26)),};
+	static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ____speed_17)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ____startSpeed_18)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ____currentBoost_19)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ____normalSpeedIncreacer_20)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ____speedDecreacer_21)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ____maxSpeed_22)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ___isBrake_23)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41, ____networkRigidbody_24)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41_StaticFields, ___U24IL2CPP_CHANGED_25)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41_StaticFields, ___U24IL2CPP_CHANGED_DELEGATE_26)),static_cast<int32_t>(offsetof(MovingForwardPlayer_tA9F4C149A780122778FC51B3E491EC4D62E74D41_StaticFields, ___U24IL2CPP_NETWORK_BEHAVIOUR_CALLBACKS_27)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4879[1] = 
 {
 	static_cast<int32_t>(offsetof(BrakeButton_t53ECEA7434B20C9566E4AD69BEAEFAA56EF2AAB5, ___onPointerDown_4)),};

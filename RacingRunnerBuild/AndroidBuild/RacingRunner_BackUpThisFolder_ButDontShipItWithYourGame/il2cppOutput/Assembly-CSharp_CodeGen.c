@@ -806,178 +806,178 @@ extern void NetworkPlayer_set_local_m156D73CE5D0DE25B40EEDE89B30122EAAB583373 (v
 extern void NetworkPlayer_get_token_mCD72B519D9EEDFFDE7242BBE0283903C14BE70A0 (void);
 // 0x0000019A System.Void NetworkPlayer::set_token(System.Int32)
 extern void NetworkPlayer_set_token_m82A8C136A8CAC7F0589251AABBA2B0180385EB75 (void);
-// 0x0000019B System.Void NetworkPlayer::Start()
-extern void NetworkPlayer_Start_m83E03BC48006E8B3FF31F9C74B0F7B9EAC08F8CE (void);
-// 0x0000019C System.Void NetworkPlayer::PlayerLeft(Fusion.PlayerRef)
+// 0x0000019B System.Void NetworkPlayer::PlayerLeft(Fusion.PlayerRef)
 extern void NetworkPlayer_PlayerLeft_m2C87F74378FEDD1E2B6D04CCF1BAB759C543D566 (void);
-// 0x0000019D System.Void NetworkPlayer::Spawned()
+// 0x0000019C System.Void NetworkPlayer::Spawned()
 extern void NetworkPlayer_Spawned_m737391039C05BC0D8B276D36C6D97997D4361EC7 (void);
-// 0x0000019E System.Void NetworkPlayer::GetOut()
+// 0x0000019D System.Void NetworkPlayer::GetOut()
 extern void NetworkPlayer_GetOut_mCF9D2CC3F118FD394C42105E73F54368831672C4 (void);
-// 0x0000019F System.Void NetworkPlayer::.ctor()
+// 0x0000019E System.Void NetworkPlayer::.ctor()
 extern void NetworkPlayer__ctor_m4FBED16D8B80CE3F3B2B5DB9D5B0C4C16EFACD96 (void);
-// 0x000001A0 System.Void NetworkPlayer::CopyBackingFieldsToState(System.Boolean)
+// 0x0000019F System.Void NetworkPlayer::CopyBackingFieldsToState(System.Boolean)
 extern void NetworkPlayer_CopyBackingFieldsToState_m11215C93D1C1B39068BD14AE84FA9B469840E9E3 (void);
-// 0x000001A1 System.Void NetworkPlayer::CopyStateToBackingFields()
+// 0x000001A0 System.Void NetworkPlayer::CopyStateToBackingFields()
 extern void NetworkPlayer_CopyStateToBackingFields_m2E6477B6A75AF664A8F3FA6C85F9E4AE9A23307A (void);
-// 0x000001A2 System.Void NetworkRunnerHandler::Awake()
+// 0x000001A1 System.Void NetworkRunnerHandler::Awake()
 extern void NetworkRunnerHandler_Awake_m08F00BCF0509BAD57E39606D691827B92F2CD3E0 (void);
-// 0x000001A3 System.Void NetworkRunnerHandler::Start()
+// 0x000001A2 System.Void NetworkRunnerHandler::Start()
 extern void NetworkRunnerHandler_Start_mD24CCC7DCD64D080B9DBB59A6DCBE71DD4C17A02 (void);
-// 0x000001A4 System.Void NetworkRunnerHandler::.ctor()
+// 0x000001A3 System.Void NetworkRunnerHandler::.ctor()
 extern void NetworkRunnerHandler__ctor_m150B6FD541634AEAE5EF7D84FA05C188A686D232 (void);
-// 0x000001A5 System.Void OnJoin::Start()
+// 0x000001A4 System.Void OnJoin::Start()
 extern void OnJoin_Start_m2C5CD01A1F006A0BECB113F1E5DC0FB6E9CEA00A (void);
-// 0x000001A6 System.Void OnJoin::OnPlayerJoined(Fusion.NetworkRunner,Fusion.PlayerRef)
+// 0x000001A5 System.Void OnJoin::OnPlayerJoined(Fusion.NetworkRunner,Fusion.PlayerRef)
 extern void OnJoin_OnPlayerJoined_mF72C72DF9862326DEC2891256FE0B2D347BC975E (void);
-// 0x000001A7 System.Int32 OnJoin::GetPlayerToken(Fusion.NetworkRunner,Fusion.PlayerRef)
+// 0x000001A6 System.Int32 OnJoin::GetPlayerToken(Fusion.NetworkRunner,Fusion.PlayerRef)
 extern void OnJoin_GetPlayerToken_m33A6B301F2504F25A50B05E065F6E09790B32C1D (void);
-// 0x000001A8 System.Void OnJoin::.ctor()
+// 0x000001A7 System.Void OnJoin::.ctor()
 extern void OnJoin__ctor_mBEF1C245B9A2A3343C1E2EC745CDB13E983F5133 (void);
-// 0x000001A9 System.Void SessionFinder::Update()
+// 0x000001A8 System.Void SessionFinder::Update()
 extern void SessionFinder_Update_mF4591DD663504DD4FD907F9BE452AF62D7281F6A (void);
-// 0x000001AA System.Void SessionFinder::StartSearch()
+// 0x000001A9 System.Void SessionFinder::StartSearch()
 extern void SessionFinder_StartSearch_m4CA0B3B69F0B019AD1478472DD79B7DEFD4648AD (void);
-// 0x000001AB System.Threading.Tasks.Task SessionFinder::StartPlayer(Fusion.NetworkRunner)
+// 0x000001AA System.Threading.Tasks.Task SessionFinder::StartPlayer(Fusion.NetworkRunner)
 extern void SessionFinder_StartPlayer_mC3B8971653D93F410824B1D80B482DF4212DCB2C (void);
-// 0x000001AC System.Void SessionFinder::.ctor()
+// 0x000001AB System.Void SessionFinder::.ctor()
 extern void SessionFinder__ctor_mB71D593EDB49F3B1D5D406D89FEC1D3489DF3C55 (void);
-// 0x000001AD System.Void SessionFinder/<StartPlayer>d__5::MoveNext()
+// 0x000001AC System.Void SessionFinder/<StartPlayer>d__5::MoveNext()
 extern void U3CStartPlayerU3Ed__5_MoveNext_m224A0CA5659C99540BA65B41E820F13FA59E92FA (void);
-// 0x000001AE System.Void SessionFinder/<StartPlayer>d__5::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+// 0x000001AD System.Void SessionFinder/<StartPlayer>d__5::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 extern void U3CStartPlayerU3Ed__5_SetStateMachine_mDB4D31EDEE8DCCF0A0516872435F793AAA9D8172 (void);
-// 0x000001AF System.Collections.Generic.Dictionary`2<Fusion.PlayerRef,NetworkPlayer> SpawnerPlayer::GetSpawnedPlayers()
+// 0x000001AE System.Collections.Generic.Dictionary`2<Fusion.PlayerRef,NetworkPlayer> SpawnerPlayer::GetSpawnedPlayers()
 extern void SpawnerPlayer_GetSpawnedPlayers_mF268421A6F4F2FC4486E2EE14877312B90326D6D (void);
-// 0x000001B0 System.Void SpawnerPlayer::Start()
+// 0x000001AF System.Void SpawnerPlayer::Start()
 extern void SpawnerPlayer_Start_m9405F1B710839E8C885444328A30BEE352B7E68C (void);
-// 0x000001B1 System.Int32 SpawnerPlayer::GetPlayerToken(Fusion.NetworkRunner,Fusion.PlayerRef)
+// 0x000001B0 System.Int32 SpawnerPlayer::GetPlayerToken(Fusion.NetworkRunner,Fusion.PlayerRef)
 extern void SpawnerPlayer_GetPlayerToken_mDBD0D6947D5B5AD5679529935EB334818F1ABD59 (void);
-// 0x000001B2 System.Void SpawnerPlayer::OnInput(Fusion.NetworkRunner,Fusion.NetworkInput)
+// 0x000001B1 System.Void SpawnerPlayer::OnInput(Fusion.NetworkRunner,Fusion.NetworkInput)
 extern void SpawnerPlayer_OnInput_mCA7A0CFEB098896598DAC5B1AC430185D615B81E (void);
-// 0x000001B3 System.Void SpawnerPlayer::SetConnectionTokenMapping(System.Int32,NetworkPlayer)
+// 0x000001B2 System.Void SpawnerPlayer::SetConnectionTokenMapping(System.Int32,NetworkPlayer)
 extern void SpawnerPlayer_SetConnectionTokenMapping_m03E9552990371D3E1823941A82D117B9279C0400 (void);
-// 0x000001B4 System.Void SpawnerPlayer::OnPlayerJoined(Fusion.NetworkRunner,Fusion.PlayerRef)
+// 0x000001B3 System.Void SpawnerPlayer::OnPlayerJoined(Fusion.NetworkRunner,Fusion.PlayerRef)
 extern void SpawnerPlayer_OnPlayerJoined_mF29038D89DF62EFE19F7D958A04A643683C252FC (void);
-// 0x000001B5 System.Void SpawnerPlayer::OnConnectedToServer(Fusion.NetworkRunner)
+// 0x000001B4 System.Void SpawnerPlayer::OnConnectedToServer(Fusion.NetworkRunner)
 extern void SpawnerPlayer_OnConnectedToServer_mCA793201B9C9225DBFB0FF9F75E82C7DA3BED4A2 (void);
-// 0x000001B6 System.Void SpawnerPlayer::OnConnectFailed(Fusion.NetworkRunner,Fusion.Sockets.NetAddress,Fusion.Sockets.NetConnectFailedReason)
+// 0x000001B5 System.Void SpawnerPlayer::OnConnectFailed(Fusion.NetworkRunner,Fusion.Sockets.NetAddress,Fusion.Sockets.NetConnectFailedReason)
 extern void SpawnerPlayer_OnConnectFailed_m6117F8014A3C2259F4194E6A8D09BA7A6B110599 (void);
-// 0x000001B7 System.Void SpawnerPlayer::OnConnectRequest(Fusion.NetworkRunner,Fusion.NetworkRunnerCallbackArgs/ConnectRequest,System.Byte[])
+// 0x000001B6 System.Void SpawnerPlayer::OnConnectRequest(Fusion.NetworkRunner,Fusion.NetworkRunnerCallbackArgs/ConnectRequest,System.Byte[])
 extern void SpawnerPlayer_OnConnectRequest_m97DA1E5CC60E459218DEDB99C96A442D2D10D972 (void);
-// 0x000001B8 System.Void SpawnerPlayer::OnCustomAuthenticationResponse(Fusion.NetworkRunner,System.Collections.Generic.Dictionary`2<System.String,System.Object>)
+// 0x000001B7 System.Void SpawnerPlayer::OnCustomAuthenticationResponse(Fusion.NetworkRunner,System.Collections.Generic.Dictionary`2<System.String,System.Object>)
 extern void SpawnerPlayer_OnCustomAuthenticationResponse_m8872BFCF491E74B946CB0DB001A2E8F9184AA718 (void);
-// 0x000001B9 System.Void SpawnerPlayer::OnDisconnectedFromServer(Fusion.NetworkRunner)
+// 0x000001B8 System.Void SpawnerPlayer::OnDisconnectedFromServer(Fusion.NetworkRunner)
 extern void SpawnerPlayer_OnDisconnectedFromServer_m6FFD933044184BD7F3F82EFFA87C36FC4038976E (void);
-// 0x000001BA System.Void SpawnerPlayer::OnHostMigration(Fusion.NetworkRunner,Fusion.HostMigrationToken)
+// 0x000001B9 System.Void SpawnerPlayer::OnHostMigration(Fusion.NetworkRunner,Fusion.HostMigrationToken)
 extern void SpawnerPlayer_OnHostMigration_mC29AE16D1FD6A89C7B320755D955027BF818DE7A (void);
-// 0x000001BB System.Void SpawnerPlayer::OnInputMissing(Fusion.NetworkRunner,Fusion.PlayerRef,Fusion.NetworkInput)
+// 0x000001BA System.Void SpawnerPlayer::OnInputMissing(Fusion.NetworkRunner,Fusion.PlayerRef,Fusion.NetworkInput)
 extern void SpawnerPlayer_OnInputMissing_mB3A4726FEC21B0D7CE0BE375F15799B214E89653 (void);
-// 0x000001BC System.Void SpawnerPlayer::OnPlayerLeft(Fusion.NetworkRunner,Fusion.PlayerRef)
+// 0x000001BB System.Void SpawnerPlayer::OnPlayerLeft(Fusion.NetworkRunner,Fusion.PlayerRef)
 extern void SpawnerPlayer_OnPlayerLeft_mDFC587F494CAF06E85ED0FCA18779B257C33D557 (void);
-// 0x000001BD System.Void SpawnerPlayer::OnReliableDataReceived(Fusion.NetworkRunner,Fusion.PlayerRef,System.ArraySegment`1<System.Byte>)
+// 0x000001BC System.Void SpawnerPlayer::OnReliableDataReceived(Fusion.NetworkRunner,Fusion.PlayerRef,System.ArraySegment`1<System.Byte>)
 extern void SpawnerPlayer_OnReliableDataReceived_m4087B56A524385F0C3146D560392E1B2968370F7 (void);
-// 0x000001BE System.Void SpawnerPlayer::OnSceneLoadDone(Fusion.NetworkRunner)
+// 0x000001BD System.Void SpawnerPlayer::OnSceneLoadDone(Fusion.NetworkRunner)
 extern void SpawnerPlayer_OnSceneLoadDone_mA48D87AC588DE1C36E2B39C9CC3C4E3ED877FEF8 (void);
-// 0x000001BF System.Void SpawnerPlayer::OnSceneLoadStart(Fusion.NetworkRunner)
+// 0x000001BE System.Void SpawnerPlayer::OnSceneLoadStart(Fusion.NetworkRunner)
 extern void SpawnerPlayer_OnSceneLoadStart_m14FC6024F6035F31FB3BAD49DED5325E01EEBE81 (void);
-// 0x000001C0 System.Void SpawnerPlayer::OnSessionListUpdated(Fusion.NetworkRunner,System.Collections.Generic.List`1<Fusion.SessionInfo>)
+// 0x000001BF System.Void SpawnerPlayer::OnSessionListUpdated(Fusion.NetworkRunner,System.Collections.Generic.List`1<Fusion.SessionInfo>)
 extern void SpawnerPlayer_OnSessionListUpdated_m96E0DB339EC52009EE4C60A8672CA823F7AFB2B9 (void);
-// 0x000001C1 System.Void SpawnerPlayer::OnShutdown(Fusion.NetworkRunner,Fusion.ShutdownReason)
+// 0x000001C0 System.Void SpawnerPlayer::OnShutdown(Fusion.NetworkRunner,Fusion.ShutdownReason)
 extern void SpawnerPlayer_OnShutdown_m8A434473CC506CBF9CD0EE2849FA4146AFA11A43 (void);
-// 0x000001C2 System.Void SpawnerPlayer::OnUserSimulationMessage(Fusion.NetworkRunner,Fusion.SimulationMessagePtr)
+// 0x000001C1 System.Void SpawnerPlayer::OnUserSimulationMessage(Fusion.NetworkRunner,Fusion.SimulationMessagePtr)
 extern void SpawnerPlayer_OnUserSimulationMessage_m3268012F2D37812CA0ECD74EC3B14207C0B62FDE (void);
-// 0x000001C3 System.Void SpawnerPlayer::.ctor()
+// 0x000001C2 System.Void SpawnerPlayer::.ctor()
 extern void SpawnerPlayer__ctor_m71933B1D3A171306EEF4AFA566F0F12C0B440C7A (void);
-// 0x000001C4 System.Void SpawnerPlayer/<OnHostMigration>d__18::MoveNext()
+// 0x000001C3 System.Void SpawnerPlayer/<OnHostMigration>d__18::MoveNext()
 extern void U3COnHostMigrationU3Ed__18_MoveNext_mC835A4EC968364DFAA601D86E2AEFA06D5B395AF (void);
-// 0x000001C5 System.Void SpawnerPlayer/<OnHostMigration>d__18::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
+// 0x000001C4 System.Void SpawnerPlayer/<OnHostMigration>d__18::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)
 extern void U3COnHostMigrationU3Ed__18_SetStateMachine_m665612BE4B3298551059CADFA08AE1EF660D2D80 (void);
-// 0x000001C6 System.Void CarSwitcher::Start()
+// 0x000001C5 System.Void CarSwitcher::Start()
 extern void CarSwitcher_Start_mB98ABF0791C6D8BFFBAE613A5A5DACD8E4213257 (void);
-// 0x000001C7 System.Void CarSwitcher::Update()
+// 0x000001C6 System.Void CarSwitcher::Update()
 extern void CarSwitcher_Update_mB390BC374C41A07D7FB261E2190167F3C9DBB924 (void);
-// 0x000001C8 System.Void CarSwitcher::Move(System.Int32)
+// 0x000001C7 System.Void CarSwitcher::Move(System.Int32)
 extern void CarSwitcher_Move_m0671F717955805982136B2604854C2053B65E05C (void);
-// 0x000001C9 System.Void CarSwitcher::ChangeCar()
+// 0x000001C8 System.Void CarSwitcher::ChangeCar()
 extern void CarSwitcher_ChangeCar_mB9FA0BC37514B320C1C550FC4D22E6D28CBE3F61 (void);
-// 0x000001CA System.Void CarSwitcher::InitializeCar()
+// 0x000001C9 System.Void CarSwitcher::InitializeCar()
 extern void CarSwitcher_InitializeCar_m8795CFF08897B657E816FBFCB085708F141BB3F5 (void);
-// 0x000001CB System.Void CarSwitcher::.ctor()
+// 0x000001CA System.Void CarSwitcher::.ctor()
 extern void CarSwitcher__ctor_m92FB0055D1F9F343BB94A706F670F58D488D6F87 (void);
-// 0x000001CC System.Void MenuController::GoToMainUI()
+// 0x000001CB System.Void MenuController::GoToMainUI()
 extern void MenuController_GoToMainUI_mBA61EB8586025E9B589F5883A8FF0E0C754557FB (void);
-// 0x000001CD System.Void MenuController::GoToGarageUI()
+// 0x000001CC System.Void MenuController::GoToGarageUI()
 extern void MenuController_GoToGarageUI_m6795A417B7DB4A439433F4D0209CD5987E097650 (void);
-// 0x000001CE System.Void MenuController::GoToOptionsUI()
+// 0x000001CD System.Void MenuController::GoToOptionsUI()
 extern void MenuController_GoToOptionsUI_m050035DAD25FC33F24C698F8DD9D8EC432208AFF (void);
-// 0x000001CF System.Void MenuController::GoToRaitingUI()
+// 0x000001CE System.Void MenuController::GoToRaitingUI()
 extern void MenuController_GoToRaitingUI_mC0E7EB5C84937BCEC1528678FF5D74C99B866DF8 (void);
-// 0x000001D0 System.Void MenuController::GoToAvatarIconsUI()
+// 0x000001CF System.Void MenuController::GoToAvatarIconsUI()
 extern void MenuController_GoToAvatarIconsUI_mB749FA8D5D85681767B9C8506D382FB8617EFE2E (void);
-// 0x000001D1 System.Void MenuController::SignOut()
+// 0x000001D0 System.Void MenuController::SignOut()
 extern void MenuController_SignOut_mECAC59C6B6086316D9FEF38B1A3BA3208C6F7CC3 (void);
-// 0x000001D2 System.Void MenuController::ExitFromGame()
+// 0x000001D1 System.Void MenuController::ExitFromGame()
 extern void MenuController_ExitFromGame_m645E63CFBC81C2B7586E6CEA7F77AE05CEDF4F83 (void);
-// 0x000001D3 System.Void MenuController::HeadeAllPanels()
+// 0x000001D2 System.Void MenuController::HeadeAllPanels()
 extern void MenuController_HeadeAllPanels_m9B2409B154D213CBE4053FC9B8793AB8C4E83ABB (void);
-// 0x000001D4 System.Void MenuController::GoToSearchScene()
+// 0x000001D3 System.Void MenuController::GoToSearchScene()
 extern void MenuController_GoToSearchScene_mABB6308EB98BFF6C930824E1887B3F6A4685A67E (void);
-// 0x000001D5 System.Void MenuController::.ctor()
+// 0x000001D4 System.Void MenuController::.ctor()
 extern void MenuController__ctor_m3E178AC64181BB1DB914E825C38F925DDE9C08C1 (void);
-// 0x000001D6 System.Void ColliderChecker::OnCollisionEnter(UnityEngine.Collision)
+// 0x000001D5 System.Void ColliderChecker::OnCollisionEnter(UnityEngine.Collision)
 extern void ColliderChecker_OnCollisionEnter_m26153F51D3922C1631BD196D73D878C6158E1359 (void);
-// 0x000001D7 System.Void ColliderChecker::OnTriggerEnter(UnityEngine.Collider)
+// 0x000001D6 System.Void ColliderChecker::OnTriggerEnter(UnityEngine.Collider)
 extern void ColliderChecker_OnTriggerEnter_m6208AE21BE292AFC08C82C2A7E0A46142A9C4391 (void);
-// 0x000001D8 System.Void ColliderChecker::.ctor()
+// 0x000001D7 System.Void ColliderChecker::.ctor()
 extern void ColliderChecker__ctor_mE4A44A9A3814A47A2A552127D19B24C469546DFB (void);
-// 0x000001D9 System.Void ColliderChecker::CopyBackingFieldsToState(System.Boolean)
+// 0x000001D8 System.Void ColliderChecker::CopyBackingFieldsToState(System.Boolean)
 extern void ColliderChecker_CopyBackingFieldsToState_m965040EE3CE597A8623B949E44BD7EEA0F9B7B6E (void);
-// 0x000001DA System.Void ColliderChecker::CopyStateToBackingFields()
+// 0x000001D9 System.Void ColliderChecker::CopyStateToBackingFields()
 extern void ColliderChecker_CopyStateToBackingFields_mDEF400B24B629C1D47FD1E1CED662AAF040CE8D6 (void);
-// 0x000001DB System.Void Finish::Start()
+// 0x000001DA System.Void Finish::Start()
 extern void Finish_Start_mA9AFFF54C6C4074C51DB4A9C91DE3F7F91C48433 (void);
-// 0x000001DC System.Void Finish::FinshGame(System.Single)
+// 0x000001DB System.Void Finish::FinshGame(System.Single)
 extern void Finish_FinshGame_m8C3C6A06BB445711324194E97C4D73A6B4453C2C (void);
-// 0x000001DD System.Void Finish::Rpc_ChangePlace(System.Int32)
+// 0x000001DC System.Void Finish::Rpc_ChangePlace(System.Int32)
 extern void Finish_Rpc_ChangePlace_mD7E8791EC90E130F56B417B91D0EEBEAF2E83003 (void);
-// 0x000001DE System.Void Finish::.ctor()
+// 0x000001DD System.Void Finish::.ctor()
 extern void Finish__ctor_m1C22870293D937B3091D24E0C0EB27B7DF08B48B (void);
-// 0x000001DF System.Void Finish::CopyBackingFieldsToState(System.Boolean)
+// 0x000001DE System.Void Finish::CopyBackingFieldsToState(System.Boolean)
 extern void Finish_CopyBackingFieldsToState_mBAAFD46ABD99A45396E9D7C12697700DB0A0735C (void);
-// 0x000001E0 System.Void Finish::CopyStateToBackingFields()
+// 0x000001DF System.Void Finish::CopyStateToBackingFields()
 extern void Finish_CopyStateToBackingFields_mD9036904635B2A2C9069A0801482FA295126A4EB (void);
-// 0x000001E1 System.Void Finish::Rpc_ChangePlace@Invoker(Fusion.NetworkBehaviour,Fusion.SimulationMessage*)
+// 0x000001E0 System.Void Finish::Rpc_ChangePlace@Invoker(Fusion.NetworkBehaviour,Fusion.SimulationMessage*)
 extern void Finish_Rpc_ChangePlaceU40Invoker_mFA88B44AF6ACE4BE3A7693FEE0BBBD9BD1AC81DC (void);
-// 0x000001E2 System.Void FinishElements::SetActivityUI(System.Boolean)
+// 0x000001E1 System.Void FinishElements::SetActivityUI(System.Boolean)
 extern void FinishElements_SetActivityUI_mFA191BFC8FE5B226D62FCD48187B47C7740D4C13 (void);
-// 0x000001E3 System.Void FinishElements::.ctor()
+// 0x000001E2 System.Void FinishElements::.ctor()
 extern void FinishElements__ctor_mDB0CE86494ED4AE6A6143BD3954E70E5F488BA88 (void);
-// 0x000001E4 System.Void GoToLoadMenu::GoToLoad()
+// 0x000001E3 System.Void GoToLoadMenu::GoToLoad()
 extern void GoToLoadMenu_GoToLoad_m674DD08D7CCA810E191378C7A9596A2A0DDD32EB (void);
-// 0x000001E5 System.Void GoToLoadMenu::.ctor()
+// 0x000001E4 System.Void GoToLoadMenu::.ctor()
 extern void GoToLoadMenu__ctor_m3D195B5C08BB3C937D7936A6225781E435733699 (void);
-// 0x000001E6 System.Void GoToLoadMenu::CopyBackingFieldsToState(System.Boolean)
+// 0x000001E5 System.Void GoToLoadMenu::CopyBackingFieldsToState(System.Boolean)
 extern void GoToLoadMenu_CopyBackingFieldsToState_m84144DE6E206EE71A16C30ED4FC84514A937595E (void);
-// 0x000001E7 System.Void GoToLoadMenu::CopyStateToBackingFields()
+// 0x000001E6 System.Void GoToLoadMenu::CopyStateToBackingFields()
 extern void GoToLoadMenu_CopyStateToBackingFields_m51A2D11690904076F170237A97424F880610427B (void);
-// 0x000001E8 System.Void LineController::FixedUpdateNetwork()
+// 0x000001E7 System.Void LineController::FixedUpdateNetwork()
 extern void LineController_FixedUpdateNetwork_m2DD41D0BFBE21E6C51AC04F87E5AFDC36F9832A7 (void);
-// 0x000001E9 System.Void LineController::MoveToLine(System.Int32)
+// 0x000001E8 System.Void LineController::MoveToLine(System.Int32)
 extern void LineController_MoveToLine_m98AE70A3C7D2D1130726A22476EEFA8118E0083A (void);
-// 0x000001EA System.Void LineController::Rpc_RequestChangePos(System.Int32)
+// 0x000001E9 System.Void LineController::Rpc_RequestChangePos(System.Int32)
 extern void LineController_Rpc_RequestChangePos_m53F78E829E736C3832141EFEB1E82F03D25B36D0 (void);
-// 0x000001EB System.Void LineController::.ctor()
+// 0x000001EA System.Void LineController::.ctor()
 extern void LineController__ctor_mC69DBDDB13EE62DFE03ED842816ACFF3D9B2E51F (void);
-// 0x000001EC System.Void LineController::CopyBackingFieldsToState(System.Boolean)
+// 0x000001EB System.Void LineController::CopyBackingFieldsToState(System.Boolean)
 extern void LineController_CopyBackingFieldsToState_m94ED50A7675401346C61F116DD317ADBC28AF11F (void);
-// 0x000001ED System.Void LineController::CopyStateToBackingFields()
+// 0x000001EC System.Void LineController::CopyStateToBackingFields()
 extern void LineController_CopyStateToBackingFields_mF14B07D5D9A75571C73A877FAC9971DA4306C864 (void);
-// 0x000001EE System.Void LineController::Rpc_RequestChangePos@Invoker(Fusion.NetworkBehaviour,Fusion.SimulationMessage*)
+// 0x000001ED System.Void LineController::Rpc_RequestChangePos@Invoker(Fusion.NetworkBehaviour,Fusion.SimulationMessage*)
 extern void LineController_Rpc_RequestChangePosU40Invoker_mE10E57B1C6B2625580E0D815B0C845DD666E4657 (void);
+// 0x000001EE System.Void MovingForwardPlayer::Start()
+extern void MovingForwardPlayer_Start_mC0C5B4CD837C60FB950FF9935073F8112065772D (void);
 // 0x000001EF System.Void MovingForwardPlayer::FixedUpdateNetwork()
 extern void MovingForwardPlayer_FixedUpdateNetwork_m270545B2E5FCDC456591991C49AD413BC91BD35F (void);
-// 0x000001F0 System.Void MovingForwardPlayer::MoveForward()
-extern void MovingForwardPlayer_MoveForward_mC7E7AE77378803FCC391E13260E82E70B6258640 (void);
+// 0x000001F0 System.Void MovingForwardPlayer::SpeedChanger()
+extern void MovingForwardPlayer_SpeedChanger_mA08FC169B7A6E7AC341AD318E65875AB390AF9EC (void);
 // 0x000001F1 System.Void MovingForwardPlayer::ChangeBoostMultiply(System.Single)
 extern void MovingForwardPlayer_ChangeBoostMultiply_mB64CCDD1B96722500F5EB0B1E9271E07A2B437F6 (void);
 // 0x000001F2 System.Void MovingForwardPlayer::StopBoost()
@@ -1897,7 +1897,6 @@ static Il2CppMethodPointer s_methodPointers[755] =
 	NetworkPlayer_set_local_m156D73CE5D0DE25B40EEDE89B30122EAAB583373,
 	NetworkPlayer_get_token_mCD72B519D9EEDFFDE7242BBE0283903C14BE70A0,
 	NetworkPlayer_set_token_m82A8C136A8CAC7F0589251AABBA2B0180385EB75,
-	NetworkPlayer_Start_m83E03BC48006E8B3FF31F9C74B0F7B9EAC08F8CE,
 	NetworkPlayer_PlayerLeft_m2C87F74378FEDD1E2B6D04CCF1BAB759C543D566,
 	NetworkPlayer_Spawned_m737391039C05BC0D8B276D36C6D97997D4361EC7,
 	NetworkPlayer_GetOut_mCF9D2CC3F118FD394C42105E73F54368831672C4,
@@ -1981,8 +1980,9 @@ static Il2CppMethodPointer s_methodPointers[755] =
 	LineController_CopyBackingFieldsToState_m94ED50A7675401346C61F116DD317ADBC28AF11F,
 	LineController_CopyStateToBackingFields_mF14B07D5D9A75571C73A877FAC9971DA4306C864,
 	LineController_Rpc_RequestChangePosU40Invoker_mE10E57B1C6B2625580E0D815B0C845DD666E4657,
+	MovingForwardPlayer_Start_mC0C5B4CD837C60FB950FF9935073F8112065772D,
 	MovingForwardPlayer_FixedUpdateNetwork_m270545B2E5FCDC456591991C49AD413BC91BD35F,
-	MovingForwardPlayer_MoveForward_mC7E7AE77378803FCC391E13260E82E70B6258640,
+	MovingForwardPlayer_SpeedChanger_mA08FC169B7A6E7AC341AD318E65875AB390AF9EC,
 	MovingForwardPlayer_ChangeBoostMultiply_mB64CCDD1B96722500F5EB0B1E9271E07A2B437F6,
 	MovingForwardPlayer_StopBoost_m65A1BDAA856E48079B003C77974B56F188AD5CF0,
 	MovingForwardPlayer_ChangeBoostToNormal_m83613B5164CCD1698D1A9060149C2FBBACCCB78F,
@@ -2253,10 +2253,10 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[6] =
 {
 	{ 0x060000C1, NetworkInputPrototype_IsUp_mF008689DEAB18BBCDA04AF8E6F2AF67183854B0E_AdjustorThunk },
 	{ 0x060000C2, NetworkInputPrototype_IsDown_mA8DE864999DB7281FE6FAD34492CEC15FB3EBFF0_AdjustorThunk },
-	{ 0x060001AD, U3CStartPlayerU3Ed__5_MoveNext_m224A0CA5659C99540BA65B41E820F13FA59E92FA_AdjustorThunk },
-	{ 0x060001AE, U3CStartPlayerU3Ed__5_SetStateMachine_mDB4D31EDEE8DCCF0A0516872435F793AAA9D8172_AdjustorThunk },
-	{ 0x060001C4, U3COnHostMigrationU3Ed__18_MoveNext_mC835A4EC968364DFAA601D86E2AEFA06D5B395AF_AdjustorThunk },
-	{ 0x060001C5, U3COnHostMigrationU3Ed__18_SetStateMachine_m665612BE4B3298551059CADFA08AE1EF660D2D80_AdjustorThunk },
+	{ 0x060001AC, U3CStartPlayerU3Ed__5_MoveNext_m224A0CA5659C99540BA65B41E820F13FA59E92FA_AdjustorThunk },
+	{ 0x060001AD, U3CStartPlayerU3Ed__5_SetStateMachine_mDB4D31EDEE8DCCF0A0516872435F793AAA9D8172_AdjustorThunk },
+	{ 0x060001C3, U3COnHostMigrationU3Ed__18_MoveNext_mC835A4EC968364DFAA601D86E2AEFA06D5B395AF_AdjustorThunk },
+	{ 0x060001C4, U3COnHostMigrationU3Ed__18_SetStateMachine_m665612BE4B3298551059CADFA08AE1EF660D2D80_AdjustorThunk },
 };
 static const int32_t s_InvokerIndices[755] = 
 {
@@ -2670,7 +2670,6 @@ static const int32_t s_InvokerIndices[755] =
 	8403,
 	5481,
 	4534,
-	5635,
 	4583,
 	5635,
 	5635,
@@ -2754,6 +2753,7 @@ static const int32_t s_InvokerIndices[755] =
 	4478,
 	5635,
 	7756,
+	5635,
 	5635,
 	5635,
 	4612,
