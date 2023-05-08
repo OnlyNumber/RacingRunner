@@ -13,12 +13,14 @@ public class InterfaceController : NetworkBehaviour
 
     public Transform AntoherPlayer;
 
-    private Material _playerMaterial;
+    //private Material _playerMaterial;
 
     //private Renderer _playerShader;
 
     [Networked(OnChanged = nameof(OnChangeMethode))]
     private NetworkBool _isStart { get; set; }
+
+    private bool _isFinish;
 
     public void Start()
     {
@@ -28,7 +30,7 @@ public class InterfaceController : NetworkBehaviour
 
     private void Update()
     {
-        if (_isStart && HasInputAuthority)
+        if (_isStart && HasInputAuthority && !_isFinish)
         {
             _playerIndicators.Distance.text = $"{(int)transform.position.z}";
 
@@ -43,6 +45,11 @@ public class InterfaceController : NetworkBehaviour
                 _playerIndicators.Place.text = "2/2";
             }
         }
+    }
+
+    public void Finish()
+    {
+        _isFinish = !_isFinish;
     }
 
     private void UpdateTimer()
@@ -80,7 +87,7 @@ public class InterfaceController : NetworkBehaviour
     [Rpc(RpcSources.StateAuthority, RpcTargets.InputAuthority)]
     public void Rpc_Init()
     {
-        _isStart = true;
+        _isStart = !_isStart;
     }
 
     private static void OnChangeMethode(Changed<InterfaceController> changed)

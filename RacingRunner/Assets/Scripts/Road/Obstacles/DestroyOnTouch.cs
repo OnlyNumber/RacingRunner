@@ -13,7 +13,7 @@ public class DestroyOnTouch : NetworkBehaviour
     {
         if(other.gameObject.layer == FINISH_LAYER || other.gameObject.layer == START_LAYER) 
         {
-            gameObject.SetActive(false);
+            Runner.Despawn(GetComponent<NetworkObject>());
         }
     }
 
@@ -21,7 +21,7 @@ public class DestroyOnTouch : NetworkBehaviour
     {
         if (collision.gameObject.layer == FINISH_LAYER || collision.gameObject.layer == START_LAYER)
         {
-            gameObject.SetActive(false);
+            Runner.Despawn(GetComponent<NetworkObject>());
         }
     }
 

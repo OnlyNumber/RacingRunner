@@ -13,7 +13,7 @@ public class CarObstacle : NetworkBehaviour, IObstacleEffect
 
     public IEnumerator ObstacleEffect(MovingForwardPlayer movingForward)
     {
-        gameObject.SetActive(false);
+        Runner.Despawn(GetComponent<NetworkObject>());
 
         movingForward.gameObject.layer = IObstacleEffect.UNTOUCHABLE_LAYER;
 

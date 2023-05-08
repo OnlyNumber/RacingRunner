@@ -19,30 +19,39 @@ public class ColliderChecker : NetworkBehaviour
     {
         switch (collision.gameObject.layer)
         {
-            
-
             case FINISH_LAYER:
                 {
-                    if (nowEf != null)
+                    if (nitroEffect != null)
                     {
-                        StopCoroutine(nowEf);
+                        StopCoroutine(nitroEffect);
                     }
+                    if(oilEffects != null)
+                    {
+                        foreach(var obstEffect in oilEffects)
+                        {
+                            StopCoroutine(obstEffect);
+                        }
+                    }
+
 
                     movingForward.ChangeBoostMultiply(0);
                     movingForward.ChangeCurrentSpeedMultiply(0);
 
                     GetComponent<BoxCollider>().enabled = false;
 
-                    if(HasInputAuthority)
+                    if (HasInputAuthority)
+                    {
                         collision.gameObject.GetComponent<Finish>().FinshGame(GetComponent<InterfaceController>().TimeTicker);
+                        GetComponent<InterfaceController>().Finish();
+                    }
 
-                    //finish.FinshGame();
-                    //StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
+
                     break;
                 }
         }
     }
-    Coroutine nowEf;
+    Coroutine nitroEffect;
+    List<Coroutine> oilEffects = new List<Coroutine>();
     IObstacleEffect stateList;
     private void OnTriggerEnter(Collider other)
     {
@@ -54,12 +63,12 @@ public class ColliderChecker : NetworkBehaviour
             case OBSTACLE_LAYER:
                 {
 
-                        if (stateList != null)
+                        /*if (stateList != null)
                         {
                             stateList.StopEffect();
-                        }
+                        }*/
 
-                        stateList = other.gameObject.GetComponent<IObstacleEffect>();
+                        //stateList = other.gameObject.GetComponent<IObstacleEffect>();
 
                         //Debug.Log()
 
@@ -75,25 +84,25 @@ public class ColliderChecker : NetworkBehaviour
 
 
 
-                        StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
+                        oilEffects.Add(StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward)));
                         
                     break;
                 }
             case USEFUL_ITEM_LAYER:
                 {
                         //stateList.Add(other.gameObject.GetComponent<NetworkBehaviour>());
-                        if(stateList != null)
+                        /*if(stateList != null)
                         {
                             stateList.StopEffect();
-                        }
-                        if(nowEf != null)
+                        }*/
+                        if(nitroEffect != null)
                         {
-                            StopCoroutine(nowEf);
+                            StopCoroutine(nitroEffect);
                         }
 
 
 
-                        stateList = other.gameObject.GetComponent<IObstacleEffect>();
+                        //stateList = other.gameObject.GetComponent<IObstacleEffect>();
                         /*foreach (var item in stateList)
                         {
                             item.StopAllCoroutines();
@@ -101,7 +110,7 @@ public class ColliderChecker : NetworkBehaviour
 
                         //GetComponent<MovingForwardPlayer>().StopAllCoroutines();
 
-                        nowEf = StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
+                        nitroEffect = StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
                         break;
                 }
         }

@@ -48,7 +48,7 @@ public class OnJoin : SpawnerPlayer
                     gameStarter.SpawnRoad();
                 }
 
-                if (runner.SessionInfo.PlayerCount == runner.SessionInfo.MaxPlayers)
+                if (runner.SessionInfo.PlayerCount == 2)
                 {
                     StartCoroutine(gameStarter.StartCountdown());
                 }
