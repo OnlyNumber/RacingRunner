@@ -214,8 +214,6 @@ struct Dictionary_2_t884D6C349E5EDAEB346334197737B19C0442823E;
 struct Dictionary_2_t685E1072D6BF5D03945108D75216A223A8EA7FBB;
 // System.Collections.Generic.Dictionary`2<System.Int32,UnityEngine.Material>
 struct Dictionary_2_tBF325E0F09BEEDF7AC6E6CB85841301637FC6E90;
-// System.Collections.Generic.Dictionary`2<System.Int32,NetworkPlayer>
-struct Dictionary_2_t6241B0C7B29DA3DB98BDA44B988B1171BCD05F92;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Object>
 struct Dictionary_2_tA75D1125AC9BE8F005BA9B868B373398E643C907;
 // System.Collections.Generic.Dictionary`2<System.Int32,Fusion.Photon.Realtime.Player>
@@ -29403,16 +29401,16 @@ struct AwaitableSocketAsyncEventArgs_tE71F60B994C14EFB1BBC5ECD4E8C09D468B04F56_S
 	Action_1_t6F9EB113EB3F16226AEF811A2744F4111C116C87* ___s_availableSentinel_20;
 };
 
-// SpawnerPlayer/<OnHostMigration>d__18
-struct U3COnHostMigrationU3Ed__18_tC4EB059467B8E1F0881D7144FE3632EEBE79B82B 
+// SpawnerPlayer/<OnHostMigration>d__16
+struct U3COnHostMigrationU3Ed__16_t3DCC2AC790680A99EF263B0D840530DF107E5A94 
 {
-	// System.Int32 SpawnerPlayer/<OnHostMigration>d__18::<>1__state
+	// System.Int32 SpawnerPlayer/<OnHostMigration>d__16::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder SpawnerPlayer/<OnHostMigration>d__18::<>t__builder
+	// System.Runtime.CompilerServices.AsyncVoidMethodBuilder SpawnerPlayer/<OnHostMigration>d__16::<>t__builder
 	AsyncVoidMethodBuilder_t253E37B63E7E7B504878AE6563347C147F98EF2D ___U3CU3Et__builder_1;
-	// Fusion.NetworkRunner SpawnerPlayer/<OnHostMigration>d__18::runner
+	// Fusion.NetworkRunner SpawnerPlayer/<OnHostMigration>d__16::runner
 	NetworkRunner_tEB731E5822AE5C584747D8D3BDA75386725AC12A* ___runner_2;
-	// System.Runtime.CompilerServices.TaskAwaiter SpawnerPlayer/<OnHostMigration>d__18::<>u__1
+	// System.Runtime.CompilerServices.TaskAwaiter SpawnerPlayer/<OnHostMigration>d__16::<>u__1
 	TaskAwaiter_t9B661AC8C2EFA6BAB94C77BB24A5DDA82D61F833 ___U3CU3Eu__1_3;
 };
 
@@ -33147,14 +33145,12 @@ struct SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE  : public MonoBeh
 {
 	// NetworkPlayer SpawnerPlayer::playerPrefab
 	NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74* ___playerPrefab_4;
-	// System.Collections.Generic.Dictionary`2<System.Int32,NetworkPlayer> SpawnerPlayer::mapTokenIdWithNetworkPlayer
-	Dictionary_2_t6241B0C7B29DA3DB98BDA44B988B1171BCD05F92* ___mapTokenIdWithNetworkPlayer_5;
 	// PlayerInputHandler SpawnerPlayer::characterInputHandler
-	PlayerInputHandler_tAD09C1EF146A9FB9BDEF315722830367DD298518* ___characterInputHandler_6;
+	PlayerInputHandler_tAD09C1EF146A9FB9BDEF315722830367DD298518* ___characterInputHandler_5;
 	// GameStarter SpawnerPlayer::gameStarter
-	GameStarter_tDC191C02FED9E091D9F85CBDEE9A607AADCA0100* ___gameStarter_7;
+	GameStarter_tDC191C02FED9E091D9F85CBDEE9A607AADCA0100* ___gameStarter_6;
 	// System.Collections.Generic.Dictionary`2<Fusion.PlayerRef,NetworkPlayer> SpawnerPlayer::_spawnedCharacters
-	Dictionary_2_t0407705F3C178B81DFB17283BB9292B4B6603C87* ____spawnedCharacters_8;
+	Dictionary_2_t0407705F3C178B81DFB17283BB9292B4B6603C87* ____spawnedCharacters_7;
 };
 
 // Fusion.Photon.Realtime.SupportLogger
@@ -40701,10 +40697,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4867[3] =
 	static_cast<int32_t>(offsetof(SessionFinder_tB918F6CC7A97C4A3FEF7CE7AB87AE61F96AF44BA, ___firstSession_4)),0,static_cast<int32_t>(offsetof(SessionFinder_tB918F6CC7A97C4A3FEF7CE7AB87AE61F96AF44BA, ___ads_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4868[4] = 
 {
-	static_cast<int32_t>(offsetof(U3COnHostMigrationU3Ed__18_tC4EB059467B8E1F0881D7144FE3632EEBE79B82B, ___U3CU3E1__state_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3COnHostMigrationU3Ed__18_tC4EB059467B8E1F0881D7144FE3632EEBE79B82B, ___U3CU3Et__builder_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3COnHostMigrationU3Ed__18_tC4EB059467B8E1F0881D7144FE3632EEBE79B82B, ___runner_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3COnHostMigrationU3Ed__18_tC4EB059467B8E1F0881D7144FE3632EEBE79B82B, ___U3CU3Eu__1_3)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4869[7] = 
+	static_cast<int32_t>(offsetof(U3COnHostMigrationU3Ed__16_t3DCC2AC790680A99EF263B0D840530DF107E5A94, ___U3CU3E1__state_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3COnHostMigrationU3Ed__16_t3DCC2AC790680A99EF263B0D840530DF107E5A94, ___U3CU3Et__builder_1)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3COnHostMigrationU3Ed__16_t3DCC2AC790680A99EF263B0D840530DF107E5A94, ___runner_2)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(U3COnHostMigrationU3Ed__16_t3DCC2AC790680A99EF263B0D840530DF107E5A94, ___U3CU3Eu__1_3)) + static_cast<int32_t>(sizeof(RuntimeObject)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4869[6] = 
 {
-	static_cast<int32_t>(offsetof(SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE, ___playerPrefab_4)),static_cast<int32_t>(offsetof(SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE, ___mapTokenIdWithNetworkPlayer_5)),static_cast<int32_t>(offsetof(SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE, ___characterInputHandler_6)),static_cast<int32_t>(offsetof(SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE, ___gameStarter_7)),static_cast<int32_t>(offsetof(SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE, ____spawnedCharacters_8)),0,0,};
+	static_cast<int32_t>(offsetof(SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE, ___playerPrefab_4)),static_cast<int32_t>(offsetof(SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE, ___characterInputHandler_5)),static_cast<int32_t>(offsetof(SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE, ___gameStarter_6)),static_cast<int32_t>(offsetof(SpawnerPlayer_tC60DB56A15F26433CCB41D2755757E85C3F1F7EE, ____spawnedCharacters_7)),0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4870[5] = 
 {
 	static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ___distanceBetweenCars_4)),static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ___currentCar_5)),static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ___maxCars_6)),static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ___targetPosition_7)),static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ____firebase_8)),};

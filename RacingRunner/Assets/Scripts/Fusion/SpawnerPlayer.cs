@@ -9,7 +9,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 {
     public NetworkPlayer playerPrefab;
 
-    private Dictionary<int, NetworkPlayer> mapTokenIdWithNetworkPlayer;
+    //private Dictionary<int, NetworkPlayer> mapTokenIdWithNetworkPlayer;
 
     private PlayerInputHandler characterInputHandler;
 
@@ -37,7 +37,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     private void Start()
     {
-        mapTokenIdWithNetworkPlayer = new Dictionary<int, NetworkPlayer>();
+        //mapTokenIdWithNetworkPlayer = new Dictionary<int, NetworkPlayer>();
         
         //_sessionFinder = FindObjectOfType<SessionFinder>(true);
 
@@ -81,32 +81,16 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     }
 
-    public void SetConnectionTokenMapping(int token, NetworkPlayer networkPlayer)
-    {
-        mapTokenIdWithNetworkPlayer.Add(token, networkPlayer);
-    }
-
     public virtual void OnPlayerJoined(NetworkRunner runner, PlayerRef player)
     {
         if(runner.IsServer)
         {
-            int playerToken = 0; //GetPlayerToken(runner, player);
 
             Debug.Log("OnPlayerJoined We are server Spawn player");
 
-            if(mapTokenIdWithNetworkPlayer.TryGetValue(playerToken, out NetworkPlayer networkPlayer))
-            {
-                Debug.Log($"Found old connection token for {playerToken}, Assigning controls to start player");
-
-                networkPlayer.GetComponent<NetworkObject>().AssignInputAuthority(player);
-            }
-            else
-            {
-                Debug.Log($"Spawning new player for connection token {playerToken}");
 
                 NetworkPlayer spawnedNetworkPlayer = runner.Spawn(playerPrefab, Vector3.zero, Quaternion.identity, player);
 
-                spawnedNetworkPlayer.token = playerToken;
 
                 _spawnedCharacters.Add(player, spawnedNetworkPlayer);
 
@@ -126,7 +110,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
                     StartCoroutine(gameStarter.StartCountdown());
                 }
                 
-            }
         }
 
 
