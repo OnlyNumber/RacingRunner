@@ -62,9 +62,11 @@ public class ColliderChecker : NetworkBehaviour
                         if (oilEffects != null)
                         {
                             StopCoroutine(oilEffects);
+                            if (nitroEffect != null)
+                            {
+                                StopCoroutine(nitroEffect);
+                            }
                         }
-
-
 
                         oilEffects = StartCoroutine(other.gameObject.GetComponent<IObstacleEffect>().ObstacleEffect(movingForward));
                         
@@ -72,7 +74,6 @@ public class ColliderChecker : NetworkBehaviour
                 }
             case USEFUL_ITEM_LAYER:
                 {
-                        
                         if(nitroEffect != null)
                         {
                             StopCoroutine(nitroEffect);

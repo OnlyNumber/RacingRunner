@@ -38,10 +38,12 @@ public class SessionFinder : MonoBehaviour
         var result = await runner.StartGame(new StartGameArgs()
         {
             
-            PlayerCount = 2,
-            Scene = SceneUtility.GetBuildIndexByScenePath($"scenes/{GAME_PLAY_SCENE}"),
-            GameMode = GameMode.AutoHostOrClient, 
+            //PlayerCount = 2,
+            //Scene = SceneUtility.GetBuildIndexByScenePath($"scenes/{GAME_PLAY_SCENE}"),
+            GameMode = GameMode.Shared, 
         });
+
+
 
         if (!result.Ok)
         {

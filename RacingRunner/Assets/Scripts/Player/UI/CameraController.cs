@@ -15,6 +15,8 @@ public class CameraController : MonoBehaviour
         {
             cam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
             cam.Follow = transform;
+
+            //cam.
         }
     }
 }

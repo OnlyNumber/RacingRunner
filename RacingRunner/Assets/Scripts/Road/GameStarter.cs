@@ -21,9 +21,6 @@ public class GameStarter : NetworkBehaviour
     [SerializeField]
     private int _roadLegth;
 
-    //[SerializeField]
-    //private InterfaceController interfaceController;
-
     private List<FragmentRoad> road = new List<FragmentRoad>();
 
 
@@ -48,13 +45,7 @@ public class GameStarter : NetworkBehaviour
 
     public IEnumerator StartCountdown()
     {
-        //_startPanel.SetActive(false);
-
-
-
         yield return new WaitForSeconds(5);
-
-
 
         StartGame();
     }
@@ -82,9 +73,6 @@ public class GameStarter : NetworkBehaviour
         {
             localPlayer.ChangeBoostToNormalStart();
             localPlayer.GetComponent<InterfaceController>().Rpc_Init();
-            //localPlayer.GetComponent<InterfaceController>().Rpc_Init();
-
-
         }
 
     }

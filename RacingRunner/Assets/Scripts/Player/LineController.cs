@@ -24,6 +24,8 @@ public class LineController : NetworkBehaviour
 
     public void MoveToLine(int lineIndex)
     {
+        if(HasInputAuthority)
+
         Rpc_RequestChangePos(lineIndex);
 
     }

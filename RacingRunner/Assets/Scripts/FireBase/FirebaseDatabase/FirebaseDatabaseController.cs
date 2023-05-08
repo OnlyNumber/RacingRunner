@@ -36,7 +36,7 @@ public class FirebaseDatabaseController : MonoBehaviour
     {
         reverseList = new List<DataSnapshot>();
 
-        Debug.Log("LoadAllUserByScore");
+        //Debug.Log("LoadAllUserByScore");
 
         var user = dbRef.Child("users").OrderByChild("bestTime").GetValueAsync();
 

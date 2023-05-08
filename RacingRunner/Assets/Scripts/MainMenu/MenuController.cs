@@ -7,6 +7,8 @@ public class MenuController : MonoBehaviour
 {
     private const string LOG_IN_MENU_SCENE = "LogInMenu";
 
+    private const string NEXT_SCENE = "GamePlay";
+
     [SerializeField]
     private GameObject _mainUI;
 
@@ -79,6 +81,6 @@ public class MenuController : MonoBehaviour
 
     public void GoToSearchScene()
     {
-        SceneManager.LoadScene("LoadScene");
+        SceneManager.LoadScene(NEXT_SCENE);
     }
 }

@@ -28,6 +28,8 @@ public class MovingForwardPlayer : NetworkBehaviour
     [SerializeField]
     private NetworkRigidbody _networkRigidbody;
 
+    //private NetworkPosition pos;
+
     private void Start()
     {
         
@@ -40,19 +42,11 @@ public class MovingForwardPlayer : NetworkBehaviour
             isBrake = networkInputData.isPressedBrake;
         }
 
-        //Debug.Log("Speed " + _speed);
-
-        //Debug.Log("Boost " + _currentBoost);
-
         SpeedChanger();
-        //transform.Translate(Vector3.forward * _speed * Time.deltaTime);
-        //_networkRigidbody.Rigidbody.MovePosition(transform.position + Vector3.forward * Time.deltaTime);
+
+        //_networkRigidbody.transform.position = 
 
         _networkRigidbody.TeleportToPosition(transform.position + Vector3.forward * _speed * Runner.DeltaTime);
-
-        //Debug.Log(Vector3.forward);
-
-        //Debug.Log(Vector3.forward * _speed * Time.deltaTime);
     }
 
     private void SpeedChanger()
@@ -73,11 +67,7 @@ public class MovingForwardPlayer : NetworkBehaviour
         {
             if (_speed < _maxSpeed)
             {
-                //if (_currentBoost * Runner.DeltaTime < 1)
-                //{
-                    //Debug.Log("_speed += _currentBoost * Runner.DeltaTime");
-                    _speed += _currentBoost * Runner.DeltaTime; //* (maxSpeed / speed);
-                //}
+                    _speed += _currentBoost * Runner.DeltaTime; 
             }
 
             

@@ -27,15 +27,6 @@ public class NetworkPlayer : NetworkBehaviour, IPlayerLeft
 
             Debug.Log("Spawn object");
         }
-        else
-        {
-            /*Camera localCamera = GetComponentInChildren<Camera>();
-            localCamera.enabled = false;
-
-            AudioListener localAudioListener = GetComponentInChildren<AudioListener>();
-            localAudioListener.enabled = false;*/
-        }
-
     }
 
     public void GetOut()
