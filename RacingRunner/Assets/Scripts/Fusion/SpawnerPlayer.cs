@@ -9,8 +9,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 {
     public NetworkPlayer playerPrefab;
 
-    //private Dictionary<int, NetworkPlayer> mapTokenIdWithNetworkPlayer;
-
     private PlayerInputHandler characterInputHandler;
 
     private GameStarter gameStarter;
@@ -20,8 +18,6 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
     private const string MENU_SCENE = "MenuScene";
 
     private const string GAME_PLAY = "GamePlay";
-
-    //private SessionFinder _sessionFinder;
 
     public Dictionary<PlayerRef, NetworkPlayer> GetSpawnedPlayers()
     {
@@ -37,34 +33,11 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
     private void Start()
     {
-        //mapTokenIdWithNetworkPlayer = new Dictionary<int, NetworkPlayer>();
-        
-        //_sessionFinder = FindObjectOfType<SessionFinder>(true);
 
         gameStarter = FindObjectOfType<GameStarter>();
 
     }
 
-    int GetPlayerToken(NetworkRunner runner, PlayerRef player)
-    {
-        if(runner.LocalPlayer == player)
-        {
-            return ConnectionTokenUtils.HashToken(GameManager.instance.GetConnectionToken());
-        }
-        else
-        {
-            var token = runner.GetPlayerConnectionToken();
-
-            if(token != null)
-            {
-                return ConnectionTokenUtils.HashToken(token);
-            }
-
-            Debug.LogError($"GetPlayerToken returned invalid token");
-
-                return 0;
-        }
-    }
 
     public void OnInput(NetworkRunner runner, NetworkInput input)
     {
