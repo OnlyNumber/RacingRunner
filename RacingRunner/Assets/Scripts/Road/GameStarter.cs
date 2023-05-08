@@ -26,33 +26,35 @@ public class GameStarter : NetworkBehaviour
 
     private List<FragmentRoad> road = new List<FragmentRoad>();
 
-    
+
     public void SpawnRoad()
     {
         Debug.Log("Spawn road");
 
-            for (int i = 1; i < _roadLegth; i++)
+        for (int i = 1; i < _roadLegth; i++)
+        {
+            if (Runner == null)
             {
-                if (Runner == null)
-                {
-                    Debug.Log("Runner == null");
-                }
-
-                road.Add(Runner.Spawn(_roadFragment, new Vector3(0, 0, _distanceToNextFragment * i)));
+                Debug.Log("Runner == null");
             }
 
-            Runner.Spawn(_finishFragment, new Vector3(0, 0, _distanceToNextFragment * _roadLegth)).transform.SetParent(gameObject.transform);
-    
+            road.Add(Runner.Spawn(_roadFragment, new Vector3(0, 0, _distanceToNextFragment * i)));
+        }
+
+        Runner.Spawn(_finishFragment, new Vector3(0, 0, _distanceToNextFragment * _roadLegth)).transform.SetParent(gameObject.transform);
+
     }
 
 
     public IEnumerator StartCountdown()
     {
-        _startPanel.SetActive(false);
+        //_startPanel.SetActive(false);
+
+
 
         yield return new WaitForSeconds(5);
 
-        
+
 
         StartGame();
     }
@@ -68,7 +70,7 @@ public class GameStarter : NetworkBehaviour
             item.SpawnWave();
         }
 
-        List<MovingForwardPlayer> movingPlayers = new List<MovingForwardPlayer>(); 
+        List<MovingForwardPlayer> movingPlayers = new List<MovingForwardPlayer>();
 
         foreach (var item in FindObjectsOfType<MovingForwardPlayer>())
         {
@@ -78,10 +80,9 @@ public class GameStarter : NetworkBehaviour
 
         foreach (var localPlayer in movingPlayers)
         {
-            //if( !localPlayer.HasInputAuthority)
-            localPlayer.GetComponent<MovingForwardPlayer>().ChangeBoostToNormalStart();
-
+            localPlayer.ChangeBoostToNormalStart();
             localPlayer.GetComponent<InterfaceController>().Rpc_Init();
+            //localPlayer.GetComponent<InterfaceController>().Rpc_Init();
 
 
         }

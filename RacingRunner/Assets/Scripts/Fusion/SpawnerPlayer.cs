@@ -90,7 +90,7 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
     {
         if(runner.IsServer)
         {
-            int playerToken = GetPlayerToken(runner, player);
+            int playerToken = 0; //GetPlayerToken(runner, player);
 
             Debug.Log("OnPlayerJoined We are server Spawn player");
 
@@ -110,20 +110,27 @@ public class SpawnerPlayer : MonoBehaviour, INetworkRunnerCallbacks
 
                 _spawnedCharacters.Add(player, spawnedNetworkPlayer);
 
+                Debug.Log(_spawnedCharacters.Count);
+
                 if(runner.SessionInfo.PlayerCount == 1)
                 {
                     gameStarter = FindObjectOfType<GameStarter>();
                     gameStarter.SpawnRoad();
                 }
 
+                
+
                 if(runner.SessionInfo.PlayerCount == runner.SessionInfo.MaxPlayers)
                 {
-                    Debug.Log("gameStarter.StartCountdown()");
+                    //Debug.Log("gameStarter.StartCountdown()");
                     StartCoroutine(gameStarter.StartCountdown());
                 }
                 
             }
         }
+
+
+
         
     }
 

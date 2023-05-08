@@ -87,7 +87,7 @@ public class InterfaceController : NetworkBehaviour
     [Rpc(RpcSources.StateAuthority, RpcTargets.InputAuthority)]
     public void Rpc_Init()
     {
-        _isStart = !_isStart;
+        _isStart = true;
     }
 
     private static void OnChangeMethode(Changed<InterfaceController> changed)
