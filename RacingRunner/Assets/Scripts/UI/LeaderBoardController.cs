@@ -29,7 +29,7 @@ public class LeaderBoardController : MonoBehaviour
 
             timer = float.Parse(item.Child("bestTime").Value.ToString());
 
-            if(timer < 0)
+            if(timer < 1)
             {
                 continue;
             }

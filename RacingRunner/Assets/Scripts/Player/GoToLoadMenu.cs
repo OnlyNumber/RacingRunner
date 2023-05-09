@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class GoToLoadMenu : NetworkBehaviour
 {
-    private const string LOAD_SCENE = "LoadScene";
+    private const string NEXT_SCENE = "GamePlay";
 
     public void GoToLoad()
     {
-        Runner.Shutdown();
-        SceneManager.LoadScene(LOAD_SCENE);
+        FindObjectOfType<NetworkRunner>().Shutdown();
+        SceneManager.LoadScene(NEXT_SCENE);
     }
 }

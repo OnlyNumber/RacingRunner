@@ -23,6 +23,16 @@ public class GameStarter : NetworkBehaviour
 
     private List<FragmentRoad> road = new List<FragmentRoad>();
 
+    private NetworkRunner runner;
+
+    [SerializeField]
+    private float waitingTimer;
+
+    public void InitializeNetworkRunner(NetworkRunner runner)
+    {
+        this.runner = runner;
+    }
+
     [ContextMenu("SpawnRoad")]
     public void SpawnRoad()
     {
@@ -35,17 +45,17 @@ public class GameStarter : NetworkBehaviour
                 Debug.Log("Runner == null");
             }
 
-            road.Add(FindObjectOfType<NetworkRunner>().Spawn(_roadFragment, new Vector3(0, 0, _distanceToNextFragment * i)));
+            road.Add(runner.Spawn(_roadFragment, new Vector3(0, 0, _distanceToNextFragment * i)));
         }
 
-        FindObjectOfType<NetworkRunner>().Spawn(_finishFragment, new Vector3(0, 0, _distanceToNextFragment * _roadLegth)).transform.SetParent(gameObject.transform);
+        runner.Spawn(_finishFragment, new Vector3(0, 0, _distanceToNextFragment * _roadLegth)).transform.SetParent(gameObject.transform);
 
     }
 
 
     public IEnumerator StartCountdown()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(waitingTimer);
 
         StartGame();
     }
@@ -58,8 +68,8 @@ public class GameStarter : NetworkBehaviour
             Debug.Log("FindObjectOfType<NetworkRunner>() == null");
         }
 
-        FindObjectOfType<NetworkRunner>().SessionInfo.IsOpen = false;
-        FindObjectOfType<NetworkRunner>().SessionInfo.IsVisible = false;
+        runner.SessionInfo.IsOpen = false;
+        runner.SessionInfo.IsVisible = false;
 
         foreach (var item in road)
         {

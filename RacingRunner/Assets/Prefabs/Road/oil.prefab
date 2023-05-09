@@ -158,7 +158,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
-  timer: 2
+  Timer: 2
+  _collider: {fileID: 1665302938497135792}
 --- !u!136 &1665302938497135792
 CapsuleCollider:
   m_ObjectHideFlags: 0

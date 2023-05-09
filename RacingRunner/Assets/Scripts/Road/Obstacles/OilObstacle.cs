@@ -6,23 +6,16 @@ using Fusion;
 public class OilObstacle : NetworkBehaviour, IObstacleEffect
 {
     [SerializeField]
-    public float timer;
+    public float Timer;
+
+    [SerializeField]
+    private Collider _collider;
+
+    
 
     public IEnumerator ObstacleEffect(MovingForwardPlayer movingForward)
     {
-        /*if(movingForward.GetComponent<ColliderChecker>().isOiled)
-        {
-            Debug.Log("movingForward.GetComponent<ColliderChecker>().test != null)");
-            yield return new WaitForSecondsRealtime(0);
-        }
-        else
-        {
-            movingForward.GetComponent<ColliderChecker>().isOiled = true;
-        }*/
-
-        //Runner.Despawn(GetComponent<NetworkObject>());
-
-        //Debug.Log("OilObstacleEffect");
+        
 
         movingForward.ChangeBoostToNormal();
 
@@ -30,7 +23,9 @@ public class OilObstacle : NetworkBehaviour, IObstacleEffect
         
         movingForward.ChangeCurrentSpeedMultiply(0.7f);
 
-        yield return new WaitForSecondsRealtime(10);
+        StartCoroutine(HideOil());
+
+        yield return new WaitForSecondsRealtime(Timer);
 
         //Debug.Log("ObstacleEffect2");
 
@@ -38,6 +33,15 @@ public class OilObstacle : NetworkBehaviour, IObstacleEffect
         
         gameObject.SetActive(true);
         //movingForward.GetComponent<ColliderChecker>().isOiled = false;
+
+    }
+
+    private IEnumerator HideOil()
+    {
+        _collider.enabled = false;
+        yield return new WaitForSecondsRealtime(2);
+
+        _collider.enabled = true;
 
     }
 

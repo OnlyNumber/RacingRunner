@@ -17,6 +17,7 @@ public class ColliderChecker : NetworkBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //if(HasStateAuthority)
         switch (collision.gameObject.layer)
         {
             case FINISH_LAYER:
@@ -52,9 +53,7 @@ public class ColliderChecker : NetworkBehaviour
     IObstacleEffect stateList;
     private void OnTriggerEnter(Collider other)
     {
-        
-
-        if(HasStateAuthority)
+        if(HasInputAuthority)
         switch (other.gameObject.layer)
         {
             case OBSTACLE_LAYER:
