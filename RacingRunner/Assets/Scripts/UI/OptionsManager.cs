@@ -18,7 +18,7 @@ public class OptionsManager : NetworkBehaviour
 
     public void LeaveGame()
     {
-        Runner.Shutdown();
+        FindObjectOfType<NetworkRunner>().Shutdown();
         SceneManager.LoadScene(MENU_SCENE);
     }
 

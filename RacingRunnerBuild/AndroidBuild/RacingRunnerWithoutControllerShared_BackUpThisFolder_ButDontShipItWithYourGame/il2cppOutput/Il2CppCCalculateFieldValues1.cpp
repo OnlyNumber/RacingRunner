@@ -35447,6 +35447,8 @@ struct SpawnerShared_t9155F6449923026C26609DA54F6F0BA82168941C  : public Simulat
 {
 	// NetworkPlayer SpawnerShared::playerPrefab
 	NetworkPlayer_t7F21AEB6412E7912BE78858377B0ED3DF4DF1D74* ___playerPrefab_9;
+	// GameStarter SpawnerShared::gameStarter
+	GameStarter_tDC191C02FED9E091D9F85CBDEE9A607AADCA0100* ___gameStarter_10;
 };
 
 // TMPro.TMP_Dropdown
@@ -40709,9 +40711,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4866[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4867[6] = 
 {
 	static_cast<int32_t>(offsetof(SpawnerAutoHost_tB90537CE95B500EFF976A0479D541D3AEC5E3B9B, ___playerPrefab_4)),static_cast<int32_t>(offsetof(SpawnerAutoHost_tB90537CE95B500EFF976A0479D541D3AEC5E3B9B, ___characterInputHandler_5)),static_cast<int32_t>(offsetof(SpawnerAutoHost_tB90537CE95B500EFF976A0479D541D3AEC5E3B9B, ___gameStarter_6)),static_cast<int32_t>(offsetof(SpawnerAutoHost_tB90537CE95B500EFF976A0479D541D3AEC5E3B9B, ____spawnedCharacters_7)),0,0,};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4868[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4868[2] = 
 {
-	static_cast<int32_t>(offsetof(SpawnerShared_t9155F6449923026C26609DA54F6F0BA82168941C, ___playerPrefab_9)),};
+	static_cast<int32_t>(offsetof(SpawnerShared_t9155F6449923026C26609DA54F6F0BA82168941C, ___playerPrefab_9)),static_cast<int32_t>(offsetof(SpawnerShared_t9155F6449923026C26609DA54F6F0BA82168941C, ___gameStarter_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4869[5] = 
 {
 	static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ___distanceBetweenCars_4)),static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ___currentCar_5)),static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ___maxCars_6)),static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ___targetPosition_7)),static_cast<int32_t>(offsetof(CarSwitcher_t4AAF8A9112BAD67C3E788C2D07DB8795462FD536, ____firebase_8)),};

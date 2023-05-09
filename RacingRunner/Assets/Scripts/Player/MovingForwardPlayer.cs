@@ -46,7 +46,9 @@ public class MovingForwardPlayer : NetworkBehaviour
 
         //_networkRigidbody.transform.position = 
 
-        _networkRigidbody.TeleportToPosition(transform.position + Vector3.forward * _speed * Runner.DeltaTime);
+        transform.Translate(Vector3.forward * _speed * Runner.DeltaTime);
+
+        //_networkRigidbody.TeleportToPosition(transform.position + Vector3.forward * _speed * Time.deltaTime);
     }
 
     private void SpeedChanger()

@@ -84,7 +84,7 @@ public class InterfaceController : NetworkBehaviour
         }
     }
 
-    [Rpc(RpcSources.StateAuthority, RpcTargets.InputAuthority)]
+    [Rpc(RpcSources.All, RpcTargets.All)]
     public void Rpc_Init()
     {
         _isStart = true;

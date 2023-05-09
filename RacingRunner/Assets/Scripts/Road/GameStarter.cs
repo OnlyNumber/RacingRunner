@@ -23,7 +23,7 @@ public class GameStarter : NetworkBehaviour
 
     private List<FragmentRoad> road = new List<FragmentRoad>();
 
-
+    [ContextMenu("SpawnRoad")]
     public void SpawnRoad()
     {
         Debug.Log("Spawn road");
@@ -35,10 +35,10 @@ public class GameStarter : NetworkBehaviour
                 Debug.Log("Runner == null");
             }
 
-            road.Add(Runner.Spawn(_roadFragment, new Vector3(0, 0, _distanceToNextFragment * i)));
+            road.Add(FindObjectOfType<NetworkRunner>().Spawn(_roadFragment, new Vector3(0, 0, _distanceToNextFragment * i)));
         }
 
-        Runner.Spawn(_finishFragment, new Vector3(0, 0, _distanceToNextFragment * _roadLegth)).transform.SetParent(gameObject.transform);
+        FindObjectOfType<NetworkRunner>().Spawn(_finishFragment, new Vector3(0, 0, _distanceToNextFragment * _roadLegth)).transform.SetParent(gameObject.transform);
 
     }
 
@@ -53,8 +53,13 @@ public class GameStarter : NetworkBehaviour
     [ContextMenu("StartGame")]
     public void StartGame()
     {
-        Runner.SessionInfo.IsOpen = false;
-        Runner.SessionInfo.IsVisible = false;
+        if (FindObjectOfType<NetworkRunner>() == null)
+        {
+            Debug.Log("FindObjectOfType<NetworkRunner>() == null");
+        }
+
+        FindObjectOfType<NetworkRunner>().SessionInfo.IsOpen = false;
+        FindObjectOfType<NetworkRunner>().SessionInfo.IsVisible = false;
 
         foreach (var item in road)
         {
